@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_32573d0103e3def14d2b92ba4ebac6e2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div style="
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 9999;
+                background: white;
+                padding: 10px 14px;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+                font-size: 13px;
+            ">
+                <b>Resumen de Ruta</b><br>
+                Total clientes: 22<br>
+                <span style="color: orange;"><b>Por graduar:</b> 0</span>
+            </div>
+            
+    
+            <div class="folium-map" id="map_32573d0103e3def14d2b92ba4ebac6e2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_32573d0103e3def14d2b92ba4ebac6e2 = L.map(
+                "map_32573d0103e3def14d2b92ba4ebac6e2",
+                {
+                    center: [-11.934675, -77.084361],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bd24f042b41ef9fdc675045110aea4ac = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u00a9 OpenStreetMap contributors \u00a9 CARTO",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bd24f042b41ef9fdc675045110aea4ac.addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var marker_cd3f9af07cc8820e93d0e5aed52574d8 = L.marker(
+                [-11.934675, -77.084361],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_af7e46882478224c21fde7be9220967c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65c964f85e0c5468e648e34f7e2be39b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e520c53fcce2d8a54adb0e1225bb0e06 = $(`<div id="html_e520c53fcce2d8a54adb0e1225bb0e06" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001705122<br>                         <b>Nombre:</b> ALVAREZ MEZA BERTHA LIVIA<br>                         <b>Dirección:</b> MCDO. PORTALES DE CHILLON PSJ 5 PTO NRO. 12 Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> ABANDONADOR 1 MES                     </div>                     </div>`)[0];
+                popup_65c964f85e0c5468e648e34f7e2be39b.setContent(html_e520c53fcce2d8a54adb0e1225bb0e06);
+            
+        
+
+        marker_cd3f9af07cc8820e93d0e5aed52574d8.bindPopup(popup_65c964f85e0c5468e648e34f7e2be39b)
+        ;
+
+        
+    
+    
+                marker_cd3f9af07cc8820e93d0e5aed52574d8.setIcon(icon_af7e46882478224c21fde7be9220967c);
+            
+    
+            var marker_9e244d74d79f8dd924b4dc54cf5d3214 = L.marker(
+                [-11.9346583, -77.0842456],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_3e7b91dca1c97040ec76d420783b453a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_988b5a381babb1706132f4611ee5f753 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8e7031c79127a0c575bd78fe3cdfe3dc = $(`<div id="html_8e7031c79127a0c575bd78fe3cdfe3dc" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001572216<br>                         <b>Nombre:</b> APEÑA CASTILLO VICTOR REYNALDO<br>                         <b>Dirección:</b> MCDO. LOS PORTALES DE CHILLON PTO-Ñ NRO. 8 URB. LOS PORTALES DE CHILLON Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_988b5a381babb1706132f4611ee5f753.setContent(html_8e7031c79127a0c575bd78fe3cdfe3dc);
+            
+        
+
+        marker_9e244d74d79f8dd924b4dc54cf5d3214.bindPopup(popup_988b5a381babb1706132f4611ee5f753)
+        ;
+
+        
+    
+    
+                marker_9e244d74d79f8dd924b4dc54cf5d3214.setIcon(icon_3e7b91dca1c97040ec76d420783b453a);
+            
+    
+            var marker_b04e24c2d627c0a417cab3d696f46c24 = L.marker(
+                [-11.9342761, -77.0843468],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_49a6a951511f867e76e33ed384669d7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e21f2c49168829c667469be3f6d8508f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ed3a37effeafe23a166e6cb6149922cd = $(`<div id="html_ed3a37effeafe23a166e6cb6149922cd" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001688335<br>                         <b>Nombre:</b> AÑO HUAMAN DANNY RIVELINO<br>                         <b>Dirección:</b> MCDO. MDO PORTALES DE CHILLON PSJ-6 NRO. 5 Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_e21f2c49168829c667469be3f6d8508f.setContent(html_ed3a37effeafe23a166e6cb6149922cd);
+            
+        
+
+        marker_b04e24c2d627c0a417cab3d696f46c24.bindPopup(popup_e21f2c49168829c667469be3f6d8508f)
+        ;
+
+        
+    
+    
+                marker_b04e24c2d627c0a417cab3d696f46c24.setIcon(icon_49a6a951511f867e76e33ed384669d7b);
+            
+    
+            var marker_02810a79bfb775cc630af6ad7b0b65b9 = L.marker(
+                [-11.8238243, -77.0992803],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_cd778983f2ff95bf1ab86b6e9670bf2c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_980592fd828214af0926aacc0b24f3d2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_825c8132340916cb9388fcf5d9ecf353 = $(`<div id="html_825c8132340916cb9388fcf5d9ecf353" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001714615<br>                         <b>Nombre:</b> BASILIO LEON OLINDA<br>                         <b>Dirección:</b> AV. LOMAS DE ZAPALLAL MZE1 LT NRO. 24 URB. LOMAS DE ZAPALLAL Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_980592fd828214af0926aacc0b24f3d2.setContent(html_825c8132340916cb9388fcf5d9ecf353);
+            
+        
+
+        marker_02810a79bfb775cc630af6ad7b0b65b9.bindPopup(popup_980592fd828214af0926aacc0b24f3d2)
+        ;
+
+        
+    
+    
+                marker_02810a79bfb775cc630af6ad7b0b65b9.setIcon(icon_cd778983f2ff95bf1ab86b6e9670bf2c);
+            
+    
+            var marker_a35a82e44d5163c89c19e0bc2e97d048 = L.marker(
+                [-11.9345303, -77.0841135],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_47fb107d5e677867f371456a3fed5e27 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b2e391ffba8c4602dfcaf3bc8e443fcf = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_48a3f0886c89c9220da9d94192f8a9d8 = $(`<div id="html_48a3f0886c89c9220da9d94192f8a9d8" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001413578<br>                         <b>Nombre:</b> BELLIDO VEGA DE FLORES ELIZABETH PATRICI<br>                         <b>Dirección:</b> MCDO. MCDOPORTALES DE CHILLON PJEN NRO. 3 URB. CHILLON Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_b2e391ffba8c4602dfcaf3bc8e443fcf.setContent(html_48a3f0886c89c9220da9d94192f8a9d8);
+            
+        
+
+        marker_a35a82e44d5163c89c19e0bc2e97d048.bindPopup(popup_b2e391ffba8c4602dfcaf3bc8e443fcf)
+        ;
+
+        
+    
+    
+                marker_a35a82e44d5163c89c19e0bc2e97d048.setIcon(icon_47fb107d5e677867f371456a3fed5e27);
+            
+    
+            var marker_a711135704f094360cbed180b6cc5b47 = L.marker(
+                [-11.9346635, -77.084264],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_c4bf34cbd83ba6a3de5e8f489f0a5a61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1942cc4005dae9bbe0990a2f4dc854ba = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_afe1ad8da4f066139933cce851e0e379 = $(`<div id="html_afe1ad8da4f066139933cce851e0e379" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001651293<br>                         <b>Nombre:</b> BRICEÑO MALDONADO NELVA SABINA<br>                         <b>Dirección:</b> MCDO. MDO PORTLAES DE CHILLON PTO- NRO. 11 Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (3A6 PEDIDOS)                     </div>                     </div>`)[0];
+                popup_1942cc4005dae9bbe0990a2f4dc854ba.setContent(html_afe1ad8da4f066139933cce851e0e379);
+            
+        
+
+        marker_a711135704f094360cbed180b6cc5b47.bindPopup(popup_1942cc4005dae9bbe0990a2f4dc854ba)
+        ;
+
+        
+    
+    
+                marker_a711135704f094360cbed180b6cc5b47.setIcon(icon_c4bf34cbd83ba6a3de5e8f489f0a5a61);
+            
+    
+            var marker_31395b05687d6f176acdc09cd3d18f04 = L.marker(
+                [-11.9242166, -77.0789998],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_bc4bfc13c4c1d73527380d6775afff70 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1a8a537d0baa2fecc1c3204c1eb17c0d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_406422e43a3fba6e1a762219231f4c41 = $(`<div id="html_406422e43a3fba6e1a762219231f4c41" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001762949<br>                         <b>Nombre:</b> CAMPOS CASTILLO BANE<br>                         <b>Dirección:</b> CL. CALLE 20 MZY LT NRO. 14 URB. CHILLON Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (7+ PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_1a8a537d0baa2fecc1c3204c1eb17c0d.setContent(html_406422e43a3fba6e1a762219231f4c41);
+            
+        
+
+        marker_31395b05687d6f176acdc09cd3d18f04.bindPopup(popup_1a8a537d0baa2fecc1c3204c1eb17c0d)
+        ;
+
+        
+    
+    
+                marker_31395b05687d6f176acdc09cd3d18f04.setIcon(icon_bc4bfc13c4c1d73527380d6775afff70);
+            
+    
+            var marker_e3c654ecfc4478ca6b49e9d0b3ad8edf = L.marker(
+                [-11.9257932, -77.0744019],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_a17a0ec6600abfc1702cb30dd64c17a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62577a6e415db14707b88e1106bdffc8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d2273adb9c02959d7f7e3bd73d7881b9 = $(`<div id="html_d2273adb9c02959d7f7e3bd73d7881b9" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001566771<br>                         <b>Nombre:</b> CARBAJAL RIVERA MARITZA ROXANA<br>                         <b>Dirección:</b> AV. COOP LA ENSENADA MZ Ñ LT NRO. 24 Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_62577a6e415db14707b88e1106bdffc8.setContent(html_d2273adb9c02959d7f7e3bd73d7881b9);
+            
+        
+
+        marker_e3c654ecfc4478ca6b49e9d0b3ad8edf.bindPopup(popup_62577a6e415db14707b88e1106bdffc8)
+        ;
+
+        
+    
+    
+                marker_e3c654ecfc4478ca6b49e9d0b3ad8edf.setIcon(icon_a17a0ec6600abfc1702cb30dd64c17a3);
+            
+    
+            var marker_838cdcc881d0b322bd62c4bdac706d12 = L.marker(
+                [-11.9345001, -77.0841235],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_fb397a2ebc2f49925a4759994dd67ec0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a6faa5184de3d7b762c8c5dca76fbafb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bead2cd95c2d29a9871758ae110dcb88 = $(`<div id="html_bead2cd95c2d29a9871758ae110dcb88" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001419370<br>                         <b>Nombre:</b> CASTAÑEDA YNCA PRIMITIVO ARNOLD<br>                         <b>Dirección:</b> MCDO. PORTALES DE CHILLON PSJ-5 PTO NRO. 5 URB. CHILLON Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_a6faa5184de3d7b762c8c5dca76fbafb.setContent(html_bead2cd95c2d29a9871758ae110dcb88);
+            
+        
+
+        marker_838cdcc881d0b322bd62c4bdac706d12.bindPopup(popup_a6faa5184de3d7b762c8c5dca76fbafb)
+        ;
+
+        
+    
+    
+                marker_838cdcc881d0b322bd62c4bdac706d12.setIcon(icon_fb397a2ebc2f49925a4759994dd67ec0);
+            
+    
+            var marker_bf8a8dc805fb5c50a71039dcf7c83c97 = L.marker(
+                [-11.8234213, -77.099574],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_8d21a5761d63278205b17c1da556bf11 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a3886fde523490b28f2ddd1bef2ccc6d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_363c5928181acac31f4fdf53970ad0bf = $(`<div id="html_363c5928181acac31f4fdf53970ad0bf" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001462826<br>                         <b>Nombre:</b> CHUCHON CARPIO MIGUEL<br>                         <b>Dirección:</b> MCDO. UNION LOMAS LT NRO. 10 URB. LOMAS DE ZAPALLAL Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_a3886fde523490b28f2ddd1bef2ccc6d.setContent(html_363c5928181acac31f4fdf53970ad0bf);
+            
+        
+
+        marker_bf8a8dc805fb5c50a71039dcf7c83c97.bindPopup(popup_a3886fde523490b28f2ddd1bef2ccc6d)
+        ;
+
+        
+    
+    
+                marker_bf8a8dc805fb5c50a71039dcf7c83c97.setIcon(icon_8d21a5761d63278205b17c1da556bf11);
+            
+    
+            var marker_716600a01dcc1687482641ded41f33a2 = L.marker(
+                [-11.8300176, -77.1079993],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_4741327101a960ae1f8255ee0650704b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fc3d9425e50f7aff4e96830ed6de6c61 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d9f32a92a7cfc189280823e2574f0412 = $(`<div id="html_d9f32a92a7cfc189280823e2574f0412" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004062974<br>                         <b>Nombre:</b> COA NUÑEZ ANA ISABEL<br>                         <b>Dirección:</b> MDO. MADRE TEREZA DE CALCUTA PTO. 16 PUENTE PIEDRA<br>                         <b>Estatus:</b> ABANDONADOR 2 MESES                     </div>                     </div>`)[0];
+                popup_fc3d9425e50f7aff4e96830ed6de6c61.setContent(html_d9f32a92a7cfc189280823e2574f0412);
+            
+        
+
+        marker_716600a01dcc1687482641ded41f33a2.bindPopup(popup_fc3d9425e50f7aff4e96830ed6de6c61)
+        ;
+
+        
+    
+    
+                marker_716600a01dcc1687482641ded41f33a2.setIcon(icon_4741327101a960ae1f8255ee0650704b);
+            
+    
+            var marker_daaf1d7b0fb49979447248ab1345d94d = L.marker(
+                [-11.9185401, -77.0770623],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_c19a8e86b27187923514254b35e10249 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_676192bd924c69458a0a21dd07f6f905 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_86607228cea4429bdde7b5ae8b399077 = $(`<div id="html_86607228cea4429bdde7b5ae8b399077" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001029423<br>                         <b>Nombre:</b> DE LA CRUZ SILVA MARIO ELIAS<br>                         <b>Dirección:</b> AV. AV LOS PINOS NRO MZ C INT L NRO. 3 URB. ASOCVOVCHILLON Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_676192bd924c69458a0a21dd07f6f905.setContent(html_86607228cea4429bdde7b5ae8b399077);
+            
+        
+
+        marker_daaf1d7b0fb49979447248ab1345d94d.bindPopup(popup_676192bd924c69458a0a21dd07f6f905)
+        ;
+
+        
+    
+    
+                marker_daaf1d7b0fb49979447248ab1345d94d.setIcon(icon_c19a8e86b27187923514254b35e10249);
+            
+    
+            var marker_9ea4378cae5c14b88928534050086aea = L.marker(
+                [-11.8322855, -77.1122968],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_a2aa38f403ada8adf491bb7c0494d3d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79da42a21fb1341c49bec1a91b73eb91 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ca1558bf59699956bb338ac088d3903a = $(`<div id="html_ca1558bf59699956bb338ac088d3903a" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001493350<br>                         <b>Nombre:</b> ESLADO ROJAS ROSARIO LUCINDA<br>                         <b>Dirección:</b> CL. LAS PALMERAS N-179 NRO. 179 URB. BELLA AURORA Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_79da42a21fb1341c49bec1a91b73eb91.setContent(html_ca1558bf59699956bb338ac088d3903a);
+            
+        
+
+        marker_9ea4378cae5c14b88928534050086aea.bindPopup(popup_79da42a21fb1341c49bec1a91b73eb91)
+        ;
+
+        
+    
+    
+                marker_9ea4378cae5c14b88928534050086aea.setIcon(icon_a2aa38f403ada8adf491bb7c0494d3d8);
+            
+    
+            var marker_b1527d45db433202b5f1b816e0088de2 = L.marker(
+                [-11.9223198, -77.0772527],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_da6bfe5df7d1d888edb97963b3b134b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_244bd9e5be07060afee594b5c7b7fc3d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9c6b22e3f6b41ddc38dd84fd46ab334b = $(`<div id="html_9c6b22e3f6b41ddc38dd84fd46ab334b" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001401510<br>                         <b>Nombre:</b> FIGUEROA RETIS YENY<br>                         <b>Dirección:</b> MCDO. MERCADO MODELO CHILLON INT. 29 MZA. V LOTE. 1 URB. CHILLON Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_244bd9e5be07060afee594b5c7b7fc3d.setContent(html_9c6b22e3f6b41ddc38dd84fd46ab334b);
+            
+        
+
+        marker_b1527d45db433202b5f1b816e0088de2.bindPopup(popup_244bd9e5be07060afee594b5c7b7fc3d)
+        ;
+
+        
+    
+    
+                marker_b1527d45db433202b5f1b816e0088de2.setIcon(icon_da6bfe5df7d1d888edb97963b3b134b4);
+            
+    
+            var marker_384001db3e03226828f97dcbc7f2dcd7 = L.marker(
+                [-11.9347, -77.0843442],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_63a670ba5c3a03756899d649cc45192b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4fd9afa49909b46e26b12ffea14352f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c7fe4a4a672db10619b7c36da3bdfd0b = $(`<div id="html_c7fe4a4a672db10619b7c36da3bdfd0b" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001424159<br>                         <b>Nombre:</b> GARAY PAMPA VICTORIA HERLINDA<br>                         <b>Dirección:</b> MCDO. MCDO PORTAL DE CHILLON PTON NRO. 12 URB. LOS PORTALES Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (3A6 PEDIDOS)                     </div>                     </div>`)[0];
+                popup_e4fd9afa49909b46e26b12ffea14352f.setContent(html_c7fe4a4a672db10619b7c36da3bdfd0b);
+            
+        
+
+        marker_384001db3e03226828f97dcbc7f2dcd7.bindPopup(popup_e4fd9afa49909b46e26b12ffea14352f)
+        ;
+
+        
+    
+    
+                marker_384001db3e03226828f97dcbc7f2dcd7.setIcon(icon_63a670ba5c3a03756899d649cc45192b);
+            
+    
+            var marker_c5aeafd7656e5e90059a0270f3cd212d = L.marker(
+                [-11.8235017, -77.0995214],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_427734d5e05b79921c995731dcb999fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d0e41347480d971273dfee3b57422965 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0fd381709575bcb0973db16d01db5d85 = $(`<div id="html_0fd381709575bcb0973db16d01db5d85" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001627634<br>                         <b>Nombre:</b> INVERSIONES ACRIALE S.A.C.<br>                         <b>Dirección:</b> MZ C1 LOTE 31 MZA. C1 LOTE. 31 URB. LOMAS DE ZAPALLAL Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_d0e41347480d971273dfee3b57422965.setContent(html_0fd381709575bcb0973db16d01db5d85);
+            
+        
+
+        marker_c5aeafd7656e5e90059a0270f3cd212d.bindPopup(popup_d0e41347480d971273dfee3b57422965)
+        ;
+
+        
+    
+    
+                marker_c5aeafd7656e5e90059a0270f3cd212d.setIcon(icon_427734d5e05b79921c995731dcb999fe);
+            
+    
+            var marker_3073950528ed73184bb070ce9255abb3 = L.marker(
+                [-11.9268278, -77.0783572],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_6f4b5dd69923684ef17da66c617b08e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a37ea87d8c963729480378e3b14496ef = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ac22835b1d55f33c11a3d37a44868679 = $(`<div id="html_ac22835b1d55f33c11a3d37a44868679" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004031736<br>                         <b>Nombre:</b> INVERSIONES CUTI S.A.C.<br>                         <b>Dirección:</b> LT. 20 MZ. B RES. LOS SAUCES - LIMA LIMA PUENTE PI<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_a37ea87d8c963729480378e3b14496ef.setContent(html_ac22835b1d55f33c11a3d37a44868679);
+            
+        
+
+        marker_3073950528ed73184bb070ce9255abb3.bindPopup(popup_a37ea87d8c963729480378e3b14496ef)
+        ;
+
+        
+    
+    
+                marker_3073950528ed73184bb070ce9255abb3.setIcon(icon_6f4b5dd69923684ef17da66c617b08e5);
+            
+    
+            var marker_6d7ec52cd7ac7fc5eff6b04174b80ef4 = L.marker(
+                [-11.8298561, -77.1041395],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_2dfedec58179fcc27e32dd98d5da1cb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_49b61826992bc6d0eb99d6650e070f8b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8e38c9ef831106ff44691c8dde001729 = $(`<div id="html_8e38c9ef831106ff44691c8dde001729" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001406385<br>                         <b>Nombre:</b> LARA SALINAS ELEAZAR<br>                         <b>Dirección:</b> MCDO. EL DORADO PTO- NRO. 41 URB. ZAPALLAL ALTO Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_49b61826992bc6d0eb99d6650e070f8b.setContent(html_8e38c9ef831106ff44691c8dde001729);
+            
+        
+
+        marker_6d7ec52cd7ac7fc5eff6b04174b80ef4.bindPopup(popup_49b61826992bc6d0eb99d6650e070f8b)
+        ;
+
+        
+    
+    
+                marker_6d7ec52cd7ac7fc5eff6b04174b80ef4.setIcon(icon_2dfedec58179fcc27e32dd98d5da1cb0);
+            
+    
+            var marker_f5c7b034ebcff85b32c6382792c40203 = L.marker(
+                [-11.8319242, -77.1105825],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_1d89f55e60b410c24a9f1edcf7ba2a13 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1c619e5e5e97490208cf79ada5aa3e8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_837d5b4d32425c2eae58230d54502985 = $(`<div id="html_837d5b4d32425c2eae58230d54502985" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001460715<br>                         <b>Nombre:</b> LOPEZ SALINAS SANTOS JULIAN<br>                         <b>Dirección:</b> BELLA AURORA MH LT NRO. 17 URB. BELLA AURORA Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_e1c619e5e5e97490208cf79ada5aa3e8.setContent(html_837d5b4d32425c2eae58230d54502985);
+            
+        
+
+        marker_f5c7b034ebcff85b32c6382792c40203.bindPopup(popup_e1c619e5e5e97490208cf79ada5aa3e8)
+        ;
+
+        
+    
+    
+                marker_f5c7b034ebcff85b32c6382792c40203.setIcon(icon_1d89f55e60b410c24a9f1edcf7ba2a13);
+            
+    
+            var marker_afdd0289b259b4ec24d1db480f71cc1b = L.marker(
+                [-11.9188251, -77.0770867],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_45df7ee045667bc066bb66d358c6e721 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_63aa9e9320480f952ffbfee710135c3d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fa7f2eee386b7ca1ea35de1d2cf548e7 = $(`<div id="html_fa7f2eee386b7ca1ea35de1d2cf548e7" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001401515<br>                         <b>Nombre:</b> MANOSALBA GUTIERREZ ALICIA<br>                         <b>Dirección:</b> CHILLON II ETAPA MZ-E LT- NRO. 1 Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_63aa9e9320480f952ffbfee710135c3d.setContent(html_fa7f2eee386b7ca1ea35de1d2cf548e7);
+            
+        
+
+        marker_afdd0289b259b4ec24d1db480f71cc1b.bindPopup(popup_63aa9e9320480f952ffbfee710135c3d)
+        ;
+
+        
+    
+    
+                marker_afdd0289b259b4ec24d1db480f71cc1b.setIcon(icon_45df7ee045667bc066bb66d358c6e721);
+            
+    
+            var marker_e77ab573d16f2f51cf2c138f6278f6be = L.marker(
+                [-11.9194681, -77.0771139],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_33531906123caf4e19d9b70471984616 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b5149dde33f093959536032f4ef0234b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_712f5433ab310e4d4294288e31999b3c = $(`<div id="html_712f5433ab310e4d4294288e31999b3c" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001719580<br>                         <b>Nombre:</b> PANDURO VASQUEZ DORA LUCIA<br>                         <b>Dirección:</b> CL. CALLE 14 MZ L LT NRO. 1 URB. CHILLON Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_b5149dde33f093959536032f4ef0234b.setContent(html_712f5433ab310e4d4294288e31999b3c);
+            
+        
+
+        marker_e77ab573d16f2f51cf2c138f6278f6be.bindPopup(popup_b5149dde33f093959536032f4ef0234b)
+        ;
+
+        
+    
+    
+                marker_e77ab573d16f2f51cf2c138f6278f6be.setIcon(icon_33531906123caf4e19d9b70471984616);
+            
+    
+            var marker_901216e2c1b0e34cf44110f5268560d9 = L.marker(
+                [-11.9284233, -77.0779095],
+                {
+}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+    
+            var icon_8314d810434b7757bca004382096356a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cd6376bb55bcd4885d1acf618a2e894 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9a46915584e378079727cc565e953c0b = $(`<div id="html_9a46915584e378079727cc565e953c0b" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001693239<br>                         <b>Nombre:</b> URIARTE COTRINA MARIA BERSELIA<br>                         <b>Dirección:</b> AV. COOP RESIDENCIAL ENSENADA MZ- NRO. 33 Lima-Lima-Puente Piedra<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_5cd6376bb55bcd4885d1acf618a2e894.setContent(html_9a46915584e378079727cc565e953c0b);
+            
+        
+
+        marker_901216e2c1b0e34cf44110f5268560d9.bindPopup(popup_5cd6376bb55bcd4885d1acf618a2e894)
+        ;
+
+        
+    
+    
+                marker_901216e2c1b0e34cf44110f5268560d9.setIcon(icon_8314d810434b7757bca004382096356a);
+            
+    
+            var poly_line_15db2b9b5e67ef5e59528978da74f57d = L.polyline(
+                [[-11.934675, -77.084361], [-11.9346583, -77.0842456], [-11.9342761, -77.0843468], [-11.8238243, -77.0992803], [-11.9345303, -77.0841135], [-11.9346635, -77.084264], [-11.9242166, -77.0789998], [-11.9257932, -77.0744019], [-11.9345001, -77.0841235], [-11.8234213, -77.099574], [-11.8300176, -77.1079993], [-11.9185401, -77.0770623], [-11.8322855, -77.1122968], [-11.9223198, -77.0772527], [-11.9347, -77.0843442], [-11.8235017, -77.0995214], [-11.9268278, -77.0783572], [-11.8298561, -77.1041395], [-11.8319242, -77.1105825], [-11.9188251, -77.0770867], [-11.9194681, -77.0771139], [-11.9284233, -77.0779095]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_32573d0103e3def14d2b92ba4ebac6e2);
+        
+</script>
+</html>
