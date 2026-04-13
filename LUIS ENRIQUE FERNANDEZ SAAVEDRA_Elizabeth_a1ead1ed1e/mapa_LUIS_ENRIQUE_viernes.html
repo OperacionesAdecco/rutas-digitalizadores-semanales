@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_fa39a9e62baf8b6bd6b5390458ef6a83 {
+                #map_81abbe77e330f653c2632ee3bb0af093 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -50,9 +50,18 @@
             </script>
 
         
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
 </head>
 <body>
     
+    
+            <style>
+            .leaflet-control-attribution {
+                display: none !important;
+            }
+            </style>
+            
     
             <div style="
                 position: fixed;
@@ -71,14 +80,14 @@
             </div>
             
     
-            <div class="folium-map" id="map_fa39a9e62baf8b6bd6b5390458ef6a83" ></div>
+            <div class="folium-map" id="map_81abbe77e330f653c2632ee3bb0af093" ></div>
         
 </body>
 <script>
     
     
-            var map_fa39a9e62baf8b6bd6b5390458ef6a83 = L.map(
-                "map_fa39a9e62baf8b6bd6b5390458ef6a83",
+            var map_81abbe77e330f653c2632ee3bb0af093 = L.map(
+                "map_81abbe77e330f653c2632ee3bb0af093",
                 {
                     center: [-12.03978, -77.0907],
                     crs: L.CRS.EPSG3857,
@@ -95,7 +104,7 @@
 
         
     
-            var tile_layer_954447fffbfd218f9faf859517eba597 = L.tileLayer(
+            var tile_layer_83f283eba348da789860bcb16fa7826e = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -112,17 +121,27 @@
             );
         
     
-            tile_layer_954447fffbfd218f9faf859517eba597.addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            tile_layer_83f283eba348da789860bcb16fa7826e.addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var marker_f61d6da86c8e771c9882c81bce473347 = L.marker(
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
+        
+    
+            var marker_d02306452fc8c65f8a83b9e2b2517544 = L.marker(
                 [-12.03978, -77.0907],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_2866d1a30c5c95ef91d3cf6fe6dacac0 = L.AwesomeMarkers.icon(
+            var icon_6c52aa9945909a6ad5c4f31485290eb5 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -133,34 +152,34 @@
             );
         
     
-        var popup_0161dfc89cc6223f02f87b7886501982 = L.popup({
+        var popup_cec8a76968346b9033d43000865c265b = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_589636f418459104324c3ce7a4dd5952 = $(`<div id="html_589636f418459104324c3ce7a4dd5952" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001707336<br>                         <b>Nombre:</b> ALFEREZ ALFEREZ COSME JESUS<br>                         <b>Dirección:</b> AV. 1ERO DE MAYO NRO. 826 Callao-Callao-Carmen de la Legua Reynoso<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_0161dfc89cc6223f02f87b7886501982.setContent(html_589636f418459104324c3ce7a4dd5952);
+                var html_de2ca74a291e3a6e263d8fb902687d72 = $(`<div id="html_de2ca74a291e3a6e263d8fb902687d72" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001707336<br>                         <b>Nombre:</b> ALFEREZ ALFEREZ COSME JESUS<br>                         <b>Dirección:</b> AV. 1ERO DE MAYO NRO. 826 Callao-Callao-Carmen de la Legua Reynoso<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_cec8a76968346b9033d43000865c265b.setContent(html_de2ca74a291e3a6e263d8fb902687d72);
             
         
 
-        marker_f61d6da86c8e771c9882c81bce473347.bindPopup(popup_0161dfc89cc6223f02f87b7886501982)
+        marker_d02306452fc8c65f8a83b9e2b2517544.bindPopup(popup_cec8a76968346b9033d43000865c265b)
         ;
 
         
     
     
-                marker_f61d6da86c8e771c9882c81bce473347.setIcon(icon_2866d1a30c5c95ef91d3cf6fe6dacac0);
+                marker_d02306452fc8c65f8a83b9e2b2517544.setIcon(icon_6c52aa9945909a6ad5c4f31485290eb5);
             
     
-            var marker_d720c2ea03df2b89d84470a517b5feb3 = L.marker(
+            var marker_c358beb698c6c0c0efe7fed959b2a6f4 = L.marker(
                 [-12.0271082, -77.086157],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_d6eff3230f4555f059b6a2bae219b42e = L.AwesomeMarkers.icon(
+            var icon_eee5c6fb3b7e924bf75342f69cefeafd = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -171,34 +190,34 @@
             );
         
     
-        var popup_eb9e797a73786671c3276148ad794667 = L.popup({
+        var popup_c812aedd23cf554d67592be5ca5ea9f6 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_b897fd2bae8b1bdaf5a86bf88b116581 = $(`<div id="html_b897fd2bae8b1bdaf5a86bf88b116581" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001746740<br>                         <b>Nombre:</b> ARAGON ROMANI MIRIAM RAQUEL<br>                         <b>Dirección:</b> JR. LIBERTAD NRO. 3664 URB. SAN MARTIN Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_eb9e797a73786671c3276148ad794667.setContent(html_b897fd2bae8b1bdaf5a86bf88b116581);
+                var html_7b700fa53d8287ab6b90ddd50be9e7cc = $(`<div id="html_7b700fa53d8287ab6b90ddd50be9e7cc" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001746740<br>                         <b>Nombre:</b> ARAGON ROMANI MIRIAM RAQUEL<br>                         <b>Dirección:</b> JR. LIBERTAD NRO. 3664 URB. SAN MARTIN Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_c812aedd23cf554d67592be5ca5ea9f6.setContent(html_7b700fa53d8287ab6b90ddd50be9e7cc);
             
         
 
-        marker_d720c2ea03df2b89d84470a517b5feb3.bindPopup(popup_eb9e797a73786671c3276148ad794667)
+        marker_c358beb698c6c0c0efe7fed959b2a6f4.bindPopup(popup_c812aedd23cf554d67592be5ca5ea9f6)
         ;
 
         
     
     
-                marker_d720c2ea03df2b89d84470a517b5feb3.setIcon(icon_d6eff3230f4555f059b6a2bae219b42e);
+                marker_c358beb698c6c0c0efe7fed959b2a6f4.setIcon(icon_eee5c6fb3b7e924bf75342f69cefeafd);
             
     
-            var marker_34f8e42c5e5d21268b9956d313620ede = L.marker(
+            var marker_55d6269de413a648583e8f2ae7aeac49 = L.marker(
                 [-12.027167, -77.084886],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_8f1ea113dd7b8929a9f31774d1c193d9 = L.AwesomeMarkers.icon(
+            var icon_f4e8751bd04b886878b221811cbe95f2 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -209,34 +228,34 @@
             );
         
     
-        var popup_dbdbc15619de4f7f26149a5b16c1c07f = L.popup({
+        var popup_faada6d36779aebab3043d9341f728cb = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_4aeeca8156db1a3c87c462e4026e6d2e = $(`<div id="html_4aeeca8156db1a3c87c462e4026e6d2e" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004205836<br>                         <b>Nombre:</b> ARMIJO ACHATA SARA YEINS<br>                         <b>Dirección:</b> Jr.Callao Nro 230 Urb Av Perú -San Martin de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_dbdbc15619de4f7f26149a5b16c1c07f.setContent(html_4aeeca8156db1a3c87c462e4026e6d2e);
+                var html_f2eef2ed379e08d5faac47b548efcd36 = $(`<div id="html_f2eef2ed379e08d5faac47b548efcd36" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004205836<br>                         <b>Nombre:</b> ARMIJO ACHATA SARA YEINS<br>                         <b>Dirección:</b> Jr.Callao Nro 230 Urb Av Perú -San Martin de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_faada6d36779aebab3043d9341f728cb.setContent(html_f2eef2ed379e08d5faac47b548efcd36);
             
         
 
-        marker_34f8e42c5e5d21268b9956d313620ede.bindPopup(popup_dbdbc15619de4f7f26149a5b16c1c07f)
+        marker_55d6269de413a648583e8f2ae7aeac49.bindPopup(popup_faada6d36779aebab3043d9341f728cb)
         ;
 
         
     
     
-                marker_34f8e42c5e5d21268b9956d313620ede.setIcon(icon_8f1ea113dd7b8929a9f31774d1c193d9);
+                marker_55d6269de413a648583e8f2ae7aeac49.setIcon(icon_f4e8751bd04b886878b221811cbe95f2);
             
     
-            var marker_1b3463f8d3185b4e88b1d47b532da8ca = L.marker(
+            var marker_89618e3e2298127b927e57f1eed5e951 = L.marker(
                 [-11.920843, -77.118499],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_bea5cca3db1d5e115c23d488948fd67c = L.AwesomeMarkers.icon(
+            var icon_c573809578dc8878f1e2382cd8ed1489 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -247,34 +266,34 @@
             );
         
     
-        var popup_ef706612713b1cdbddc40cea9b2a9299 = L.popup({
+        var popup_45e62c4319909b1a56f2d0ea99b8b72c = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_947136183918b78a97921d93265a7f5e = $(`<div id="html_947136183918b78a97921d93265a7f5e" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004190781<br>                         <b>Nombre:</b> BARBOZA RUIZ LUZ MARIA<br>                         <b>Dirección:</b> Loreto 132 4ta zona Valle<br>                         <b>Estatus:</b> NUEVO                     </div>                     </div>`)[0];
-                popup_ef706612713b1cdbddc40cea9b2a9299.setContent(html_947136183918b78a97921d93265a7f5e);
+                var html_892443cdc49a6f622df9073d588fb7e2 = $(`<div id="html_892443cdc49a6f622df9073d588fb7e2" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004190781<br>                         <b>Nombre:</b> BARBOZA RUIZ LUZ MARIA<br>                         <b>Dirección:</b> Loreto 132 4ta zona Valle<br>                         <b>Estatus:</b> NUEVO                     </div>                     </div>`)[0];
+                popup_45e62c4319909b1a56f2d0ea99b8b72c.setContent(html_892443cdc49a6f622df9073d588fb7e2);
             
         
 
-        marker_1b3463f8d3185b4e88b1d47b532da8ca.bindPopup(popup_ef706612713b1cdbddc40cea9b2a9299)
+        marker_89618e3e2298127b927e57f1eed5e951.bindPopup(popup_45e62c4319909b1a56f2d0ea99b8b72c)
         ;
 
         
     
     
-                marker_1b3463f8d3185b4e88b1d47b532da8ca.setIcon(icon_bea5cca3db1d5e115c23d488948fd67c);
+                marker_89618e3e2298127b927e57f1eed5e951.setIcon(icon_c573809578dc8878f1e2382cd8ed1489);
             
     
-            var marker_a9bbdc43dbc7dfc88429d885bf4e41b9 = L.marker(
+            var marker_7fc49cf8ab93c3629f0b946cea42f4ec = L.marker(
                 [-12.0242993, -77.0915875],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_27eaaffff225ba9704b800c9edba6510 = L.AwesomeMarkers.icon(
+            var icon_0fb760af039b3e96dfb77092b4200c26 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -285,34 +304,34 @@
             );
         
     
-        var popup_8585bb68fce40c134fd9cf5d206e13b0 = L.popup({
+        var popup_907224c66dcb63d3edbc0ef3209e1dbc = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_588d65555fe4a6c8bcd51aac4331462b = $(`<div id="html_588d65555fe4a6c8bcd51aac4331462b" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001638076<br>                         <b>Nombre:</b> BERAUN ALVA MARCO LIBIO<br>                         <b>Dirección:</b> JR. SALAVERRY NRO. 125 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_8585bb68fce40c134fd9cf5d206e13b0.setContent(html_588d65555fe4a6c8bcd51aac4331462b);
+                var html_6da868c9a203b9dc9b1dd7650d47e8f4 = $(`<div id="html_6da868c9a203b9dc9b1dd7650d47e8f4" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001638076<br>                         <b>Nombre:</b> BERAUN ALVA MARCO LIBIO<br>                         <b>Dirección:</b> JR. SALAVERRY NRO. 125 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_907224c66dcb63d3edbc0ef3209e1dbc.setContent(html_6da868c9a203b9dc9b1dd7650d47e8f4);
             
         
 
-        marker_a9bbdc43dbc7dfc88429d885bf4e41b9.bindPopup(popup_8585bb68fce40c134fd9cf5d206e13b0)
+        marker_7fc49cf8ab93c3629f0b946cea42f4ec.bindPopup(popup_907224c66dcb63d3edbc0ef3209e1dbc)
         ;
 
         
     
     
-                marker_a9bbdc43dbc7dfc88429d885bf4e41b9.setIcon(icon_27eaaffff225ba9704b800c9edba6510);
+                marker_7fc49cf8ab93c3629f0b946cea42f4ec.setIcon(icon_0fb760af039b3e96dfb77092b4200c26);
             
     
-            var marker_50ebe3981ab6c0d09d2023b34797d6ca = L.marker(
+            var marker_e6fec1998d0e1325ada2d39d32cbbdd2 = L.marker(
                 [-12.036301, -77.088628],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_3ed4ee9ea8d4bc3531da2219becd480d = L.AwesomeMarkers.icon(
+            var icon_4ca80529b4dcc614c5955789f4290a03 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -323,34 +342,34 @@
             );
         
     
-        var popup_1c5df536811f5308723428130e972e89 = L.popup({
+        var popup_5a37a93c009bae82029da03755308005 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_8de39a1b35a8f31d70996d32530ae24e = $(`<div id="html_8de39a1b35a8f31d70996d32530ae24e" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004142651<br>                         <b>Nombre:</b> COSAR CAPARACHIN ESPIRITA BERTHA<br>                         <b>Dirección:</b> mercado santa rosa pasaje Pachacutec: puesto 20<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_1c5df536811f5308723428130e972e89.setContent(html_8de39a1b35a8f31d70996d32530ae24e);
+                var html_b77ef0e16c47590a4929909130950fe7 = $(`<div id="html_b77ef0e16c47590a4929909130950fe7" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004142651<br>                         <b>Nombre:</b> COSAR CAPARACHIN ESPIRITA BERTHA<br>                         <b>Dirección:</b> mercado santa rosa pasaje Pachacutec: puesto 20<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_5a37a93c009bae82029da03755308005.setContent(html_b77ef0e16c47590a4929909130950fe7);
             
         
 
-        marker_50ebe3981ab6c0d09d2023b34797d6ca.bindPopup(popup_1c5df536811f5308723428130e972e89)
+        marker_e6fec1998d0e1325ada2d39d32cbbdd2.bindPopup(popup_5a37a93c009bae82029da03755308005)
         ;
 
         
     
     
-                marker_50ebe3981ab6c0d09d2023b34797d6ca.setIcon(icon_3ed4ee9ea8d4bc3531da2219becd480d);
+                marker_e6fec1998d0e1325ada2d39d32cbbdd2.setIcon(icon_4ca80529b4dcc614c5955789f4290a03);
             
     
-            var marker_569b1f0e3c04dffbe04ba508c2c38e19 = L.marker(
+            var marker_9b0240503af988dfdc2b3eed0bf57814 = L.marker(
                 [-12.0261806, -77.082363],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_16047a8acec10209ca360c8b64466bbc = L.AwesomeMarkers.icon(
+            var icon_c4fdf0ae41c713206f9c6410b8c8676f = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -361,34 +380,34 @@
             );
         
     
-        var popup_25f4430b953b3d307f896dfbb28213e4 = L.popup({
+        var popup_dea1881ec3ab6e894f0fc0ea9c4ec3af = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_380950b354db3ce14059f9f9b6c73935 = $(`<div id="html_380950b354db3ce14059f9f9b6c73935" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001539915<br>                         <b>Nombre:</b> FRANCIA POLO YUSSY ANGELICA<br>                         <b>Dirección:</b> JR. OSCAR BARRENECHEA NRO. 185 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_25f4430b953b3d307f896dfbb28213e4.setContent(html_380950b354db3ce14059f9f9b6c73935);
+                var html_0335af6c534a49bc6a1dc7afb8c90083 = $(`<div id="html_0335af6c534a49bc6a1dc7afb8c90083" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001539915<br>                         <b>Nombre:</b> FRANCIA POLO YUSSY ANGELICA<br>                         <b>Dirección:</b> JR. OSCAR BARRENECHEA NRO. 185 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_dea1881ec3ab6e894f0fc0ea9c4ec3af.setContent(html_0335af6c534a49bc6a1dc7afb8c90083);
             
         
 
-        marker_569b1f0e3c04dffbe04ba508c2c38e19.bindPopup(popup_25f4430b953b3d307f896dfbb28213e4)
+        marker_9b0240503af988dfdc2b3eed0bf57814.bindPopup(popup_dea1881ec3ab6e894f0fc0ea9c4ec3af)
         ;
 
         
     
     
-                marker_569b1f0e3c04dffbe04ba508c2c38e19.setIcon(icon_16047a8acec10209ca360c8b64466bbc);
+                marker_9b0240503af988dfdc2b3eed0bf57814.setIcon(icon_c4fdf0ae41c713206f9c6410b8c8676f);
             
     
-            var marker_2c17d6e83e65bbcb6fa57c84ee16be7f = L.marker(
+            var marker_62c50ecfe2b1b35ceb33bab22c39417a = L.marker(
                 [-12.0173437, -77.08483],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_4430a77adb66bece8244182a10127492 = L.AwesomeMarkers.icon(
+            var icon_80e297abad0a8a7aa86635dca7cfab0c = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -399,34 +418,34 @@
             );
         
     
-        var popup_634b65d1bc525a24723ff3ac170091eb = L.popup({
+        var popup_f557e1d07638d2b71bcee621c2a9541b = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_f4fadbe037dcfc65a73512e164b801fd = $(`<div id="html_f4fadbe037dcfc65a73512e164b801fd" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004044335<br>                         <b>Nombre:</b> HUARCAYA BULA SARITA HAYDEE<br>                         <b>Dirección:</b> Av. German aguirre # 299 mz. S1  lote 1<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_634b65d1bc525a24723ff3ac170091eb.setContent(html_f4fadbe037dcfc65a73512e164b801fd);
+                var html_8c73bf74c50dcd358984dc935e44fba7 = $(`<div id="html_8c73bf74c50dcd358984dc935e44fba7" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004044335<br>                         <b>Nombre:</b> HUARCAYA BULA SARITA HAYDEE<br>                         <b>Dirección:</b> Av. German aguirre # 299 mz. S1  lote 1<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_f557e1d07638d2b71bcee621c2a9541b.setContent(html_8c73bf74c50dcd358984dc935e44fba7);
             
         
 
-        marker_2c17d6e83e65bbcb6fa57c84ee16be7f.bindPopup(popup_634b65d1bc525a24723ff3ac170091eb)
+        marker_62c50ecfe2b1b35ceb33bab22c39417a.bindPopup(popup_f557e1d07638d2b71bcee621c2a9541b)
         ;
 
         
     
     
-                marker_2c17d6e83e65bbcb6fa57c84ee16be7f.setIcon(icon_4430a77adb66bece8244182a10127492);
+                marker_62c50ecfe2b1b35ceb33bab22c39417a.setIcon(icon_80e297abad0a8a7aa86635dca7cfab0c);
             
     
-            var marker_06edf313447657c65d5d40f865bb5328 = L.marker(
+            var marker_929491fd6b1ace448ad03d70d7186cc0 = L.marker(
                 [-12.0522626, -77.1391133],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_4f51f05bdeb089b098b25d1b7ea72cee = L.AwesomeMarkers.icon(
+            var icon_3a727243c8b34e1602ae9dd3ded8f794 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -437,34 +456,34 @@
             );
         
     
-        var popup_10f85c3588fa11fed85d3ee7d56282e0 = L.popup({
+        var popup_b4b9270c2f4bcb712d0072f36d74b73c = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_14ce4746e14dc6f57e3bbe82984719f7 = $(`<div id="html_14ce4746e14dc6f57e3bbe82984719f7" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004167012<br>                         <b>Nombre:</b> HUAROCC TAIPE JESUS<br>                         <b>Dirección:</b> Jiron Jose Galvez Egusquiza 222<br>                         <b>Estatus:</b> ABANDONADOR 3 A 5 MESES                     </div>                     </div>`)[0];
-                popup_10f85c3588fa11fed85d3ee7d56282e0.setContent(html_14ce4746e14dc6f57e3bbe82984719f7);
+                var html_1fdec4c56968d629dddc74d1d117933a = $(`<div id="html_1fdec4c56968d629dddc74d1d117933a" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004167012<br>                         <b>Nombre:</b> HUAROCC TAIPE JESUS<br>                         <b>Dirección:</b> Jiron Jose Galvez Egusquiza 222<br>                         <b>Estatus:</b> ABANDONADOR 3 A 5 MESES                     </div>                     </div>`)[0];
+                popup_b4b9270c2f4bcb712d0072f36d74b73c.setContent(html_1fdec4c56968d629dddc74d1d117933a);
             
         
 
-        marker_06edf313447657c65d5d40f865bb5328.bindPopup(popup_10f85c3588fa11fed85d3ee7d56282e0)
+        marker_929491fd6b1ace448ad03d70d7186cc0.bindPopup(popup_b4b9270c2f4bcb712d0072f36d74b73c)
         ;
 
         
     
     
-                marker_06edf313447657c65d5d40f865bb5328.setIcon(icon_4f51f05bdeb089b098b25d1b7ea72cee);
+                marker_929491fd6b1ace448ad03d70d7186cc0.setIcon(icon_3a727243c8b34e1602ae9dd3ded8f794);
             
     
-            var marker_247f82b24f6f0e33c96bcf27f47c56cc = L.marker(
+            var marker_0ad14faefc0ba674e422228eafc9528c = L.marker(
                 [-12.03622, -77.09295],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_ec902b1910bfdafc2294710443b11900 = L.AwesomeMarkers.icon(
+            var icon_a882500cb725d92dedbd67a581911a21 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -475,34 +494,34 @@
             );
         
     
-        var popup_f7200e6a1f78b1d60518fe9c23089500 = L.popup({
+        var popup_f440382676c0347cddc80e744e073a5f = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_b7bb7d3cb283df378b5927e643012b40 = $(`<div id="html_b7bb7d3cb283df378b5927e643012b40" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001717695<br>                         <b>Nombre:</b> MILLONES LOPEZ MARIA JESUS<br>                         <b>Dirección:</b> JR. AMAZONAS NRO. 3869 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_f7200e6a1f78b1d60518fe9c23089500.setContent(html_b7bb7d3cb283df378b5927e643012b40);
+                var html_515bc864f164289010b005538408c830 = $(`<div id="html_515bc864f164289010b005538408c830" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001717695<br>                         <b>Nombre:</b> MILLONES LOPEZ MARIA JESUS<br>                         <b>Dirección:</b> JR. AMAZONAS NRO. 3869 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_f440382676c0347cddc80e744e073a5f.setContent(html_515bc864f164289010b005538408c830);
             
         
 
-        marker_247f82b24f6f0e33c96bcf27f47c56cc.bindPopup(popup_f7200e6a1f78b1d60518fe9c23089500)
+        marker_0ad14faefc0ba674e422228eafc9528c.bindPopup(popup_f440382676c0347cddc80e744e073a5f)
         ;
 
         
     
     
-                marker_247f82b24f6f0e33c96bcf27f47c56cc.setIcon(icon_ec902b1910bfdafc2294710443b11900);
+                marker_0ad14faefc0ba674e422228eafc9528c.setIcon(icon_a882500cb725d92dedbd67a581911a21);
             
     
-            var marker_4380b8bc06708a69b011dfc799aad32f = L.marker(
+            var marker_ad85924666d32971f3dd3c43a4f39ad6 = L.marker(
                 [-12.03584, -77.09066],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_5c257ec8778f26f4cc5b728494c41a06 = L.AwesomeMarkers.icon(
+            var icon_1182a308755b54c72c3f9efa9045b27c = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -513,34 +532,34 @@
             );
         
     
-        var popup_d0c9643496f6dd8fe7e82d5c1eb0895a = L.popup({
+        var popup_7340150dbf94bdb712ec352b3a92969d = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_b28b4584beaa247b486afcf89402df53 = $(`<div id="html_b28b4584beaa247b486afcf89402df53" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001759374<br>                         <b>Nombre:</b> OCHOA VILLANUEVA ANA MARIA<br>                         <b>Dirección:</b> JR. JR LORETO 3700 SMP Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_d0c9643496f6dd8fe7e82d5c1eb0895a.setContent(html_b28b4584beaa247b486afcf89402df53);
+                var html_7a8a0aa0a1af2daa43d67873f222f8fe = $(`<div id="html_7a8a0aa0a1af2daa43d67873f222f8fe" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001759374<br>                         <b>Nombre:</b> OCHOA VILLANUEVA ANA MARIA<br>                         <b>Dirección:</b> JR. JR LORETO 3700 SMP Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_7340150dbf94bdb712ec352b3a92969d.setContent(html_7a8a0aa0a1af2daa43d67873f222f8fe);
             
         
 
-        marker_4380b8bc06708a69b011dfc799aad32f.bindPopup(popup_d0c9643496f6dd8fe7e82d5c1eb0895a)
+        marker_ad85924666d32971f3dd3c43a4f39ad6.bindPopup(popup_7340150dbf94bdb712ec352b3a92969d)
         ;
 
         
     
     
-                marker_4380b8bc06708a69b011dfc799aad32f.setIcon(icon_5c257ec8778f26f4cc5b728494c41a06);
+                marker_ad85924666d32971f3dd3c43a4f39ad6.setIcon(icon_1182a308755b54c72c3f9efa9045b27c);
             
     
-            var marker_19d9e4dc823081cb46ada21b3e2c7ec4 = L.marker(
+            var marker_e076095291c033413ca6b1b91355a98b = L.marker(
                 [-12.0346637, -77.0897388],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_1bd8c82189c7eca423ca7f0d6d31b331 = L.AwesomeMarkers.icon(
+            var icon_088b484cbf656bdd7d8522058255cf3c = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -551,34 +570,34 @@
             );
         
     
-        var popup_bd8f0da788a977f1518ffdc07268713c = L.popup({
+        var popup_c00b0b2e5b0d17d663e8b7127b73fb3a = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_7a8d096f70246e31114a3cbbc29131b1 = $(`<div id="html_7a8d096f70246e31114a3cbbc29131b1" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001703860<br>                         <b>Nombre:</b> OLAGUIBEL VARGAS NILA LISBETH<br>                         <b>Dirección:</b> AV. 12 DE OCTUBRE 829 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (7+ PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_bd8f0da788a977f1518ffdc07268713c.setContent(html_7a8d096f70246e31114a3cbbc29131b1);
+                var html_77167ba73ffbcaedf5ebf923a9326fe8 = $(`<div id="html_77167ba73ffbcaedf5ebf923a9326fe8" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001703860<br>                         <b>Nombre:</b> OLAGUIBEL VARGAS NILA LISBETH<br>                         <b>Dirección:</b> AV. 12 DE OCTUBRE 829 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (7+ PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_c00b0b2e5b0d17d663e8b7127b73fb3a.setContent(html_77167ba73ffbcaedf5ebf923a9326fe8);
             
         
 
-        marker_19d9e4dc823081cb46ada21b3e2c7ec4.bindPopup(popup_bd8f0da788a977f1518ffdc07268713c)
+        marker_e076095291c033413ca6b1b91355a98b.bindPopup(popup_c00b0b2e5b0d17d663e8b7127b73fb3a)
         ;
 
         
     
     
-                marker_19d9e4dc823081cb46ada21b3e2c7ec4.setIcon(icon_1bd8c82189c7eca423ca7f0d6d31b331);
+                marker_e076095291c033413ca6b1b91355a98b.setIcon(icon_088b484cbf656bdd7d8522058255cf3c);
             
     
-            var marker_f94407c4c283f5cf6897f5991e0c44cb = L.marker(
+            var marker_3f9a1996f02c4367ff7d59a5c4bc27aa = L.marker(
                 [-11.98395, -77.0933034],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_b2f88fec231697df921d4d7a74594068 = L.AwesomeMarkers.icon(
+            var icon_f8220aeba1790118264c31e6572ccd1a = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -589,34 +608,34 @@
             );
         
     
-        var popup_285ec6d145cc9034c4a66fe57705d1c3 = L.popup({
+        var popup_3e07f03a527a8f2d15b059458f01117e = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_9cc20a13a583f1d1cc0b45636c84f9ba = $(`<div id="html_9cc20a13a583f1d1cc0b45636c84f9ba" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000236443<br>                         <b>Nombre:</b> ORRILLO VASQUEZ HERLITA<br>                         <b>Dirección:</b> AV. MER MDO SR DE LOS MILAGROS P1 NRO. 1 MZA. MAZAA190 URB. ASOCSRDE LOS MILAGROS Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ABANDONADOR 3 A 5 MESES                     </div>                     </div>`)[0];
-                popup_285ec6d145cc9034c4a66fe57705d1c3.setContent(html_9cc20a13a583f1d1cc0b45636c84f9ba);
+                var html_a03fb18c6c1ca796af43f164d8a9e48d = $(`<div id="html_a03fb18c6c1ca796af43f164d8a9e48d" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000236443<br>                         <b>Nombre:</b> ORRILLO VASQUEZ HERLITA<br>                         <b>Dirección:</b> AV. MER MDO SR DE LOS MILAGROS P1 NRO. 1 MZA. MAZAA190 URB. ASOCSRDE LOS MILAGROS Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ABANDONADOR 3 A 5 MESES                     </div>                     </div>`)[0];
+                popup_3e07f03a527a8f2d15b059458f01117e.setContent(html_a03fb18c6c1ca796af43f164d8a9e48d);
             
         
 
-        marker_f94407c4c283f5cf6897f5991e0c44cb.bindPopup(popup_285ec6d145cc9034c4a66fe57705d1c3)
+        marker_3f9a1996f02c4367ff7d59a5c4bc27aa.bindPopup(popup_3e07f03a527a8f2d15b059458f01117e)
         ;
 
         
     
     
-                marker_f94407c4c283f5cf6897f5991e0c44cb.setIcon(icon_b2f88fec231697df921d4d7a74594068);
+                marker_3f9a1996f02c4367ff7d59a5c4bc27aa.setIcon(icon_f8220aeba1790118264c31e6572ccd1a);
             
     
-            var marker_228c887876afcd215a5d1a5284319f29 = L.marker(
+            var marker_72d99f89986b772f9b0b63d2307bdf74 = L.marker(
                 [-12.0206997, -77.0890578],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_6499bb5084ae91ea3872d0c5fbdda1f2 = L.AwesomeMarkers.icon(
+            var icon_135cdb7c0bad2508c5982bb764aae3b3 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -627,34 +646,34 @@
             );
         
     
-        var popup_c2e65008782a9a92d700cf887492534c = L.popup({
+        var popup_318c9f428e32940f1dbe4260a851b7fd = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_c961ffdd10d90d68f6757ac27b509b38 = $(`<div id="html_c961ffdd10d90d68f6757ac27b509b38" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001489600<br>                         <b>Nombre:</b> PAYANO ESPINOZA SONIA LOURDES<br>                         <b>Dirección:</b> AV. JR PABLO CHAVEZ NRO 295 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_c2e65008782a9a92d700cf887492534c.setContent(html_c961ffdd10d90d68f6757ac27b509b38);
+                var html_fc1fb4e454886d3d2c41e392432f947e = $(`<div id="html_fc1fb4e454886d3d2c41e392432f947e" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001489600<br>                         <b>Nombre:</b> PAYANO ESPINOZA SONIA LOURDES<br>                         <b>Dirección:</b> AV. JR PABLO CHAVEZ NRO 295 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_318c9f428e32940f1dbe4260a851b7fd.setContent(html_fc1fb4e454886d3d2c41e392432f947e);
             
         
 
-        marker_228c887876afcd215a5d1a5284319f29.bindPopup(popup_c2e65008782a9a92d700cf887492534c)
+        marker_72d99f89986b772f9b0b63d2307bdf74.bindPopup(popup_318c9f428e32940f1dbe4260a851b7fd)
         ;
 
         
     
     
-                marker_228c887876afcd215a5d1a5284319f29.setIcon(icon_6499bb5084ae91ea3872d0c5fbdda1f2);
+                marker_72d99f89986b772f9b0b63d2307bdf74.setIcon(icon_135cdb7c0bad2508c5982bb764aae3b3);
             
     
-            var marker_c0a1be85dc078d15c69ccc2b06ef71d9 = L.marker(
+            var marker_0b3a3c9b69445ef9d56f516fe3f60687 = L.marker(
                 [-12.0348, -77.09136],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_6a820d62ebfeb92592e0c3405facd5f8 = L.AwesomeMarkers.icon(
+            var icon_fab6afffb4211daed1ec53efcff77077 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -665,34 +684,34 @@
             );
         
     
-        var popup_b9801e542a79d47f746bb8f518ff175c = L.popup({
+        var popup_0c07775695d4b2f0bd02ea442d9625ba = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_c32b159ca51d85aedfbf3d36152117bb = $(`<div id="html_c32b159ca51d85aedfbf3d36152117bb" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001086040<br>                         <b>Nombre:</b> POSADAS AMAYA ROBERTA LUZ<br>                         <b>Dirección:</b> JR. CUZCO NRO. 3792 URB. PERU Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_b9801e542a79d47f746bb8f518ff175c.setContent(html_c32b159ca51d85aedfbf3d36152117bb);
+                var html_c861a2b5775ff8311de2ec907895fe3b = $(`<div id="html_c861a2b5775ff8311de2ec907895fe3b" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001086040<br>                         <b>Nombre:</b> POSADAS AMAYA ROBERTA LUZ<br>                         <b>Dirección:</b> JR. CUZCO NRO. 3792 URB. PERU Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_0c07775695d4b2f0bd02ea442d9625ba.setContent(html_c861a2b5775ff8311de2ec907895fe3b);
             
         
 
-        marker_c0a1be85dc078d15c69ccc2b06ef71d9.bindPopup(popup_b9801e542a79d47f746bb8f518ff175c)
+        marker_0b3a3c9b69445ef9d56f516fe3f60687.bindPopup(popup_0c07775695d4b2f0bd02ea442d9625ba)
         ;
 
         
     
     
-                marker_c0a1be85dc078d15c69ccc2b06ef71d9.setIcon(icon_6a820d62ebfeb92592e0c3405facd5f8);
+                marker_0b3a3c9b69445ef9d56f516fe3f60687.setIcon(icon_fab6afffb4211daed1ec53efcff77077);
             
     
-            var marker_751f4136533c999b2de2aaad4f48f4c0 = L.marker(
+            var marker_32e9dde4b1d3f4c4ec0e7f44b9473d32 = L.marker(
                 [-12.0290403, -77.0862194],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_46273f37ca2ab985b008d5f49073cef1 = L.AwesomeMarkers.icon(
+            var icon_78e74d2eeaf487dfb4a4ca5fd620ba49 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -703,34 +722,34 @@
             );
         
     
-        var popup_b55d4d7267717a2fbe35777706891c17 = L.popup({
+        var popup_89fcf5f599d9c7f48e69ac72844b79b1 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_7b410da0b7fa1dcbfc0b9469b7253be6 = $(`<div id="html_7b410da0b7fa1dcbfc0b9469b7253be6" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004182090<br>                         <b>Nombre:</b> RAMOS VALIENTE FERNANDO EULOGIO<br>                         <b>Dirección:</b> Av lima 3658<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_b55d4d7267717a2fbe35777706891c17.setContent(html_7b410da0b7fa1dcbfc0b9469b7253be6);
+                var html_00eeab25749e369d10dd79039ea54f7f = $(`<div id="html_00eeab25749e369d10dd79039ea54f7f" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004182090<br>                         <b>Nombre:</b> RAMOS VALIENTE FERNANDO EULOGIO<br>                         <b>Dirección:</b> Av lima 3658<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_89fcf5f599d9c7f48e69ac72844b79b1.setContent(html_00eeab25749e369d10dd79039ea54f7f);
             
         
 
-        marker_751f4136533c999b2de2aaad4f48f4c0.bindPopup(popup_b55d4d7267717a2fbe35777706891c17)
+        marker_32e9dde4b1d3f4c4ec0e7f44b9473d32.bindPopup(popup_89fcf5f599d9c7f48e69ac72844b79b1)
         ;
 
         
     
     
-                marker_751f4136533c999b2de2aaad4f48f4c0.setIcon(icon_46273f37ca2ab985b008d5f49073cef1);
+                marker_32e9dde4b1d3f4c4ec0e7f44b9473d32.setIcon(icon_78e74d2eeaf487dfb4a4ca5fd620ba49);
             
     
-            var marker_1c1f2bdb7e645f4edfcdc5ebdec9bdc6 = L.marker(
+            var marker_0e5c79111d3e31ae3871723297abfa54 = L.marker(
                 [-12.02216, -77.08794],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_7950ce73bb4e315223d31b2304fcfe23 = L.AwesomeMarkers.icon(
+            var icon_88538b6946dc7120cd8905afa87fa9a2 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -741,34 +760,34 @@
             );
         
     
-        var popup_dc3e714a14dac3d113d62ebc58606b3a = L.popup({
+        var popup_5e29e807a76cf8e9c1788ef5421ac89d = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_1a68fbbdf77c6a9b2c990b9a42933d25 = $(`<div id="html_1a68fbbdf77c6a9b2c990b9a42933d25" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001648734<br>                         <b>Nombre:</b> RENGIFO VELA IMMER<br>                         <b>Dirección:</b> AV. ALAMEDA ELVIRA GARCIA NRO. 3872 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_dc3e714a14dac3d113d62ebc58606b3a.setContent(html_1a68fbbdf77c6a9b2c990b9a42933d25);
+                var html_052dfcf9a093dafb330424aa0103cd80 = $(`<div id="html_052dfcf9a093dafb330424aa0103cd80" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001648734<br>                         <b>Nombre:</b> RENGIFO VELA IMMER<br>                         <b>Dirección:</b> AV. ALAMEDA ELVIRA GARCIA NRO. 3872 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_5e29e807a76cf8e9c1788ef5421ac89d.setContent(html_052dfcf9a093dafb330424aa0103cd80);
             
         
 
-        marker_1c1f2bdb7e645f4edfcdc5ebdec9bdc6.bindPopup(popup_dc3e714a14dac3d113d62ebc58606b3a)
+        marker_0e5c79111d3e31ae3871723297abfa54.bindPopup(popup_5e29e807a76cf8e9c1788ef5421ac89d)
         ;
 
         
     
     
-                marker_1c1f2bdb7e645f4edfcdc5ebdec9bdc6.setIcon(icon_7950ce73bb4e315223d31b2304fcfe23);
+                marker_0e5c79111d3e31ae3871723297abfa54.setIcon(icon_88538b6946dc7120cd8905afa87fa9a2);
             
     
-            var marker_01265a29fc09159738ef2a21b0088e0e = L.marker(
+            var marker_a86cf322d15f4cf69e21c65fad110249 = L.marker(
                 [-11.9856361, -77.0926527],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_4cdc5f0234faf55950657bcd377858e8 = L.AwesomeMarkers.icon(
+            var icon_de2adbb0684929ef9455ec86b52c7dc5 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -779,34 +798,34 @@
             );
         
     
-        var popup_395cb45338c6d458df47e8c71e5257bc = L.popup({
+        var popup_d868ad553b58ba53e2bb67d253d8fb38 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_297a2ca23d0e1686c35fbc3dd0227010 = $(`<div id="html_297a2ca23d0e1686c35fbc3dd0227010" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004038727<br>                         <b>Nombre:</b> ROQUE OCAÑA JULIO CESAR<br>                         <b>Dirección:</b> Av los Olivos Mz B Lt 12 <br>                         <b>Estatus:</b> ABANDONADOR 3 A 5 MESES                     </div>                     </div>`)[0];
-                popup_395cb45338c6d458df47e8c71e5257bc.setContent(html_297a2ca23d0e1686c35fbc3dd0227010);
+                var html_2ab6dcce1c272e6894bf5861e11db9ee = $(`<div id="html_2ab6dcce1c272e6894bf5861e11db9ee" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004038727<br>                         <b>Nombre:</b> ROQUE OCAÑA JULIO CESAR<br>                         <b>Dirección:</b> Av los Olivos Mz B Lt 12 <br>                         <b>Estatus:</b> ABANDONADOR 3 A 5 MESES                     </div>                     </div>`)[0];
+                popup_d868ad553b58ba53e2bb67d253d8fb38.setContent(html_2ab6dcce1c272e6894bf5861e11db9ee);
             
         
 
-        marker_01265a29fc09159738ef2a21b0088e0e.bindPopup(popup_395cb45338c6d458df47e8c71e5257bc)
+        marker_a86cf322d15f4cf69e21c65fad110249.bindPopup(popup_d868ad553b58ba53e2bb67d253d8fb38)
         ;
 
         
     
     
-                marker_01265a29fc09159738ef2a21b0088e0e.setIcon(icon_4cdc5f0234faf55950657bcd377858e8);
+                marker_a86cf322d15f4cf69e21c65fad110249.setIcon(icon_de2adbb0684929ef9455ec86b52c7dc5);
             
     
-            var marker_246ec88fc37e550fc9cec3ec5a5bf163 = L.marker(
+            var marker_537fffe281429a902887b048e49b6984 = L.marker(
                 [-12.022373, -77.089609],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_b2138968cf066331a526e94645e5ba16 = L.AwesomeMarkers.icon(
+            var icon_d1c13b3ec28b971b5e42de182ffa3aac = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -817,34 +836,34 @@
             );
         
     
-        var popup_97f64c79a39f4530102fbfd01fa8f7df = L.popup({
+        var popup_fb38f922b0a7b631bea0a27c3bf25886 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_e4ecaabba54134490545111b4ddceeb4 = $(`<div id="html_e4ecaabba54134490545111b4ddceeb4" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004177854<br>                         <b>Nombre:</b> SUAREZ SALAZAR SUSANA CAROLINA<br>                         <b>Dirección:</b> JR TEOFILO ESPEJO 4178<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_97f64c79a39f4530102fbfd01fa8f7df.setContent(html_e4ecaabba54134490545111b4ddceeb4);
+                var html_5f799402c0a2d3011671b32073a50360 = $(`<div id="html_5f799402c0a2d3011671b32073a50360" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004177854<br>                         <b>Nombre:</b> SUAREZ SALAZAR SUSANA CAROLINA<br>                         <b>Dirección:</b> JR TEOFILO ESPEJO 4178<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_fb38f922b0a7b631bea0a27c3bf25886.setContent(html_5f799402c0a2d3011671b32073a50360);
             
         
 
-        marker_246ec88fc37e550fc9cec3ec5a5bf163.bindPopup(popup_97f64c79a39f4530102fbfd01fa8f7df)
+        marker_537fffe281429a902887b048e49b6984.bindPopup(popup_fb38f922b0a7b631bea0a27c3bf25886)
         ;
 
         
     
     
-                marker_246ec88fc37e550fc9cec3ec5a5bf163.setIcon(icon_b2138968cf066331a526e94645e5ba16);
+                marker_537fffe281429a902887b048e49b6984.setIcon(icon_d1c13b3ec28b971b5e42de182ffa3aac);
             
     
-            var marker_3a0414d2147f6ab24dd0f97a544a3539 = L.marker(
+            var marker_785f87cb14ddcb16ba909b7b1e168780 = L.marker(
                 [-12.0243377, -77.0901837],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_cb5e8e7d100b5cb7b3f8460982225cbc = L.AwesomeMarkers.icon(
+            var icon_12012ec222e08bf769cffaec849808ae = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -855,34 +874,34 @@
             );
         
     
-        var popup_e935ac49f5d8579184f157b87b418572 = L.popup({
+        var popup_4ea31c466e84d75ca9ec5250e52e91a7 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_b6fc1e3286df801753edb56d875e8962 = $(`<div id="html_b6fc1e3286df801753edb56d875e8962" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001408836<br>                         <b>Nombre:</b> VARGAS SAHUA ESTHER<br>                         <b>Dirección:</b> JR. TUMBES NRO. 4003 URB. PERU Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_e935ac49f5d8579184f157b87b418572.setContent(html_b6fc1e3286df801753edb56d875e8962);
+                var html_2d0eaf87740803a8eeef0318d9188f3f = $(`<div id="html_2d0eaf87740803a8eeef0318d9188f3f" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001408836<br>                         <b>Nombre:</b> VARGAS SAHUA ESTHER<br>                         <b>Dirección:</b> JR. TUMBES NRO. 4003 URB. PERU Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_4ea31c466e84d75ca9ec5250e52e91a7.setContent(html_2d0eaf87740803a8eeef0318d9188f3f);
             
         
 
-        marker_3a0414d2147f6ab24dd0f97a544a3539.bindPopup(popup_e935ac49f5d8579184f157b87b418572)
+        marker_785f87cb14ddcb16ba909b7b1e168780.bindPopup(popup_4ea31c466e84d75ca9ec5250e52e91a7)
         ;
 
         
     
     
-                marker_3a0414d2147f6ab24dd0f97a544a3539.setIcon(icon_cb5e8e7d100b5cb7b3f8460982225cbc);
+                marker_785f87cb14ddcb16ba909b7b1e168780.setIcon(icon_12012ec222e08bf769cffaec849808ae);
             
     
-            var marker_3e9e7c180b59868bb059bd90b3f27c32 = L.marker(
+            var marker_0c677f31d36632deadeedd8de654257e = L.marker(
                 [-12.0363238, -77.0932692],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_cab1cb32b3282bd914b086d5974b7c9a = L.AwesomeMarkers.icon(
+            var icon_7ab0333164cbf48c94ee4f58f82543cb = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -893,34 +912,34 @@
             );
         
     
-        var popup_c9beceaef563efe288a7bf30e66efa2c = L.popup({
+        var popup_28a02bfd5d069b73422ac885dcb326c9 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_2c2f21a906491256c4bcb7e11cb5fbc2 = $(`<div id="html_2c2f21a906491256c4bcb7e11cb5fbc2" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000234615<br>                         <b>Nombre:</b> VEGA OAUPARI FLORENCIO<br>                         <b>Dirección:</b> CL. JIR AMAZONAS N3896 NRO. 3896 MZA. MAZAA230 URB. PLAYA RIMAC Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_c9beceaef563efe288a7bf30e66efa2c.setContent(html_2c2f21a906491256c4bcb7e11cb5fbc2);
+                var html_9e32584f997c5349aaed112b4c7a8fc9 = $(`<div id="html_9e32584f997c5349aaed112b4c7a8fc9" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000234615<br>                         <b>Nombre:</b> VEGA OAUPARI FLORENCIO<br>                         <b>Dirección:</b> CL. JIR AMAZONAS N3896 NRO. 3896 MZA. MAZAA230 URB. PLAYA RIMAC Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_28a02bfd5d069b73422ac885dcb326c9.setContent(html_9e32584f997c5349aaed112b4c7a8fc9);
             
         
 
-        marker_3e9e7c180b59868bb059bd90b3f27c32.bindPopup(popup_c9beceaef563efe288a7bf30e66efa2c)
+        marker_0c677f31d36632deadeedd8de654257e.bindPopup(popup_28a02bfd5d069b73422ac885dcb326c9)
         ;
 
         
     
     
-                marker_3e9e7c180b59868bb059bd90b3f27c32.setIcon(icon_cab1cb32b3282bd914b086d5974b7c9a);
+                marker_0c677f31d36632deadeedd8de654257e.setIcon(icon_7ab0333164cbf48c94ee4f58f82543cb);
             
     
-            var marker_3ee8914a1d18a13cc758d149244a7c0b = L.marker(
+            var marker_35b348c277344b9ff7570cfdae4093fd = L.marker(
                 [-12.03012, -77.08505],
                 {
 }
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
     
-            var icon_604ab416c2ecaf8e59f806c41c488b62 = L.AwesomeMarkers.icon(
+            var icon_3e1c960c44664169816a75c99f8d9a34 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -931,30 +950,30 @@
             );
         
     
-        var popup_8abf45f92c62bdccbb1a6287ce365b71 = L.popup({
+        var popup_1c67003c8b830410c8c5393ffdae5b56 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_d53715e1f4eac94c69ad375f62bac832 = $(`<div id="html_d53715e1f4eac94c69ad375f62bac832" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001713038<br>                         <b>Nombre:</b> ZAVALETA SILVA MARIA ANALI<br>                         <b>Dirección:</b> JR. IQUITOS NRO. 447 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
-                popup_8abf45f92c62bdccbb1a6287ce365b71.setContent(html_d53715e1f4eac94c69ad375f62bac832);
+                var html_8e303226c7b0dc7593f6c63a833841e4 = $(`<div id="html_8e303226c7b0dc7593f6c63a833841e4" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001713038<br>                         <b>Nombre:</b> ZAVALETA SILVA MARIA ANALI<br>                         <b>Dirección:</b> JR. IQUITOS NRO. 447 Lima-Lima-San Martín de Porres<br>                         <b>Estatus:</b> ESTABLE                     </div>                     </div>`)[0];
+                popup_1c67003c8b830410c8c5393ffdae5b56.setContent(html_8e303226c7b0dc7593f6c63a833841e4);
             
         
 
-        marker_3ee8914a1d18a13cc758d149244a7c0b.bindPopup(popup_8abf45f92c62bdccbb1a6287ce365b71)
+        marker_35b348c277344b9ff7570cfdae4093fd.bindPopup(popup_1c67003c8b830410c8c5393ffdae5b56)
         ;
 
         
     
     
-                marker_3ee8914a1d18a13cc758d149244a7c0b.setIcon(icon_604ab416c2ecaf8e59f806c41c488b62);
+                marker_35b348c277344b9ff7570cfdae4093fd.setIcon(icon_3e1c960c44664169816a75c99f8d9a34);
             
     
-            var poly_line_3d3e52bfa1c3ad533f1d990632f3c873 = L.polyline(
+            var poly_line_b96ae8d546a915a2af876c5867cf51bc = L.polyline(
                 [[-12.03978, -77.0907], [-12.0271082, -77.086157], [-12.027167, -77.084886], [-11.920843, -77.118499], [-12.0242993, -77.0915875], [-12.036301, -77.088628], [-12.0261806, -77.082363], [-12.0173437, -77.08483], [-12.0522626, -77.1391133], [-12.03622, -77.09295], [-12.03584, -77.09066], [-12.0346637, -77.0897388], [-11.98395, -77.0933034], [-12.0206997, -77.0890578], [-12.0348, -77.09136], [-12.0290403, -77.0862194], [-12.02216, -77.08794], [-11.9856361, -77.0926527], [-12.022373, -77.089609], [-12.0243377, -77.0901837], [-12.0363238, -77.0932692], [-12.03012, -77.08505]],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5}
-            ).addTo(map_fa39a9e62baf8b6bd6b5390458ef6a83);
+            ).addTo(map_81abbe77e330f653c2632ee3bb0af093);
         
 </script>
 </html>

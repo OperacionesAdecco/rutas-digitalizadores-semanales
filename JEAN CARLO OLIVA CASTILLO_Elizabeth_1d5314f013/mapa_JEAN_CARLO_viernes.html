@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_fe28d1f027bf4f4f84bc6acaf82a5f03 {
+                #map_a2c4a3abda3f1f07ed6b043ffcbd3417 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -50,9 +50,18 @@
             </script>
 
         
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
 </head>
 <body>
     
+    
+            <style>
+            .leaflet-control-attribution {
+                display: none !important;
+            }
+            </style>
+            
     
             <div style="
                 position: fixed;
@@ -71,14 +80,14 @@
             </div>
             
     
-            <div class="folium-map" id="map_fe28d1f027bf4f4f84bc6acaf82a5f03" ></div>
+            <div class="folium-map" id="map_a2c4a3abda3f1f07ed6b043ffcbd3417" ></div>
         
 </body>
 <script>
     
     
-            var map_fe28d1f027bf4f4f84bc6acaf82a5f03 = L.map(
-                "map_fe28d1f027bf4f4f84bc6acaf82a5f03",
+            var map_a2c4a3abda3f1f07ed6b043ffcbd3417 = L.map(
+                "map_a2c4a3abda3f1f07ed6b043ffcbd3417",
                 {
                     center: [-12.20805, -76.935463],
                     crs: L.CRS.EPSG3857,
@@ -95,7 +104,7 @@
 
         
     
-            var tile_layer_3e716d9ee947f5202b33e48086ebaccc = L.tileLayer(
+            var tile_layer_387f91e0f0776f6cbd59c066e4681dd8 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -112,17 +121,27 @@
             );
         
     
-            tile_layer_3e716d9ee947f5202b33e48086ebaccc.addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            tile_layer_387f91e0f0776f6cbd59c066e4681dd8.addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var marker_8c29cc1871b32512d2f9835f010717fe = L.marker(
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
+        
+    
+            var marker_62dc9e68b30fbd32bfdfa32faf0ff75f = L.marker(
                 [-12.20805, -76.935463],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_482aa28257ef8f8c8c3c517db71ebf09 = L.AwesomeMarkers.icon(
+            var icon_362e7b29ec02f067c986da52512fce6a = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -133,34 +152,34 @@
             );
         
     
-        var popup_51c4dc8d78c39d47c62e28154f1af468 = L.popup({
+        var popup_4ac5bca65181152dee81198243d4bb15 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_8042f33af3ccd296c1baae57391f0711 = $(`<div id="html_8042f33af3ccd296c1baae57391f0711" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004166912<br>                         <b>Nombre:</b> CABEZAS QUISPE GLORIA MARINA<br>                         <b>Dirección:</b> SECTOR 2 GRUPO 4 MZ.H LT.1<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_51c4dc8d78c39d47c62e28154f1af468.setContent(html_8042f33af3ccd296c1baae57391f0711);
+                var html_bc11c37016120705e5ff5810b4108cb5 = $(`<div id="html_bc11c37016120705e5ff5810b4108cb5" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004166912<br>                         <b>Nombre:</b> CABEZAS QUISPE GLORIA MARINA<br>                         <b>Dirección:</b> SECTOR 2 GRUPO 4 MZ.H LT.1<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_4ac5bca65181152dee81198243d4bb15.setContent(html_bc11c37016120705e5ff5810b4108cb5);
             
         
 
-        marker_8c29cc1871b32512d2f9835f010717fe.bindPopup(popup_51c4dc8d78c39d47c62e28154f1af468)
+        marker_62dc9e68b30fbd32bfdfa32faf0ff75f.bindPopup(popup_4ac5bca65181152dee81198243d4bb15)
         ;
 
         
     
     
-                marker_8c29cc1871b32512d2f9835f010717fe.setIcon(icon_482aa28257ef8f8c8c3c517db71ebf09);
+                marker_62dc9e68b30fbd32bfdfa32faf0ff75f.setIcon(icon_362e7b29ec02f067c986da52512fce6a);
             
     
-            var marker_dae9060d629b90fbf7e7200e2d12bb29 = L.marker(
+            var marker_4dbbed980b800f9558329dd7fcf055db = L.marker(
                 [-12.2375605, -76.9347114],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_abe7cc4b3ed07857a993e97ce97adf82 = L.AwesomeMarkers.icon(
+            var icon_8b999cf6f1ba5ffcbe0464174373eccb = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -171,34 +190,34 @@
             );
         
     
-        var popup_47eede85d60e78b6121c790ec88cee76 = L.popup({
+        var popup_97e3093fb21cc7afe2fe15942759cdcb = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_0e3ff3aa42bf814cc7d27c1803744717 = $(`<div id="html_0e3ff3aa42bf814cc7d27c1803744717" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001391125<br>                         <b>Nombre:</b> CORO GUTIERREZ ALICIA MERY<br>                         <b>Dirección:</b> AV. SECTOR 10 GRUPO MZA. Q2A LOTE. 15 URB. AH OASIS-GRUPO 1 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
-                popup_47eede85d60e78b6121c790ec88cee76.setContent(html_0e3ff3aa42bf814cc7d27c1803744717);
+                var html_5e9e09deaf19f7af8b40a305b491b402 = $(`<div id="html_5e9e09deaf19f7af8b40a305b491b402" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001391125<br>                         <b>Nombre:</b> CORO GUTIERREZ ALICIA MERY<br>                         <b>Dirección:</b> AV. SECTOR 10 GRUPO MZA. Q2A LOTE. 15 URB. AH OASIS-GRUPO 1 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
+                popup_97e3093fb21cc7afe2fe15942759cdcb.setContent(html_5e9e09deaf19f7af8b40a305b491b402);
             
         
 
-        marker_dae9060d629b90fbf7e7200e2d12bb29.bindPopup(popup_47eede85d60e78b6121c790ec88cee76)
+        marker_4dbbed980b800f9558329dd7fcf055db.bindPopup(popup_97e3093fb21cc7afe2fe15942759cdcb)
         ;
 
         
     
     
-                marker_dae9060d629b90fbf7e7200e2d12bb29.setIcon(icon_abe7cc4b3ed07857a993e97ce97adf82);
+                marker_4dbbed980b800f9558329dd7fcf055db.setIcon(icon_8b999cf6f1ba5ffcbe0464174373eccb);
             
     
-            var marker_2dd224ad44e45d418a5e779c101c4c60 = L.marker(
+            var marker_6096ff5e9d634def4aea97b422bd4351 = L.marker(
                 [-12.2008043, -76.9526581],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_1a641b3fa534646532e5982b22c5d527 = L.AwesomeMarkers.icon(
+            var icon_91bee89dcd6ea261a6b39cd6d67630d9 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -209,34 +228,34 @@
             );
         
     
-        var popup_08225e6a0b2331bc70d9c5e2a4fe0716 = L.popup({
+        var popup_4ae8548fe24d3a707e52d5725a88bd2c = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_77bb18770fce3046ca469b4f7e0a0d1b = $(`<div id="html_77bb18770fce3046ca469b4f7e0a0d1b" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001025991<br>                         <b>Nombre:</b> CURIHUAMANI LEON MONICA ALICIA<br>                         <b>Dirección:</b> SECTOR 1 MZA. B LOTE. 12 URB. SEC1 GPO26 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_08225e6a0b2331bc70d9c5e2a4fe0716.setContent(html_77bb18770fce3046ca469b4f7e0a0d1b);
+                var html_77ffc9ac8be9dceb8be014197600dc39 = $(`<div id="html_77ffc9ac8be9dceb8be014197600dc39" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001025991<br>                         <b>Nombre:</b> CURIHUAMANI LEON MONICA ALICIA<br>                         <b>Dirección:</b> SECTOR 1 MZA. B LOTE. 12 URB. SEC1 GPO26 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_4ae8548fe24d3a707e52d5725a88bd2c.setContent(html_77ffc9ac8be9dceb8be014197600dc39);
             
         
 
-        marker_2dd224ad44e45d418a5e779c101c4c60.bindPopup(popup_08225e6a0b2331bc70d9c5e2a4fe0716)
+        marker_6096ff5e9d634def4aea97b422bd4351.bindPopup(popup_4ae8548fe24d3a707e52d5725a88bd2c)
         ;
 
         
     
     
-                marker_2dd224ad44e45d418a5e779c101c4c60.setIcon(icon_1a641b3fa534646532e5982b22c5d527);
+                marker_6096ff5e9d634def4aea97b422bd4351.setIcon(icon_91bee89dcd6ea261a6b39cd6d67630d9);
             
     
-            var marker_632bd6d00a0e80f137020889c440e966 = L.marker(
+            var marker_040ff7d5a611a14e2c12970ad0b5bfa8 = L.marker(
                 [-12.2086015, -76.9433484],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_de274d03c95e21f75118eebafd55b231 = L.AwesomeMarkers.icon(
+            var icon_a3e21f4b118b6a34735525aae1917ca9 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -247,34 +266,34 @@
             );
         
     
-        var popup_de1f1b20cd2e2a139faf316968235a81 = L.popup({
+        var popup_f8c0184da6b5b70fc12589cdcdc2af80 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_7f1b664e8c8ec17e07d7597d92d5fdd2 = $(`<div id="html_7f1b664e8c8ec17e07d7597d92d5fdd2" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001548632<br>                         <b>Nombre:</b> FABIAN DE LA CRUZ DE LAZO ANGELICA ALICI<br>                         <b>Dirección:</b> SECTOR 2 GRUPO 18 MZA. B LOTE. 16 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_de1f1b20cd2e2a139faf316968235a81.setContent(html_7f1b664e8c8ec17e07d7597d92d5fdd2);
+                var html_2727895df7ee652f7650a9c6af17f43f = $(`<div id="html_2727895df7ee652f7650a9c6af17f43f" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001548632<br>                         <b>Nombre:</b> FABIAN DE LA CRUZ DE LAZO ANGELICA ALICI<br>                         <b>Dirección:</b> SECTOR 2 GRUPO 18 MZA. B LOTE. 16 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_f8c0184da6b5b70fc12589cdcdc2af80.setContent(html_2727895df7ee652f7650a9c6af17f43f);
             
         
 
-        marker_632bd6d00a0e80f137020889c440e966.bindPopup(popup_de1f1b20cd2e2a139faf316968235a81)
+        marker_040ff7d5a611a14e2c12970ad0b5bfa8.bindPopup(popup_f8c0184da6b5b70fc12589cdcdc2af80)
         ;
 
         
     
     
-                marker_632bd6d00a0e80f137020889c440e966.setIcon(icon_de274d03c95e21f75118eebafd55b231);
+                marker_040ff7d5a611a14e2c12970ad0b5bfa8.setIcon(icon_a3e21f4b118b6a34735525aae1917ca9);
             
     
-            var marker_a14cd5c92ed4c2ba3874e22e3aefe8c2 = L.marker(
+            var marker_0abe05ba0628885ee7454116ad56164d = L.marker(
                 [-12.2114462, -76.9506622],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_cdf5b480c82fcfecaa703cbd0ebd025e = L.AwesomeMarkers.icon(
+            var icon_ed0dc679eb5a64c77081db1a324a8787 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -285,34 +304,34 @@
             );
         
     
-        var popup_5b3f8640fcdc9de2aa5755386db99c92 = L.popup({
+        var popup_b3cfdaba9db0231c5d10d71d1b4670d8 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_311b39ed25965f6347c1e187de389d06 = $(`<div id="html_311b39ed25965f6347c1e187de389d06" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001674375<br>                         <b>Nombre:</b> FLORES PUZA DE QUISPE MAGNA<br>                         <b>Dirección:</b> SECTOR 6 GRUPO 3 LOTE. 5 URB. AV PERU Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_5b3f8640fcdc9de2aa5755386db99c92.setContent(html_311b39ed25965f6347c1e187de389d06);
+                var html_6ff9f72fc4df27adf69d032ef78787cb = $(`<div id="html_6ff9f72fc4df27adf69d032ef78787cb" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001674375<br>                         <b>Nombre:</b> FLORES PUZA DE QUISPE MAGNA<br>                         <b>Dirección:</b> SECTOR 6 GRUPO 3 LOTE. 5 URB. AV PERU Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_b3cfdaba9db0231c5d10d71d1b4670d8.setContent(html_6ff9f72fc4df27adf69d032ef78787cb);
             
         
 
-        marker_a14cd5c92ed4c2ba3874e22e3aefe8c2.bindPopup(popup_5b3f8640fcdc9de2aa5755386db99c92)
+        marker_0abe05ba0628885ee7454116ad56164d.bindPopup(popup_b3cfdaba9db0231c5d10d71d1b4670d8)
         ;
 
         
     
     
-                marker_a14cd5c92ed4c2ba3874e22e3aefe8c2.setIcon(icon_cdf5b480c82fcfecaa703cbd0ebd025e);
+                marker_0abe05ba0628885ee7454116ad56164d.setIcon(icon_ed0dc679eb5a64c77081db1a324a8787);
             
     
-            var marker_735945c926a5b61bd6457a23c163d574 = L.marker(
+            var marker_bf141da9ba95c781d7ac71d4046fdc48 = L.marker(
                 [-12.210648, -76.939811],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_7c87a52f30f7aef60bef4bc39f9a3e7b = L.AwesomeMarkers.icon(
+            var icon_24f09824b2dff50b4da72b6a51110d57 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -323,34 +342,34 @@
             );
         
     
-        var popup_a0b346e0b6b7edc1582569ba318eadcf = L.popup({
+        var popup_f8a42952fc01653dadf91331dc61a8cf = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_ea6cab8e0a489d0ca14a925e3681fe6c = $(`<div id="html_ea6cab8e0a489d0ca14a925e3681fe6c" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004096419<br>                         <b>Nombre:</b> GONZALES ARQUEROS NELSON MARTIN<br>                         <b>Dirección:</b> Sector 2 Grupo 14 MZ G LT 2<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
-                popup_a0b346e0b6b7edc1582569ba318eadcf.setContent(html_ea6cab8e0a489d0ca14a925e3681fe6c);
+                var html_5d07afd023dd067d5b37ed0d8da40ccf = $(`<div id="html_5d07afd023dd067d5b37ed0d8da40ccf" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004096419<br>                         <b>Nombre:</b> GONZALES ARQUEROS NELSON MARTIN<br>                         <b>Dirección:</b> Sector 2 Grupo 14 MZ G LT 2<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
+                popup_f8a42952fc01653dadf91331dc61a8cf.setContent(html_5d07afd023dd067d5b37ed0d8da40ccf);
             
         
 
-        marker_735945c926a5b61bd6457a23c163d574.bindPopup(popup_a0b346e0b6b7edc1582569ba318eadcf)
+        marker_bf141da9ba95c781d7ac71d4046fdc48.bindPopup(popup_f8a42952fc01653dadf91331dc61a8cf)
         ;
 
         
     
     
-                marker_735945c926a5b61bd6457a23c163d574.setIcon(icon_7c87a52f30f7aef60bef4bc39f9a3e7b);
+                marker_bf141da9ba95c781d7ac71d4046fdc48.setIcon(icon_24f09824b2dff50b4da72b6a51110d57);
             
     
-            var marker_2212dd444d4f7f0c9ac4da4c6ed3fc2d = L.marker(
+            var marker_610d56e131a00f83785fcb929ce51d4a = L.marker(
                 [-12.2119853, -76.9551488],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_bff31e7d631f88a46ed8d80702e9ed5c = L.AwesomeMarkers.icon(
+            var icon_cbea4b0f286a17bde5e972341f1d6dbe = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -361,34 +380,34 @@
             );
         
     
-        var popup_34a69c676b9e6b96f3d704e9d39b3d42 = L.popup({
+        var popup_c27a1f519b3cefad763a7a7b633ef83b = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_6f5ac99394dc2eaf6c143c5a5a5d101a = $(`<div id="html_6f5ac99394dc2eaf6c143c5a5a5d101a" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001633473<br>                         <b>Nombre:</b> HERMANAS SANTA E.I.R.L.<br>                         <b>Dirección:</b> AV. C MZA. E LOTE. 1 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
-                popup_34a69c676b9e6b96f3d704e9d39b3d42.setContent(html_6f5ac99394dc2eaf6c143c5a5a5d101a);
+                var html_cfae97b35600a0c3c97a7659c77f9b4d = $(`<div id="html_cfae97b35600a0c3c97a7659c77f9b4d" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001633473<br>                         <b>Nombre:</b> HERMANAS SANTA E.I.R.L.<br>                         <b>Dirección:</b> AV. C MZA. E LOTE. 1 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
+                popup_c27a1f519b3cefad763a7a7b633ef83b.setContent(html_cfae97b35600a0c3c97a7659c77f9b4d);
             
         
 
-        marker_2212dd444d4f7f0c9ac4da4c6ed3fc2d.bindPopup(popup_34a69c676b9e6b96f3d704e9d39b3d42)
+        marker_610d56e131a00f83785fcb929ce51d4a.bindPopup(popup_c27a1f519b3cefad763a7a7b633ef83b)
         ;
 
         
     
     
-                marker_2212dd444d4f7f0c9ac4da4c6ed3fc2d.setIcon(icon_bff31e7d631f88a46ed8d80702e9ed5c);
+                marker_610d56e131a00f83785fcb929ce51d4a.setIcon(icon_cbea4b0f286a17bde5e972341f1d6dbe);
             
     
-            var marker_4b7f5660f0eebfed4135e45bd9c67914 = L.marker(
+            var marker_37e3d903528db9e05802be0b4076907a = L.marker(
                 [-12.210243, -76.940804],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_98f69eca60ac3a70507823d41bc8fd68 = L.AwesomeMarkers.icon(
+            var icon_05e14546180e30426f4033b54af4dda2 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -399,34 +418,34 @@
             );
         
     
-        var popup_cab9db409585a3ad49fd915408cb4243 = L.popup({
+        var popup_8c6a23ce1fe74c2f5d14ccc8548842e5 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_f2771a9420924ad2d8f7c90f6bcb58d2 = $(`<div id="html_f2771a9420924ad2d8f7c90f6bcb58d2" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004065888<br>                         <b>Nombre:</b> HUAMAN NAVARRO LEONARDO COSTERIANO<br>                         <b>Dirección:</b> Grupo 14 MZ L LT 11 Sector 2<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
-                popup_cab9db409585a3ad49fd915408cb4243.setContent(html_f2771a9420924ad2d8f7c90f6bcb58d2);
+                var html_937d6fb5b0f6761bddef794379e893f3 = $(`<div id="html_937d6fb5b0f6761bddef794379e893f3" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004065888<br>                         <b>Nombre:</b> HUAMAN NAVARRO LEONARDO COSTERIANO<br>                         <b>Dirección:</b> Grupo 14 MZ L LT 11 Sector 2<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
+                popup_8c6a23ce1fe74c2f5d14ccc8548842e5.setContent(html_937d6fb5b0f6761bddef794379e893f3);
             
         
 
-        marker_4b7f5660f0eebfed4135e45bd9c67914.bindPopup(popup_cab9db409585a3ad49fd915408cb4243)
+        marker_37e3d903528db9e05802be0b4076907a.bindPopup(popup_8c6a23ce1fe74c2f5d14ccc8548842e5)
         ;
 
         
     
     
-                marker_4b7f5660f0eebfed4135e45bd9c67914.setIcon(icon_98f69eca60ac3a70507823d41bc8fd68);
+                marker_37e3d903528db9e05802be0b4076907a.setIcon(icon_05e14546180e30426f4033b54af4dda2);
             
     
-            var marker_e5566004cc001c9d4000497d80449538 = L.marker(
+            var marker_2f6274409c20d2a937348b6368e53d7b = L.marker(
                 [-12.2112254, -76.9415302],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_24db19485dff0e1c3bb72e0c31e238d6 = L.AwesomeMarkers.icon(
+            var icon_9c11cfe0763fbdb060dea90709d4f46a = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -437,34 +456,34 @@
             );
         
     
-        var popup_7fa1f3c4e0dd1cafdf1ac46a66996117 = L.popup({
+        var popup_00725d0dce40ad70af6f11363ea9c99f = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_a88608bdb7692ebb38738d6cbec6334e = $(`<div id="html_a88608bdb7692ebb38738d6cbec6334e" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001650917<br>                         <b>Nombre:</b> HUAMANI GUTIERREZ HILDA VALENTINA<br>                         <b>Dirección:</b> SECTOR 2 GRUPO 19 MZA. E LOTE. 4 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
-                popup_7fa1f3c4e0dd1cafdf1ac46a66996117.setContent(html_a88608bdb7692ebb38738d6cbec6334e);
+                var html_cb225ab38efe4c3a36e72ddbe56d0ca6 = $(`<div id="html_cb225ab38efe4c3a36e72ddbe56d0ca6" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001650917<br>                         <b>Nombre:</b> HUAMANI GUTIERREZ HILDA VALENTINA<br>                         <b>Dirección:</b> SECTOR 2 GRUPO 19 MZA. E LOTE. 4 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
+                popup_00725d0dce40ad70af6f11363ea9c99f.setContent(html_cb225ab38efe4c3a36e72ddbe56d0ca6);
             
         
 
-        marker_e5566004cc001c9d4000497d80449538.bindPopup(popup_7fa1f3c4e0dd1cafdf1ac46a66996117)
+        marker_2f6274409c20d2a937348b6368e53d7b.bindPopup(popup_00725d0dce40ad70af6f11363ea9c99f)
         ;
 
         
     
     
-                marker_e5566004cc001c9d4000497d80449538.setIcon(icon_24db19485dff0e1c3bb72e0c31e238d6);
+                marker_2f6274409c20d2a937348b6368e53d7b.setIcon(icon_9c11cfe0763fbdb060dea90709d4f46a);
             
     
-            var marker_a1188436d69911e96351d4e74036f16f = L.marker(
+            var marker_5aac32f1dd2644275fc0e0bc1c70aff0 = L.marker(
                 [-12.2085898, -76.9346833],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_8b2998ac09c3984afcf9d4220faf5f4f = L.AwesomeMarkers.icon(
+            var icon_07873f696e33491ab9ad9fb055fa685b = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -475,34 +494,34 @@
             );
         
     
-        var popup_d8520224f3b2a905acb747e1e15f3f4f = L.popup({
+        var popup_9d625cb4fdd76d878ed9fa9f2023a3c3 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_56157c3f1e18aebc7160f0b3b130dcb6 = $(`<div id="html_56157c3f1e18aebc7160f0b3b130dcb6" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001000735<br>                         <b>Nombre:</b> HUILLCAYA HILARIO ELENA ISABEL<br>                         <b>Dirección:</b> SEC 2 GRUPO 4 MZA. G LOTE. 17 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
-                popup_d8520224f3b2a905acb747e1e15f3f4f.setContent(html_56157c3f1e18aebc7160f0b3b130dcb6);
+                var html_ae3716c82d5a22e35760a2b4cc0552d7 = $(`<div id="html_ae3716c82d5a22e35760a2b4cc0552d7" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001000735<br>                         <b>Nombre:</b> HUILLCAYA HILARIO ELENA ISABEL<br>                         <b>Dirección:</b> SEC 2 GRUPO 4 MZA. G LOTE. 17 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
+                popup_9d625cb4fdd76d878ed9fa9f2023a3c3.setContent(html_ae3716c82d5a22e35760a2b4cc0552d7);
             
         
 
-        marker_a1188436d69911e96351d4e74036f16f.bindPopup(popup_d8520224f3b2a905acb747e1e15f3f4f)
+        marker_5aac32f1dd2644275fc0e0bc1c70aff0.bindPopup(popup_9d625cb4fdd76d878ed9fa9f2023a3c3)
         ;
 
         
     
     
-                marker_a1188436d69911e96351d4e74036f16f.setIcon(icon_8b2998ac09c3984afcf9d4220faf5f4f);
+                marker_5aac32f1dd2644275fc0e0bc1c70aff0.setIcon(icon_07873f696e33491ab9ad9fb055fa685b);
             
     
-            var marker_3359e901b178909029a690f4bd9c6ae3 = L.marker(
+            var marker_daf39b3a28286a694193be8c98b8642d = L.marker(
                 [-12.205587, -76.941975],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_ccc3de0b913e33d48ea008cf66d3db43 = L.AwesomeMarkers.icon(
+            var icon_a5b67172d6d298f36b917f9a8a4196b2 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -513,34 +532,34 @@
             );
         
     
-        var popup_86fa1f53a7972ad183e116c4c1380c19 = L.popup({
+        var popup_8b70d0a32af2d58ef27a21256b406cee = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_adb400be3493b5a54712c2414b7e310a = $(`<div id="html_adb400be3493b5a54712c2414b7e310a" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004099044<br>                         <b>Nombre:</b> MAMANI CHIPANA REYNA<br>                         <b>Dirección:</b> MCDO. 24 DE JUNIO PTO-G39<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0A2 PEDIDOS)                     </div>                     </div>`)[0];
-                popup_86fa1f53a7972ad183e116c4c1380c19.setContent(html_adb400be3493b5a54712c2414b7e310a);
+                var html_14a1cf33076f1470c82f965ef71b9093 = $(`<div id="html_14a1cf33076f1470c82f965ef71b9093" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004099044<br>                         <b>Nombre:</b> MAMANI CHIPANA REYNA<br>                         <b>Dirección:</b> MCDO. 24 DE JUNIO PTO-G39<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0A2 PEDIDOS)                     </div>                     </div>`)[0];
+                popup_8b70d0a32af2d58ef27a21256b406cee.setContent(html_14a1cf33076f1470c82f965ef71b9093);
             
         
 
-        marker_3359e901b178909029a690f4bd9c6ae3.bindPopup(popup_86fa1f53a7972ad183e116c4c1380c19)
+        marker_daf39b3a28286a694193be8c98b8642d.bindPopup(popup_8b70d0a32af2d58ef27a21256b406cee)
         ;
 
         
     
     
-                marker_3359e901b178909029a690f4bd9c6ae3.setIcon(icon_ccc3de0b913e33d48ea008cf66d3db43);
+                marker_daf39b3a28286a694193be8c98b8642d.setIcon(icon_a5b67172d6d298f36b917f9a8a4196b2);
             
     
-            var marker_8ddbe4a59f0bdc8607966bcd01042c75 = L.marker(
+            var marker_cce9771c5bb204f6f656234756eb5837 = L.marker(
                 [-12.2467944, -76.9264579],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_a6ec11df37143959fc8b61a063b5d55b = L.AwesomeMarkers.icon(
+            var icon_dd31789130e4d526b8ead6ec055bda65 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -551,34 +570,34 @@
             );
         
     
-        var popup_fe2ac1176fd5b9289c11922dd97fdb02 = L.popup({
+        var popup_5c44a80825652de90951e1b4d4023a13 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_23990d3d369945d0ecbb59e55ae06ab1 = $(`<div id="html_23990d3d369945d0ecbb59e55ae06ab1" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001644382<br>                         <b>Nombre:</b> MENESES PICHARDO KEKTA LORENZA<br>                         <b>Dirección:</b> AV. EDILBERTO RAMOS MZA. 12 LOTE. 03 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0A2 PEDIDOS)                     </div>                     </div>`)[0];
-                popup_fe2ac1176fd5b9289c11922dd97fdb02.setContent(html_23990d3d369945d0ecbb59e55ae06ab1);
+                var html_652df3b350f242a5901906a60b97b206 = $(`<div id="html_652df3b350f242a5901906a60b97b206" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001644382<br>                         <b>Nombre:</b> MENESES PICHARDO KEKTA LORENZA<br>                         <b>Dirección:</b> AV. EDILBERTO RAMOS MZA. 12 LOTE. 03 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0A2 PEDIDOS)                     </div>                     </div>`)[0];
+                popup_5c44a80825652de90951e1b4d4023a13.setContent(html_652df3b350f242a5901906a60b97b206);
             
         
 
-        marker_8ddbe4a59f0bdc8607966bcd01042c75.bindPopup(popup_fe2ac1176fd5b9289c11922dd97fdb02)
+        marker_cce9771c5bb204f6f656234756eb5837.bindPopup(popup_5c44a80825652de90951e1b4d4023a13)
         ;
 
         
     
     
-                marker_8ddbe4a59f0bdc8607966bcd01042c75.setIcon(icon_a6ec11df37143959fc8b61a063b5d55b);
+                marker_cce9771c5bb204f6f656234756eb5837.setIcon(icon_dd31789130e4d526b8ead6ec055bda65);
             
     
-            var marker_7385aeb3c83553abb3d52c9e9ccd87c5 = L.marker(
+            var marker_78fbf5f3d4884db54b2745dec472106c = L.marker(
                 [-12.2111336, -76.9338511],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_57dcd677c8514bae50225dcec3731930 = L.AwesomeMarkers.icon(
+            var icon_7419514551cf1dff3e5938f2435f8623 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -589,34 +608,34 @@
             );
         
     
-        var popup_4865ebc3924901e5d6c01f66f0eab6e3 = L.popup({
+        var popup_7775a30535d15d497e8f4c12b8131e66 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_68ff4aed4061f7cf132f939bb3efd7be = $(`<div id="html_68ff4aed4061f7cf132f939bb3efd7be" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001429444<br>                         <b>Nombre:</b> RAYMUNDO BALVIN DE NAVARRO FELISA<br>                         <b>Dirección:</b> SECTOR 2 GRUPO 5 MZA. I LOTE. 13 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_4865ebc3924901e5d6c01f66f0eab6e3.setContent(html_68ff4aed4061f7cf132f939bb3efd7be);
+                var html_ed464401dd6af1dd3d0ee0f4a71eeef6 = $(`<div id="html_ed464401dd6af1dd3d0ee0f4a71eeef6" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001429444<br>                         <b>Nombre:</b> RAYMUNDO BALVIN DE NAVARRO FELISA<br>                         <b>Dirección:</b> SECTOR 2 GRUPO 5 MZA. I LOTE. 13 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_7775a30535d15d497e8f4c12b8131e66.setContent(html_ed464401dd6af1dd3d0ee0f4a71eeef6);
             
         
 
-        marker_7385aeb3c83553abb3d52c9e9ccd87c5.bindPopup(popup_4865ebc3924901e5d6c01f66f0eab6e3)
+        marker_78fbf5f3d4884db54b2745dec472106c.bindPopup(popup_7775a30535d15d497e8f4c12b8131e66)
         ;
 
         
     
     
-                marker_7385aeb3c83553abb3d52c9e9ccd87c5.setIcon(icon_57dcd677c8514bae50225dcec3731930);
+                marker_78fbf5f3d4884db54b2745dec472106c.setIcon(icon_7419514551cf1dff3e5938f2435f8623);
             
     
-            var marker_0bc3796435eb5ad8284ec5ffad9c0fad = L.marker(
+            var marker_77c9d041e622b41ece68b14a7f07c51b = L.marker(
                 [-12.1929639, -76.9468658],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_9854303bafcef465de76a7ce3579e47e = L.AwesomeMarkers.icon(
+            var icon_6d6826a9bd8c4de59e4f1b7fb88541f3 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -627,34 +646,34 @@
             );
         
     
-        var popup_698947d6134b4a7e84d6c1830cb2aa4d = L.popup({
+        var popup_77fde3a23af96ae9f40e8c1c808611c3 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_808061e08e2456af9721860140f210ba = $(`<div id="html_808061e08e2456af9721860140f210ba" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001561757<br>                         <b>Nombre:</b> RUEDA RICRA YSABEL GLADYS<br>                         <b>Dirección:</b> AV. SECTOR 1 GRUPO 8 MZA. C LOTE. 1 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> ABANDONADOR 2 MESES                     </div>                     </div>`)[0];
-                popup_698947d6134b4a7e84d6c1830cb2aa4d.setContent(html_808061e08e2456af9721860140f210ba);
+                var html_be05e137173de86d59dd33512ed02a66 = $(`<div id="html_be05e137173de86d59dd33512ed02a66" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001561757<br>                         <b>Nombre:</b> RUEDA RICRA YSABEL GLADYS<br>                         <b>Dirección:</b> AV. SECTOR 1 GRUPO 8 MZA. C LOTE. 1 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> ABANDONADOR 2 MESES                     </div>                     </div>`)[0];
+                popup_77fde3a23af96ae9f40e8c1c808611c3.setContent(html_be05e137173de86d59dd33512ed02a66);
             
         
 
-        marker_0bc3796435eb5ad8284ec5ffad9c0fad.bindPopup(popup_698947d6134b4a7e84d6c1830cb2aa4d)
+        marker_77c9d041e622b41ece68b14a7f07c51b.bindPopup(popup_77fde3a23af96ae9f40e8c1c808611c3)
         ;
 
         
     
     
-                marker_0bc3796435eb5ad8284ec5ffad9c0fad.setIcon(icon_9854303bafcef465de76a7ce3579e47e);
+                marker_77c9d041e622b41ece68b14a7f07c51b.setIcon(icon_6d6826a9bd8c4de59e4f1b7fb88541f3);
             
     
-            var marker_fc3c740de425f2e309c9c4ce1e13976c = L.marker(
+            var marker_8a07677188451a4b7a39da9f7fc46c90 = L.marker(
                 [-12.2034298, -76.9504952],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_5cebfdeb29492ed1dd7f9fac98fb1b52 = L.AwesomeMarkers.icon(
+            var icon_a02b6f9af78b0bfeeb2b1d9e98819ba8 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -665,34 +684,34 @@
             );
         
     
-        var popup_8f7f119035ad8de3bba2ff43787e725b = L.popup({
+        var popup_8d7e98a179390cf83d2297f09cdd3bd1 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_76808fc9c65b7759024f611ba909948d = $(`<div id="html_76808fc9c65b7759024f611ba909948d" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001304584<br>                         <b>Nombre:</b> SALINAS FIGUEROA FRANCISCO BERNARDO<br>                         <b>Dirección:</b> SECTOR 1 GRU 25 MZA. G LOTE. 8 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_8f7f119035ad8de3bba2ff43787e725b.setContent(html_76808fc9c65b7759024f611ba909948d);
+                var html_bad7d1b094572725a6527cb88b382b5d = $(`<div id="html_bad7d1b094572725a6527cb88b382b5d" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001304584<br>                         <b>Nombre:</b> SALINAS FIGUEROA FRANCISCO BERNARDO<br>                         <b>Dirección:</b> SECTOR 1 GRU 25 MZA. G LOTE. 8 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_8d7e98a179390cf83d2297f09cdd3bd1.setContent(html_bad7d1b094572725a6527cb88b382b5d);
             
         
 
-        marker_fc3c740de425f2e309c9c4ce1e13976c.bindPopup(popup_8f7f119035ad8de3bba2ff43787e725b)
+        marker_8a07677188451a4b7a39da9f7fc46c90.bindPopup(popup_8d7e98a179390cf83d2297f09cdd3bd1)
         ;
 
         
     
     
-                marker_fc3c740de425f2e309c9c4ce1e13976c.setIcon(icon_5cebfdeb29492ed1dd7f9fac98fb1b52);
+                marker_8a07677188451a4b7a39da9f7fc46c90.setIcon(icon_a02b6f9af78b0bfeeb2b1d9e98819ba8);
             
     
-            var marker_9af56c3fd57af1ff03d1cd399720f038 = L.marker(
+            var marker_562d4e8ee9bce04afcd7b48fe29eebb6 = L.marker(
                 [-12.2257214, -76.9425834],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_eb318c96c6fe8fb6d75e8b6901d3e59e = L.AwesomeMarkers.icon(
+            var icon_b4211152f1b62965b2c111fdf1fffd2b = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -703,34 +722,34 @@
             );
         
     
-        var popup_22209e498b579cb4cc8841b6b6b38ec2 = L.popup({
+        var popup_95266d793939c8d964dce060f732712a = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_bc99cc8fdfa06c2e1021e704a478e8b3 = $(`<div id="html_bc99cc8fdfa06c2e1021e704a478e8b3" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001441755<br>                         <b>Nombre:</b> SAMANIEGO TIMOTEO CARMEN ELENA<br>                         <b>Dirección:</b> AV. SECTOR 6 GRUPO 8A MZA. A LOTE. 19 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> 4 ABANDONADOR 2M                     </div>                     </div>`)[0];
-                popup_22209e498b579cb4cc8841b6b6b38ec2.setContent(html_bc99cc8fdfa06c2e1021e704a478e8b3);
+                var html_8839a7a1f864d010681c3820797cb7af = $(`<div id="html_8839a7a1f864d010681c3820797cb7af" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001441755<br>                         <b>Nombre:</b> SAMANIEGO TIMOTEO CARMEN ELENA<br>                         <b>Dirección:</b> AV. SECTOR 6 GRUPO 8A MZA. A LOTE. 19 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> 4 ABANDONADOR 2M                     </div>                     </div>`)[0];
+                popup_95266d793939c8d964dce060f732712a.setContent(html_8839a7a1f864d010681c3820797cb7af);
             
         
 
-        marker_9af56c3fd57af1ff03d1cd399720f038.bindPopup(popup_22209e498b579cb4cc8841b6b6b38ec2)
+        marker_562d4e8ee9bce04afcd7b48fe29eebb6.bindPopup(popup_95266d793939c8d964dce060f732712a)
         ;
 
         
     
     
-                marker_9af56c3fd57af1ff03d1cd399720f038.setIcon(icon_eb318c96c6fe8fb6d75e8b6901d3e59e);
+                marker_562d4e8ee9bce04afcd7b48fe29eebb6.setIcon(icon_b4211152f1b62965b2c111fdf1fffd2b);
             
     
-            var marker_453f1cec0eaa928df691777445de26f5 = L.marker(
+            var marker_ee4436a677d08281158553dfeb182670 = L.marker(
                 [-12.2107289, -76.9324312],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_7ccec8f30e5850b7989a188d34e5add2 = L.AwesomeMarkers.icon(
+            var icon_af4b34c491584f98a6766864ed45eab8 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -741,34 +760,34 @@
             );
         
     
-        var popup_7e780b8bc2efa783486ffc8e88b3955e = L.popup({
+        var popup_88a563b0b9e2778f539fbfc8afef0d29 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_f9070bcbb652cd24b2b10cdc71d74280 = $(`<div id="html_f9070bcbb652cd24b2b10cdc71d74280" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001742372<br>                         <b>Nombre:</b> VASQUEZ REVATA DE SEVILLANOS MARINA<br>                         <b>Dirección:</b> SECT. 2 GRUPO 5 MZA. F LOTE. 20 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_7e780b8bc2efa783486ffc8e88b3955e.setContent(html_f9070bcbb652cd24b2b10cdc71d74280);
+                var html_5f699f8a1d724bcf84120fa5d12e60d4 = $(`<div id="html_5f699f8a1d724bcf84120fa5d12e60d4" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001742372<br>                         <b>Nombre:</b> VASQUEZ REVATA DE SEVILLANOS MARINA<br>                         <b>Dirección:</b> SECT. 2 GRUPO 5 MZA. F LOTE. 20 Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_88a563b0b9e2778f539fbfc8afef0d29.setContent(html_5f699f8a1d724bcf84120fa5d12e60d4);
             
         
 
-        marker_453f1cec0eaa928df691777445de26f5.bindPopup(popup_7e780b8bc2efa783486ffc8e88b3955e)
+        marker_ee4436a677d08281158553dfeb182670.bindPopup(popup_88a563b0b9e2778f539fbfc8afef0d29)
         ;
 
         
     
     
-                marker_453f1cec0eaa928df691777445de26f5.setIcon(icon_7ccec8f30e5850b7989a188d34e5add2);
+                marker_ee4436a677d08281158553dfeb182670.setIcon(icon_af4b34c491584f98a6766864ed45eab8);
             
     
-            var marker_928ae30e6d6bed6868c4952c94998ee2 = L.marker(
+            var marker_3118962c22dc50e7f21b0dce6c9d969f = L.marker(
                 [-12.2267627, -76.9341854],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_a425eb3e0a81aae7df827c973f18254c = L.AwesomeMarkers.icon(
+            var icon_8346430c23b5e0fc93bc979f4ff0aa37 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -779,34 +798,34 @@
             );
         
     
-        var popup_58f2efb2c206040d7b46ec86e3e6cd9e = L.popup({
+        var popup_e5489ae6f8c2d8419ccbbd84f701779c = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_19eb82ffce60e39a635c4abc34c39c8a = $(`<div id="html_19eb82ffce60e39a635c4abc34c39c8a" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001179729<br>                         <b>Nombre:</b> VERDE RAMOS JANET<br>                         <b>Dirección:</b> AV. TALARA MZA. L LOTE. 8 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_58f2efb2c206040d7b46ec86e3e6cd9e.setContent(html_19eb82ffce60e39a635c4abc34c39c8a);
+                var html_4d351eda81ff9318f92e20de78eb0188 = $(`<div id="html_4d351eda81ff9318f92e20de78eb0188" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001179729<br>                         <b>Nombre:</b> VERDE RAMOS JANET<br>                         <b>Dirección:</b> AV. TALARA MZA. L LOTE. 8 URB. VILLA EL SALVADOR Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_e5489ae6f8c2d8419ccbbd84f701779c.setContent(html_4d351eda81ff9318f92e20de78eb0188);
             
         
 
-        marker_928ae30e6d6bed6868c4952c94998ee2.bindPopup(popup_58f2efb2c206040d7b46ec86e3e6cd9e)
+        marker_3118962c22dc50e7f21b0dce6c9d969f.bindPopup(popup_e5489ae6f8c2d8419ccbbd84f701779c)
         ;
 
         
     
     
-                marker_928ae30e6d6bed6868c4952c94998ee2.setIcon(icon_a425eb3e0a81aae7df827c973f18254c);
+                marker_3118962c22dc50e7f21b0dce6c9d969f.setIcon(icon_8346430c23b5e0fc93bc979f4ff0aa37);
             
     
-            var marker_354e0937cbe4a44f70b514a919572048 = L.marker(
+            var marker_9ca4d8e036b1868993a3b245b9c0c332 = L.marker(
                 [-12.208654, -76.946866],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_4a2c76fccbbfe8e487cf0c73bf2d5782 = L.AwesomeMarkers.icon(
+            var icon_4ddb9d9607f46382e45e474b3769f95e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -817,34 +836,34 @@
             );
         
     
-        var popup_90528bdd498c7ed450b8845866177617 = L.popup({
+        var popup_638ee16fcf4583286e464f1b74caabfc = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_46c7f2d190396e388f0df7ba37010bb3 = $(`<div id="html_46c7f2d190396e388f0df7ba37010bb3" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004203023<br>                         <b>Nombre:</b> VILLA CONDOR JULISSA ELSA<br>                         <b>Dirección:</b> MCDO.MODELO PTO-D15<br>                         <b>Estatus:</b> NUEVO                     </div>                     </div>`)[0];
-                popup_90528bdd498c7ed450b8845866177617.setContent(html_46c7f2d190396e388f0df7ba37010bb3);
+                var html_361517d9021f111e7ada137f6936e908 = $(`<div id="html_361517d9021f111e7ada137f6936e908" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004203023<br>                         <b>Nombre:</b> VILLA CONDOR JULISSA ELSA<br>                         <b>Dirección:</b> MCDO.MODELO PTO-D15<br>                         <b>Estatus:</b> NUEVO                     </div>                     </div>`)[0];
+                popup_638ee16fcf4583286e464f1b74caabfc.setContent(html_361517d9021f111e7ada137f6936e908);
             
         
 
-        marker_354e0937cbe4a44f70b514a919572048.bindPopup(popup_90528bdd498c7ed450b8845866177617)
+        marker_9ca4d8e036b1868993a3b245b9c0c332.bindPopup(popup_638ee16fcf4583286e464f1b74caabfc)
         ;
 
         
     
     
-                marker_354e0937cbe4a44f70b514a919572048.setIcon(icon_4a2c76fccbbfe8e487cf0c73bf2d5782);
+                marker_9ca4d8e036b1868993a3b245b9c0c332.setIcon(icon_4ddb9d9607f46382e45e474b3769f95e);
             
     
-            var marker_054ad0b40e58c88f27f7fcc1b13123a1 = L.marker(
+            var marker_4e8959fa6e08007dd4fa13a145417c97 = L.marker(
                 [-12.2061878, -76.9420493],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_4faeb3903b6954e3bd1d609f73b0c0f0 = L.AwesomeMarkers.icon(
+            var icon_3322f77b31287a932dc8333a568a6051 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -855,34 +874,34 @@
             );
         
     
-        var popup_ae4a9951c1bef31cd3fc6163dd212417 = L.popup({
+        var popup_7a8632e9251e48cf51431c36489c5de1 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_1ecb09b86c61e06fd3a27aab2e8bfb16 = $(`<div id="html_1ecb09b86c61e06fd3a27aab2e8bfb16" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004020497<br>                         <b>Nombre:</b> YAPUCHURA YAPUCHURA JORGE LUIS<br>                         <b>Dirección:</b> MCDO. 24 DE JUNIO PTO-G30<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0A2 PEDIDOS)                     </div>                     </div>`)[0];
-                popup_ae4a9951c1bef31cd3fc6163dd212417.setContent(html_1ecb09b86c61e06fd3a27aab2e8bfb16);
+                var html_9d74e701a3cf0aecb22a021897638e0b = $(`<div id="html_9d74e701a3cf0aecb22a021897638e0b" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004020497<br>                         <b>Nombre:</b> YAPUCHURA YAPUCHURA JORGE LUIS<br>                         <b>Dirección:</b> MCDO. 24 DE JUNIO PTO-G30<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0A2 PEDIDOS)                     </div>                     </div>`)[0];
+                popup_7a8632e9251e48cf51431c36489c5de1.setContent(html_9d74e701a3cf0aecb22a021897638e0b);
             
         
 
-        marker_054ad0b40e58c88f27f7fcc1b13123a1.bindPopup(popup_ae4a9951c1bef31cd3fc6163dd212417)
+        marker_4e8959fa6e08007dd4fa13a145417c97.bindPopup(popup_7a8632e9251e48cf51431c36489c5de1)
         ;
 
         
     
     
-                marker_054ad0b40e58c88f27f7fcc1b13123a1.setIcon(icon_4faeb3903b6954e3bd1d609f73b0c0f0);
+                marker_4e8959fa6e08007dd4fa13a145417c97.setIcon(icon_3322f77b31287a932dc8333a568a6051);
             
     
-            var marker_b6c0e36c892f2f04e4a7b8318fffa7a6 = L.marker(
+            var marker_0779bc40be51f88f69040c57c555f4e4 = L.marker(
                 [-12.2416491, -76.9316407],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_4ba63cda456dcfaf4dbdbdfa79323493 = L.AwesomeMarkers.icon(
+            var icon_c2f054c6e136a2bc5284a289a2967181 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -893,34 +912,34 @@
             );
         
     
-        var popup_10d36c3d9e24e68ab800ec1f27861eb9 = L.popup({
+        var popup_539cfc527ff2afc8e995559e86c078d5 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_dc6fe082c26521925e4ae4a86fa114f5 = $(`<div id="html_dc6fe082c26521925e4ae4a86fa114f5" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001308588<br>                         <b>Nombre:</b> ZAMALLOA HUILLCA VIRGINIA<br>                         <b>Dirección:</b> SECTOR 10 GRUPO 3 MZA. O LOTE. 17 URB. OASIS Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_10d36c3d9e24e68ab800ec1f27861eb9.setContent(html_dc6fe082c26521925e4ae4a86fa114f5);
+                var html_416cc0e858ec66c8c5e71e06025b145d = $(`<div id="html_416cc0e858ec66c8c5e71e06025b145d" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001308588<br>                         <b>Nombre:</b> ZAMALLOA HUILLCA VIRGINIA<br>                         <b>Dirección:</b> SECTOR 10 GRUPO 3 MZA. O LOTE. 17 URB. OASIS Lima-Lima-Villa el Salvador<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_539cfc527ff2afc8e995559e86c078d5.setContent(html_416cc0e858ec66c8c5e71e06025b145d);
             
         
 
-        marker_b6c0e36c892f2f04e4a7b8318fffa7a6.bindPopup(popup_10d36c3d9e24e68ab800ec1f27861eb9)
+        marker_0779bc40be51f88f69040c57c555f4e4.bindPopup(popup_539cfc527ff2afc8e995559e86c078d5)
         ;
 
         
     
     
-                marker_b6c0e36c892f2f04e4a7b8318fffa7a6.setIcon(icon_4ba63cda456dcfaf4dbdbdfa79323493);
+                marker_0779bc40be51f88f69040c57c555f4e4.setIcon(icon_c2f054c6e136a2bc5284a289a2967181);
             
     
-            var marker_e29992de58b23978c5fc75c8d9ee39f9 = L.marker(
+            var marker_21e6aa7b88d0c9777a74aa0feef63244 = L.marker(
                 [-12.194838, -76.950615],
                 {
 }
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
     
-            var icon_aa9ebc2316dce803bac470b776987b17 = L.AwesomeMarkers.icon(
+            var icon_8916cdc75b5a2648c9bddf2fcd82093a = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -931,30 +950,30 @@
             );
         
     
-        var popup_82ce96b862df756c271d7499f38098a8 = L.popup({
+        var popup_a893977ec81556756de783d3f5a7fe10 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_0452c2c6b355c76fa2d5c5901fa10b9d = $(`<div id="html_0452c2c6b355c76fa2d5c5901fa10b9d" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004166838<br>                         <b>Nombre:</b> ZARATE ESCOBAR MARLENE<br>                         <b>Dirección:</b> SECTOR 1 GRUPO 13 MZ. N LTE. 22<br>                         <b>Estatus:</b> NUEVO                     </div>                     </div>`)[0];
-                popup_82ce96b862df756c271d7499f38098a8.setContent(html_0452c2c6b355c76fa2d5c5901fa10b9d);
+                var html_61031c8306b12b4091957597d3d10cfe = $(`<div id="html_61031c8306b12b4091957597d3d10cfe" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004166838<br>                         <b>Nombre:</b> ZARATE ESCOBAR MARLENE<br>                         <b>Dirección:</b> SECTOR 1 GRUPO 13 MZ. N LTE. 22<br>                         <b>Estatus:</b> NUEVO                     </div>                     </div>`)[0];
+                popup_a893977ec81556756de783d3f5a7fe10.setContent(html_61031c8306b12b4091957597d3d10cfe);
             
         
 
-        marker_e29992de58b23978c5fc75c8d9ee39f9.bindPopup(popup_82ce96b862df756c271d7499f38098a8)
+        marker_21e6aa7b88d0c9777a74aa0feef63244.bindPopup(popup_a893977ec81556756de783d3f5a7fe10)
         ;
 
         
     
     
-                marker_e29992de58b23978c5fc75c8d9ee39f9.setIcon(icon_aa9ebc2316dce803bac470b776987b17);
+                marker_21e6aa7b88d0c9777a74aa0feef63244.setIcon(icon_8916cdc75b5a2648c9bddf2fcd82093a);
             
     
-            var poly_line_1e17aec552ab939c505bf9cb3111f7f0 = L.polyline(
+            var poly_line_7d61b32648911804ec148b758a1c035c = L.polyline(
                 [[-12.20805, -76.935463], [-12.2375605, -76.9347114], [-12.2008043, -76.9526581], [-12.2086015, -76.9433484], [-12.2114462, -76.9506622], [-12.210648, -76.939811], [-12.2119853, -76.9551488], [-12.210243, -76.940804], [-12.2112254, -76.9415302], [-12.2085898, -76.9346833], [-12.205587, -76.941975], [-12.2467944, -76.9264579], [-12.2111336, -76.9338511], [-12.1929639, -76.9468658], [-12.2034298, -76.9504952], [-12.2257214, -76.9425834], [-12.2107289, -76.9324312], [-12.2267627, -76.9341854], [-12.208654, -76.946866], [-12.2061878, -76.9420493], [-12.2416491, -76.9316407], [-12.194838, -76.950615]],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5}
-            ).addTo(map_fe28d1f027bf4f4f84bc6acaf82a5f03);
+            ).addTo(map_a2c4a3abda3f1f07ed6b043ffcbd3417);
         
 </script>
 </html>

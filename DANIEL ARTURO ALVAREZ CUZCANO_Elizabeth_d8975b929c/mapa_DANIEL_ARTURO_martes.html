@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_36df4cfc3fffee810fa0acef875565c7 {
+                #map_4574bac01848a5337eaf1ac80e8007b6 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -50,9 +50,18 @@
             </script>
 
         
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
 </head>
 <body>
     
+    
+            <style>
+            .leaflet-control-attribution {
+                display: none !important;
+            }
+            </style>
+            
     
             <div style="
                 position: fixed;
@@ -71,14 +80,14 @@
             </div>
             
     
-            <div class="folium-map" id="map_36df4cfc3fffee810fa0acef875565c7" ></div>
+            <div class="folium-map" id="map_4574bac01848a5337eaf1ac80e8007b6" ></div>
         
 </body>
 <script>
     
     
-            var map_36df4cfc3fffee810fa0acef875565c7 = L.map(
-                "map_36df4cfc3fffee810fa0acef875565c7",
+            var map_4574bac01848a5337eaf1ac80e8007b6 = L.map(
+                "map_4574bac01848a5337eaf1ac80e8007b6",
                 {
                     center: [-12.1950705, -76.9301468],
                     crs: L.CRS.EPSG3857,
@@ -95,7 +104,7 @@
 
         
     
-            var tile_layer_93a3fd3cbb07d4bf567dc9ab7d7a1bd0 = L.tileLayer(
+            var tile_layer_1c91b1a5e09997a2656e115fe38e9cc0 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -112,17 +121,27 @@
             );
         
     
-            tile_layer_93a3fd3cbb07d4bf567dc9ab7d7a1bd0.addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            tile_layer_1c91b1a5e09997a2656e115fe38e9cc0.addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var marker_4a3999930a6c43f77650f43fc4dca14c = L.marker(
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
+        
+    
+            var marker_460888d04ab76269260e71d1294c685c = L.marker(
                 [-12.1950705, -76.9301468],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_dfab614e4dff695ad1be74d1a4b025d3 = L.AwesomeMarkers.icon(
+            var icon_41159e517b1864f880d0d7d906c2a80b = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -133,34 +152,34 @@
             );
         
     
-        var popup_d77be65da246dc40d54112c354c8c91b = L.popup({
+        var popup_fbadbe6c7dbc5ed9e9b879279e4b7cdb = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_a6bcaed6d1b448e79b9da510ff28c2b5 = $(`<div id="html_a6bcaed6d1b448e79b9da510ff28c2b5" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001757459<br>                         <b>Nombre:</b> AGUILAR PURCA ALEXANDER MELQUIADES<br>                         <b>Dirección:</b> AV. AV LA UNION 457 TABLADA DE LUR Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_d77be65da246dc40d54112c354c8c91b.setContent(html_a6bcaed6d1b448e79b9da510ff28c2b5);
+                var html_6123a711d21d196a611baccc90f7ac0e = $(`<div id="html_6123a711d21d196a611baccc90f7ac0e" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001757459<br>                         <b>Nombre:</b> AGUILAR PURCA ALEXANDER MELQUIADES<br>                         <b>Dirección:</b> AV. AV LA UNION 457 TABLADA DE LUR Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_fbadbe6c7dbc5ed9e9b879279e4b7cdb.setContent(html_6123a711d21d196a611baccc90f7ac0e);
             
         
 
-        marker_4a3999930a6c43f77650f43fc4dca14c.bindPopup(popup_d77be65da246dc40d54112c354c8c91b)
+        marker_460888d04ab76269260e71d1294c685c.bindPopup(popup_fbadbe6c7dbc5ed9e9b879279e4b7cdb)
         ;
 
         
     
     
-                marker_4a3999930a6c43f77650f43fc4dca14c.setIcon(icon_dfab614e4dff695ad1be74d1a4b025d3);
+                marker_460888d04ab76269260e71d1294c685c.setIcon(icon_41159e517b1864f880d0d7d906c2a80b);
             
     
-            var marker_51b608207a92d40d6f9f6337e2a883b0 = L.marker(
+            var marker_a560d23a7cf51c8e9ee425f1d0fbbc94 = L.marker(
                 [-12.2197832, -76.9129919],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_0a60dd1a8cfab8c9c9f076aaa43d71bc = L.AwesomeMarkers.icon(
+            var icon_0a1ef99029bcbd678780e376a2893da7 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -171,34 +190,34 @@
             );
         
     
-        var popup_4f192b51d68ff0afdcbd359bef884860 = L.popup({
+        var popup_2d10836ad13b8b9c9a81b149bf86fdd1 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_d63e986a26fa363577b51e3b58e62bd6 = $(`<div id="html_d63e986a26fa363577b51e3b58e62bd6" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001703826<br>                         <b>Nombre:</b> ALBINO CHAVEZ PRIMITIVA<br>                         <b>Dirección:</b> CL. LOS CEREZOS SECTOR ELSA CARRER MZA. A LOTE. 8 URB. AH PROY INTEG SEÑOR DE LUREN Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_4f192b51d68ff0afdcbd359bef884860.setContent(html_d63e986a26fa363577b51e3b58e62bd6);
+                var html_e954bdbd1141cd45c60b9f20231b7c67 = $(`<div id="html_e954bdbd1141cd45c60b9f20231b7c67" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001703826<br>                         <b>Nombre:</b> ALBINO CHAVEZ PRIMITIVA<br>                         <b>Dirección:</b> CL. LOS CEREZOS SECTOR ELSA CARRER MZA. A LOTE. 8 URB. AH PROY INTEG SEÑOR DE LUREN Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_2d10836ad13b8b9c9a81b149bf86fdd1.setContent(html_e954bdbd1141cd45c60b9f20231b7c67);
             
         
 
-        marker_51b608207a92d40d6f9f6337e2a883b0.bindPopup(popup_4f192b51d68ff0afdcbd359bef884860)
+        marker_a560d23a7cf51c8e9ee425f1d0fbbc94.bindPopup(popup_2d10836ad13b8b9c9a81b149bf86fdd1)
         ;
 
         
     
     
-                marker_51b608207a92d40d6f9f6337e2a883b0.setIcon(icon_0a60dd1a8cfab8c9c9f076aaa43d71bc);
+                marker_a560d23a7cf51c8e9ee425f1d0fbbc94.setIcon(icon_0a1ef99029bcbd678780e376a2893da7);
             
     
-            var marker_5879884c6b6f77cc6fedcfb973e4766b = L.marker(
+            var marker_bd90088e21ce9e312cc588aa9daf0b31 = L.marker(
                 [-12.175521, -76.935838],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_97ea039bdea72a550cc5fa5fd8efd869 = L.AwesomeMarkers.icon(
+            var icon_b695ef7c62a3db53cf9c5d23975af44f = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -209,34 +228,34 @@
             );
         
     
-        var popup_6e4fcc0301aa10971bae806f220b8324 = L.popup({
+        var popup_868c494d3f0c6896c06fecab879e8150 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_bd83df29bc75ac82da9b85d641bd4799 = $(`<div id="html_bd83df29bc75ac82da9b85d641bd4799" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001763543<br>                         <b>Nombre:</b> ARCE VIVAR MARIO ALESSANDRO<br>                         <b>Dirección:</b> AV. 28 DE JULIO NRO. 480 URB. NUEVA ESPERANZA Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_6e4fcc0301aa10971bae806f220b8324.setContent(html_bd83df29bc75ac82da9b85d641bd4799);
+                var html_7097c610ad4ab6398b300c0463327681 = $(`<div id="html_7097c610ad4ab6398b300c0463327681" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001763543<br>                         <b>Nombre:</b> ARCE VIVAR MARIO ALESSANDRO<br>                         <b>Dirección:</b> AV. 28 DE JULIO NRO. 480 URB. NUEVA ESPERANZA Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_868c494d3f0c6896c06fecab879e8150.setContent(html_7097c610ad4ab6398b300c0463327681);
             
         
 
-        marker_5879884c6b6f77cc6fedcfb973e4766b.bindPopup(popup_6e4fcc0301aa10971bae806f220b8324)
+        marker_bd90088e21ce9e312cc588aa9daf0b31.bindPopup(popup_868c494d3f0c6896c06fecab879e8150)
         ;
 
         
     
     
-                marker_5879884c6b6f77cc6fedcfb973e4766b.setIcon(icon_97ea039bdea72a550cc5fa5fd8efd869);
+                marker_bd90088e21ce9e312cc588aa9daf0b31.setIcon(icon_b695ef7c62a3db53cf9c5d23975af44f);
             
     
-            var marker_53558abf2aa21f4327549db8ba6e4484 = L.marker(
+            var marker_fd832dd7f0addc74e3b115516775e277 = L.marker(
                 [-12.22121, -76.914299],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_234b59fbcc3acec4acabae7bd363eca2 = L.AwesomeMarkers.icon(
+            var icon_269e45cae7e1225290ebd1d3f06e2f7f = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -247,34 +266,34 @@
             );
         
     
-        var popup_7ac10e50ff88aed68aef02c4ca516cfa = L.popup({
+        var popup_8fedbeaa227acae57c3d70b7bdd6655a = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_d3372d466682965434909c39e110900d = $(`<div id="html_d3372d466682965434909c39e110900d" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001326535<br>                         <b>Nombre:</b> BELLIDO PALOMINO ANA CELESTINA<br>                         <b>Dirección:</b> GRUPO 4 NUEVO PROCESO MZA. C LOTE. 12 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_7ac10e50ff88aed68aef02c4ca516cfa.setContent(html_d3372d466682965434909c39e110900d);
+                var html_f058aa3804847a196b7a197cbf4b599f = $(`<div id="html_f058aa3804847a196b7a197cbf4b599f" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001326535<br>                         <b>Nombre:</b> BELLIDO PALOMINO ANA CELESTINA<br>                         <b>Dirección:</b> GRUPO 4 NUEVO PROCESO MZA. C LOTE. 12 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_8fedbeaa227acae57c3d70b7bdd6655a.setContent(html_f058aa3804847a196b7a197cbf4b599f);
             
         
 
-        marker_53558abf2aa21f4327549db8ba6e4484.bindPopup(popup_7ac10e50ff88aed68aef02c4ca516cfa)
+        marker_fd832dd7f0addc74e3b115516775e277.bindPopup(popup_8fedbeaa227acae57c3d70b7bdd6655a)
         ;
 
         
     
     
-                marker_53558abf2aa21f4327549db8ba6e4484.setIcon(icon_234b59fbcc3acec4acabae7bd363eca2);
+                marker_fd832dd7f0addc74e3b115516775e277.setIcon(icon_269e45cae7e1225290ebd1d3f06e2f7f);
             
     
-            var marker_eb588548bc589043104d00063c3ac536 = L.marker(
+            var marker_fbe2b545104e2c57e361008fb7cd1254 = L.marker(
                 [-12.2185088, -76.9168442],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_4a48939ca49c09f4bcb75db777dc4d06 = L.AwesomeMarkers.icon(
+            var icon_6a556d53976b3beb4731ec4575cc62c3 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -285,34 +304,34 @@
             );
         
     
-        var popup_975001f874d3ca1347d56e1627d18d04 = L.popup({
+        var popup_e8463b68d9e7ad414c9a72ad1d60f31f = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_63752edef5c7b72b97885aba92bb835b = $(`<div id="html_63752edef5c7b72b97885aba92bb835b" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001628487<br>                         <b>Nombre:</b> CARBAJAL CHIPA ISABEL<br>                         <b>Dirección:</b> QUINTO SECTOR  NUEVO PROGRESO MZA. C LOTE. 27 URB. VILLA MARIA DEL TRIUNFO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_975001f874d3ca1347d56e1627d18d04.setContent(html_63752edef5c7b72b97885aba92bb835b);
+                var html_07ff0496c7921438aac8420b55c5a5b1 = $(`<div id="html_07ff0496c7921438aac8420b55c5a5b1" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001628487<br>                         <b>Nombre:</b> CARBAJAL CHIPA ISABEL<br>                         <b>Dirección:</b> QUINTO SECTOR  NUEVO PROGRESO MZA. C LOTE. 27 URB. VILLA MARIA DEL TRIUNFO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_e8463b68d9e7ad414c9a72ad1d60f31f.setContent(html_07ff0496c7921438aac8420b55c5a5b1);
             
         
 
-        marker_eb588548bc589043104d00063c3ac536.bindPopup(popup_975001f874d3ca1347d56e1627d18d04)
+        marker_fbe2b545104e2c57e361008fb7cd1254.bindPopup(popup_e8463b68d9e7ad414c9a72ad1d60f31f)
         ;
 
         
     
     
-                marker_eb588548bc589043104d00063c3ac536.setIcon(icon_4a48939ca49c09f4bcb75db777dc4d06);
+                marker_fbe2b545104e2c57e361008fb7cd1254.setIcon(icon_6a556d53976b3beb4731ec4575cc62c3);
             
     
-            var marker_46c42c2447a65398e8c098581ba9f4c0 = L.marker(
+            var marker_305a54c7fe52c07579bea5fd83c165be = L.marker(
                 [-12.2212214, -76.9140725],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_e9a5cea99476b5ae71c7fc1be48e9daf = L.AwesomeMarkers.icon(
+            var icon_5cb27788afa29a267127d4009704efdc = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -323,34 +342,34 @@
             );
         
     
-        var popup_a8c6bc074762af0bcdda2d5db5f11f39 = L.popup({
+        var popup_5e742643fe1bab612c3f37a227551680 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_31b4812e8011365ab900c1f33080153e = $(`<div id="html_31b4812e8011365ab900c1f33080153e" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001703857<br>                         <b>Nombre:</b> CCORAHUA RUA NORMA<br>                         <b>Dirección:</b> CL. LOS ROBLES MZA. B LOTE. 1 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_a8c6bc074762af0bcdda2d5db5f11f39.setContent(html_31b4812e8011365ab900c1f33080153e);
+                var html_be4127ac695d532330ad36513790ded6 = $(`<div id="html_be4127ac695d532330ad36513790ded6" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001703857<br>                         <b>Nombre:</b> CCORAHUA RUA NORMA<br>                         <b>Dirección:</b> CL. LOS ROBLES MZA. B LOTE. 1 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_5e742643fe1bab612c3f37a227551680.setContent(html_be4127ac695d532330ad36513790ded6);
             
         
 
-        marker_46c42c2447a65398e8c098581ba9f4c0.bindPopup(popup_a8c6bc074762af0bcdda2d5db5f11f39)
+        marker_305a54c7fe52c07579bea5fd83c165be.bindPopup(popup_5e742643fe1bab612c3f37a227551680)
         ;
 
         
     
     
-                marker_46c42c2447a65398e8c098581ba9f4c0.setIcon(icon_e9a5cea99476b5ae71c7fc1be48e9daf);
+                marker_305a54c7fe52c07579bea5fd83c165be.setIcon(icon_5cb27788afa29a267127d4009704efdc);
             
     
-            var marker_633ed8d7170e7fa5853963009d967336 = L.marker(
+            var marker_7a8ca138dbf171a50c02bb74c06ca15f = L.marker(
                 [-12.2171676, -76.9175144],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_d116f8f3c43cd93c0adc0e2a88e2c5c5 = L.AwesomeMarkers.icon(
+            var icon_cff3402d3ae6df68cb38eac6bee726d9 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -361,34 +380,34 @@
             );
         
     
-        var popup_be915d4670da768489d7404d172f0b73 = L.popup({
+        var popup_e7b2c0d9be6f493346595bb9f80ce9e0 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_c7fa54c3411e60567083029c01a58b8f = $(`<div id="html_c7fa54c3411e60567083029c01a58b8f" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001762839<br>                         <b>Nombre:</b> CCORI SULLCARAY EMILIA JULIA<br>                         <b>Dirección:</b> AAHH PUYUSCA MZA. K LOTE. 10 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_be915d4670da768489d7404d172f0b73.setContent(html_c7fa54c3411e60567083029c01a58b8f);
+                var html_b14ef8d3c61f442caac3bdaa9d9a4483 = $(`<div id="html_b14ef8d3c61f442caac3bdaa9d9a4483" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001762839<br>                         <b>Nombre:</b> CCORI SULLCARAY EMILIA JULIA<br>                         <b>Dirección:</b> AAHH PUYUSCA MZA. K LOTE. 10 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_e7b2c0d9be6f493346595bb9f80ce9e0.setContent(html_b14ef8d3c61f442caac3bdaa9d9a4483);
             
         
 
-        marker_633ed8d7170e7fa5853963009d967336.bindPopup(popup_be915d4670da768489d7404d172f0b73)
+        marker_7a8ca138dbf171a50c02bb74c06ca15f.bindPopup(popup_e7b2c0d9be6f493346595bb9f80ce9e0)
         ;
 
         
     
     
-                marker_633ed8d7170e7fa5853963009d967336.setIcon(icon_d116f8f3c43cd93c0adc0e2a88e2c5c5);
+                marker_7a8ca138dbf171a50c02bb74c06ca15f.setIcon(icon_cff3402d3ae6df68cb38eac6bee726d9);
             
     
-            var marker_4381d2001d9c5268fae826516bf9533b = L.marker(
+            var marker_44ad18974450747a1e94242a384f2362 = L.marker(
                 [-12.2198717, -76.9133221],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_e20fabffee173f8af23b7f5250334248 = L.AwesomeMarkers.icon(
+            var icon_d89094ad78e0faa940221c7c237a2f42 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -399,34 +418,34 @@
             );
         
     
-        var popup_ad2f977431f1b27bd01de0761223320f = L.popup({
+        var popup_1cba9758c4d75414fb4b1f0333dc6a01 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_e26d76d7579077529d6344371347ab82 = $(`<div id="html_e26d76d7579077529d6344371347ab82" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001334065<br>                         <b>Nombre:</b> CURO RAMOS DAISE<br>                         <b>Dirección:</b> AH NUEVA JUVENTUD MZA. B LOTE. 13 URB. VILLA MARIA DEL TRIUNFO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_ad2f977431f1b27bd01de0761223320f.setContent(html_e26d76d7579077529d6344371347ab82);
+                var html_d48932bc91003f03b9883f4da9289f45 = $(`<div id="html_d48932bc91003f03b9883f4da9289f45" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001334065<br>                         <b>Nombre:</b> CURO RAMOS DAISE<br>                         <b>Dirección:</b> AH NUEVA JUVENTUD MZA. B LOTE. 13 URB. VILLA MARIA DEL TRIUNFO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_1cba9758c4d75414fb4b1f0333dc6a01.setContent(html_d48932bc91003f03b9883f4da9289f45);
             
         
 
-        marker_4381d2001d9c5268fae826516bf9533b.bindPopup(popup_ad2f977431f1b27bd01de0761223320f)
+        marker_44ad18974450747a1e94242a384f2362.bindPopup(popup_1cba9758c4d75414fb4b1f0333dc6a01)
         ;
 
         
     
     
-                marker_4381d2001d9c5268fae826516bf9533b.setIcon(icon_e20fabffee173f8af23b7f5250334248);
+                marker_44ad18974450747a1e94242a384f2362.setIcon(icon_d89094ad78e0faa940221c7c237a2f42);
             
     
-            var marker_be3e72662c94b107d527b904200903c7 = L.marker(
+            var marker_af101c06076656b6603f8b19b91c46b0 = L.marker(
                 [-12.1851737, -76.9390599],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_f4e5cb2bd46d0c8b66671643b0735f28 = L.AwesomeMarkers.icon(
+            var icon_d4dcb44f8241d2aae8b8b06364a6005b = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -437,34 +456,34 @@
             );
         
     
-        var popup_506b14a313d38a44ea355cadb0596b28 = L.popup({
+        var popup_f70e373c7d446483fd4dc1487be747f2 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_9aa5eb49e998747c261a44256ff995b6 = $(`<div id="html_9aa5eb49e998747c261a44256ff995b6" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000411535<br>                         <b>Nombre:</b> DIAZ MACHACCA DE RAMOS CONCEPCION<br>                         <b>Dirección:</b> AV. MER INCA PACHACUTEC P22 MZA. MAZAA420 URB. PJ CESAR VALLEJO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_506b14a313d38a44ea355cadb0596b28.setContent(html_9aa5eb49e998747c261a44256ff995b6);
+                var html_2b4c433cd44846bc0f9169d78378700f = $(`<div id="html_2b4c433cd44846bc0f9169d78378700f" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000411535<br>                         <b>Nombre:</b> DIAZ MACHACCA DE RAMOS CONCEPCION<br>                         <b>Dirección:</b> AV. MER INCA PACHACUTEC P22 MZA. MAZAA420 URB. PJ CESAR VALLEJO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_f70e373c7d446483fd4dc1487be747f2.setContent(html_2b4c433cd44846bc0f9169d78378700f);
             
         
 
-        marker_be3e72662c94b107d527b904200903c7.bindPopup(popup_506b14a313d38a44ea355cadb0596b28)
+        marker_af101c06076656b6603f8b19b91c46b0.bindPopup(popup_f70e373c7d446483fd4dc1487be747f2)
         ;
 
         
     
     
-                marker_be3e72662c94b107d527b904200903c7.setIcon(icon_f4e5cb2bd46d0c8b66671643b0735f28);
+                marker_af101c06076656b6603f8b19b91c46b0.setIcon(icon_d4dcb44f8241d2aae8b8b06364a6005b);
             
     
-            var marker_eb2436ca1db7abcd422b2d7231711644 = L.marker(
+            var marker_31adcb1f1daf555ff5d5729e96622461 = L.marker(
                 [-12.1851265, -76.9392071],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_3ed31139e755c64f8955b1a0e9754d24 = L.AwesomeMarkers.icon(
+            var icon_097a349fafba6328e1a3f5ea5001facb = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -475,34 +494,34 @@
             );
         
     
-        var popup_cb4a57df772a9dd8df0832da28bba8b4 = L.popup({
+        var popup_42c794c490ad434773a9ea47c597c46a = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_441f148baac6376ca29900b1e2ccb719 = $(`<div id="html_441f148baac6376ca29900b1e2ccb719" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000411481<br>                         <b>Nombre:</b> DIAZ RAMOS DE VICTORIA<br>                         <b>Dirección:</b> AV. MER INCA PACHACUTEC P18 MZA. MAZAA420 URB. PJ CESAR VALLEJO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_cb4a57df772a9dd8df0832da28bba8b4.setContent(html_441f148baac6376ca29900b1e2ccb719);
+                var html_df66bb0ccd5f107237f1aa992b0490cb = $(`<div id="html_df66bb0ccd5f107237f1aa992b0490cb" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000411481<br>                         <b>Nombre:</b> DIAZ RAMOS DE VICTORIA<br>                         <b>Dirección:</b> AV. MER INCA PACHACUTEC P18 MZA. MAZAA420 URB. PJ CESAR VALLEJO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_42c794c490ad434773a9ea47c597c46a.setContent(html_df66bb0ccd5f107237f1aa992b0490cb);
             
         
 
-        marker_eb2436ca1db7abcd422b2d7231711644.bindPopup(popup_cb4a57df772a9dd8df0832da28bba8b4)
+        marker_31adcb1f1daf555ff5d5729e96622461.bindPopup(popup_42c794c490ad434773a9ea47c597c46a)
         ;
 
         
     
     
-                marker_eb2436ca1db7abcd422b2d7231711644.setIcon(icon_3ed31139e755c64f8955b1a0e9754d24);
+                marker_31adcb1f1daf555ff5d5729e96622461.setIcon(icon_097a349fafba6328e1a3f5ea5001facb);
             
     
-            var marker_9a4550f421acb9d5de8123246dc032db = L.marker(
+            var marker_4cf380d1ec312ac2ea180f8696376bf6 = L.marker(
                 [-12.2176198, -76.9175349],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_f1cb0a4fcf37400b36b4890ac6f0cfe3 = L.AwesomeMarkers.icon(
+            var icon_0d45071e2be982daaf04312c5e49bc73 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -513,34 +532,34 @@
             );
         
     
-        var popup_9ddeb171894da2e16e19bd485139feb8 = L.popup({
+        var popup_8d3021a8479bec21ca2ae6c26159ef5c = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_735900b93327b128910cc57059f89629 = $(`<div id="html_735900b93327b128910cc57059f89629" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001645154<br>                         <b>Nombre:</b> FLORES MAÑUYCO VICTORIA<br>                         <b>Dirección:</b> NUEVO PROGRESO MZA. B LOTE. 12 URB. VILLA MARIA DEL TRIUNFO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_9ddeb171894da2e16e19bd485139feb8.setContent(html_735900b93327b128910cc57059f89629);
+                var html_f05c4601c0de351e7a01249cd777a8d2 = $(`<div id="html_f05c4601c0de351e7a01249cd777a8d2" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001645154<br>                         <b>Nombre:</b> FLORES MAÑUYCO VICTORIA<br>                         <b>Dirección:</b> NUEVO PROGRESO MZA. B LOTE. 12 URB. VILLA MARIA DEL TRIUNFO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_8d3021a8479bec21ca2ae6c26159ef5c.setContent(html_f05c4601c0de351e7a01249cd777a8d2);
             
         
 
-        marker_9a4550f421acb9d5de8123246dc032db.bindPopup(popup_9ddeb171894da2e16e19bd485139feb8)
+        marker_4cf380d1ec312ac2ea180f8696376bf6.bindPopup(popup_8d3021a8479bec21ca2ae6c26159ef5c)
         ;
 
         
     
     
-                marker_9a4550f421acb9d5de8123246dc032db.setIcon(icon_f1cb0a4fcf37400b36b4890ac6f0cfe3);
+                marker_4cf380d1ec312ac2ea180f8696376bf6.setIcon(icon_0d45071e2be982daaf04312c5e49bc73);
             
     
-            var marker_bec0741f9d861ff2c188d9c5846b964e = L.marker(
+            var marker_8154cc3efee8c6e6e5f92963c3246ab4 = L.marker(
                 [-12.17897, -76.949218],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_8ed04a2de5f67ad6bc716b43be234aa2 = L.AwesomeMarkers.icon(
+            var icon_4a18d69f5773408a0bf2ebc68f5bc012 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -551,34 +570,34 @@
             );
         
     
-        var popup_33e3451217dd546727fd9a1952d9fda9 = L.popup({
+        var popup_d23ee3cbd4066e24d94808e953845e16 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_770da16c921c306c715c54f0226a6825 = $(`<div id="html_770da16c921c306c715c54f0226a6825" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004096894<br>                         <b>Nombre:</b> GUERRA MIRANDA SOFIA<br>                         <b>Dirección:</b> Calle Juana Alarco 225 Mariano Melgar<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
-                popup_33e3451217dd546727fd9a1952d9fda9.setContent(html_770da16c921c306c715c54f0226a6825);
+                var html_95274377b36b7df0bb30335256bed6c4 = $(`<div id="html_95274377b36b7df0bb30335256bed6c4" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004096894<br>                         <b>Nombre:</b> GUERRA MIRANDA SOFIA<br>                         <b>Dirección:</b> Calle Juana Alarco 225 Mariano Melgar<br>                         <b>Estatus:</b> 3 ABANDONADOR 1M                     </div>                     </div>`)[0];
+                popup_d23ee3cbd4066e24d94808e953845e16.setContent(html_95274377b36b7df0bb30335256bed6c4);
             
         
 
-        marker_bec0741f9d861ff2c188d9c5846b964e.bindPopup(popup_33e3451217dd546727fd9a1952d9fda9)
+        marker_8154cc3efee8c6e6e5f92963c3246ab4.bindPopup(popup_d23ee3cbd4066e24d94808e953845e16)
         ;
 
         
     
     
-                marker_bec0741f9d861ff2c188d9c5846b964e.setIcon(icon_8ed04a2de5f67ad6bc716b43be234aa2);
+                marker_8154cc3efee8c6e6e5f92963c3246ab4.setIcon(icon_4a18d69f5773408a0bf2ebc68f5bc012);
             
     
-            var marker_c47be7b6c016b6ba7f40c8cca5aeb6c5 = L.marker(
+            var marker_d3735a5c48670bf2686069a4ecadce0d = L.marker(
                 [-12.1805511, -76.9389439],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_4ffcae3527bb33938452ef3139ba6b8a = L.AwesomeMarkers.icon(
+            var icon_3242d4586eb49354c65a448e493e10ce = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -589,34 +608,34 @@
             );
         
     
-        var popup_2b6b7a4fe8196117f224e68f1d06b300 = L.popup({
+        var popup_00f4667e1d1c1db879b04df84547d53a = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_741604046d8172ed522b2f71128764d5 = $(`<div id="html_741604046d8172ed522b2f71128764d5" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001098808<br>                         <b>Nombre:</b> LIVIAS YUNQUE WILLIANS ANTENOR<br>                         <b>Dirección:</b> JR. LA MERCED NRO. 435 URB. JRLA MERCED 435 PJECVALLEJO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_2b6b7a4fe8196117f224e68f1d06b300.setContent(html_741604046d8172ed522b2f71128764d5);
+                var html_b2b8c4839e706ccc20d809082f94f4a4 = $(`<div id="html_b2b8c4839e706ccc20d809082f94f4a4" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001098808<br>                         <b>Nombre:</b> LIVIAS YUNQUE WILLIANS ANTENOR<br>                         <b>Dirección:</b> JR. LA MERCED NRO. 435 URB. JRLA MERCED 435 PJECVALLEJO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_00f4667e1d1c1db879b04df84547d53a.setContent(html_b2b8c4839e706ccc20d809082f94f4a4);
             
         
 
-        marker_c47be7b6c016b6ba7f40c8cca5aeb6c5.bindPopup(popup_2b6b7a4fe8196117f224e68f1d06b300)
+        marker_d3735a5c48670bf2686069a4ecadce0d.bindPopup(popup_00f4667e1d1c1db879b04df84547d53a)
         ;
 
         
     
     
-                marker_c47be7b6c016b6ba7f40c8cca5aeb6c5.setIcon(icon_4ffcae3527bb33938452ef3139ba6b8a);
+                marker_d3735a5c48670bf2686069a4ecadce0d.setIcon(icon_3242d4586eb49354c65a448e493e10ce);
             
     
-            var marker_01b380553c10fd0a156c31ce52d2edc8 = L.marker(
+            var marker_ce4a4b8009d477cd1a3e1882b2aa151d = L.marker(
                 [-12.172452, -76.934101],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_72d0ff478d466f17e4e07923b784c273 = L.AwesomeMarkers.icon(
+            var icon_59d55ebba710f11f0876abd3e0a7a987 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -627,34 +646,34 @@
             );
         
     
-        var popup_2cdddf958951bfd18caaf5b153aac27f = L.popup({
+        var popup_94a6dcda6b31735f47b015122dcbe46a = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_fa07eb146f5bf8dddc136a7d43b501fc = $(`<div id="html_fa07eb146f5bf8dddc136a7d43b501fc" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004191278<br>                         <b>Nombre:</b> MAURTUA ARIAS ALEJANDRO HUGO<br>                         <b>Dirección:</b> Av. 7 junio 891 Nueva Esperanza (Altura Paradero 4)<br>                         <b>Estatus:</b> NUEVO                     </div>                     </div>`)[0];
-                popup_2cdddf958951bfd18caaf5b153aac27f.setContent(html_fa07eb146f5bf8dddc136a7d43b501fc);
+                var html_5e1ec5676c13c79800ca653ba4240306 = $(`<div id="html_5e1ec5676c13c79800ca653ba4240306" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004191278<br>                         <b>Nombre:</b> MAURTUA ARIAS ALEJANDRO HUGO<br>                         <b>Dirección:</b> Av. 7 junio 891 Nueva Esperanza (Altura Paradero 4)<br>                         <b>Estatus:</b> NUEVO                     </div>                     </div>`)[0];
+                popup_94a6dcda6b31735f47b015122dcbe46a.setContent(html_5e1ec5676c13c79800ca653ba4240306);
             
         
 
-        marker_01b380553c10fd0a156c31ce52d2edc8.bindPopup(popup_2cdddf958951bfd18caaf5b153aac27f)
+        marker_ce4a4b8009d477cd1a3e1882b2aa151d.bindPopup(popup_94a6dcda6b31735f47b015122dcbe46a)
         ;
 
         
     
     
-                marker_01b380553c10fd0a156c31ce52d2edc8.setIcon(icon_72d0ff478d466f17e4e07923b784c273);
+                marker_ce4a4b8009d477cd1a3e1882b2aa151d.setIcon(icon_59d55ebba710f11f0876abd3e0a7a987);
             
     
-            var marker_d313637b3dc073bb8f2d990599cc04fb = L.marker(
+            var marker_cc7a1408fb9d289b3c97c56094e87c59 = L.marker(
                 [-12.1763775, -76.950738],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_6f05dda52fa0644c5289b035b5703778 = L.AwesomeMarkers.icon(
+            var icon_1de21fc80bbe72686779090052af2a47 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -665,34 +684,34 @@
             );
         
     
-        var popup_59fe3c0178261b1eb06dd2760b9d8d72 = L.popup({
+        var popup_ceffd102835e3268bcb2ef3bed998774 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_b04a4369f38a1a48ebca9ebb499c4249 = $(`<div id="html_b04a4369f38a1a48ebca9ebb499c4249" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004039867<br>                         <b>Nombre:</b> MENDOZA AYLAS MARIA ELENA<br>                         <b>Dirección:</b> MCDO.MODELO PACHACUTEC PTO.55<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_59fe3c0178261b1eb06dd2760b9d8d72.setContent(html_b04a4369f38a1a48ebca9ebb499c4249);
+                var html_7885cee955c79ba43ec1b6355bd69bb1 = $(`<div id="html_7885cee955c79ba43ec1b6355bd69bb1" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004039867<br>                         <b>Nombre:</b> MENDOZA AYLAS MARIA ELENA<br>                         <b>Dirección:</b> MCDO.MODELO PACHACUTEC PTO.55<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_ceffd102835e3268bcb2ef3bed998774.setContent(html_7885cee955c79ba43ec1b6355bd69bb1);
             
         
 
-        marker_d313637b3dc073bb8f2d990599cc04fb.bindPopup(popup_59fe3c0178261b1eb06dd2760b9d8d72)
+        marker_cc7a1408fb9d289b3c97c56094e87c59.bindPopup(popup_ceffd102835e3268bcb2ef3bed998774)
         ;
 
         
     
     
-                marker_d313637b3dc073bb8f2d990599cc04fb.setIcon(icon_6f05dda52fa0644c5289b035b5703778);
+                marker_cc7a1408fb9d289b3c97c56094e87c59.setIcon(icon_1de21fc80bbe72686779090052af2a47);
             
     
-            var marker_1abf5e08420f74aefbc638b4c7ad86cf = L.marker(
+            var marker_62a705233bb6e9497c8142ad67827201 = L.marker(
                 [-12.1764506, -76.9508157],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_7e9ab947e64b71fe0eea3ab6189b5a1e = L.AwesomeMarkers.icon(
+            var icon_8e29d4f4c13080b3725361e964e70626 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -703,34 +722,34 @@
             );
         
     
-        var popup_d5bde1720a9802eef984a08a7cc5d5b7 = L.popup({
+        var popup_cdf0694c2b1eeadadaf49cacd6c44593 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_081c30ccd21cbbb88ed9df914ebfe33a = $(`<div id="html_081c30ccd21cbbb88ed9df914ebfe33a" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000414453<br>                         <b>Nombre:</b> NOA AQUINO SUSANA<br>                         <b>Dirección:</b> AV. MER MODELO PACHACUTEC MZA. MAZAA240 URB. AH MICAELA BASTIDAS PSTO. 31 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_d5bde1720a9802eef984a08a7cc5d5b7.setContent(html_081c30ccd21cbbb88ed9df914ebfe33a);
+                var html_dbeedcd489129abcc35be37b9c1cccdd = $(`<div id="html_dbeedcd489129abcc35be37b9c1cccdd" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000414453<br>                         <b>Nombre:</b> NOA AQUINO SUSANA<br>                         <b>Dirección:</b> AV. MER MODELO PACHACUTEC MZA. MAZAA240 URB. AH MICAELA BASTIDAS PSTO. 31 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_cdf0694c2b1eeadadaf49cacd6c44593.setContent(html_dbeedcd489129abcc35be37b9c1cccdd);
             
         
 
-        marker_1abf5e08420f74aefbc638b4c7ad86cf.bindPopup(popup_d5bde1720a9802eef984a08a7cc5d5b7)
+        marker_62a705233bb6e9497c8142ad67827201.bindPopup(popup_cdf0694c2b1eeadadaf49cacd6c44593)
         ;
 
         
     
     
-                marker_1abf5e08420f74aefbc638b4c7ad86cf.setIcon(icon_7e9ab947e64b71fe0eea3ab6189b5a1e);
+                marker_62a705233bb6e9497c8142ad67827201.setIcon(icon_8e29d4f4c13080b3725361e964e70626);
             
     
-            var marker_9fe93ce5b0119fb9d915e67bca34d7a0 = L.marker(
+            var marker_7407456c2acb64cb93ea1ba14a333952 = L.marker(
                 [-12.17264, -76.9512074],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_a9dc6ea3b5da9c471f4373f5ed530558 = L.AwesomeMarkers.icon(
+            var icon_c22a7d69efe7e451162351c8607fea24 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -741,34 +760,34 @@
             );
         
     
-        var popup_2bb2696dd0cae257e8815ea5e58c0500 = L.popup({
+        var popup_406389d40ac342af061628654a4829bc = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_e57cd107a59b7efa8c6e6de43674acd9 = $(`<div id="html_e57cd107a59b7efa8c6e6de43674acd9" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001480639<br>                         <b>Nombre:</b> SANCHEZ GAUNA DE CAJACH ELVIRA<br>                         <b>Dirección:</b> JR. MATEO PUMACAHUA NRO. 270 URB. VILLA MARIA DEL TRIUNFO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_2bb2696dd0cae257e8815ea5e58c0500.setContent(html_e57cd107a59b7efa8c6e6de43674acd9);
+                var html_5195e42678f38e1543233d5cac7802b8 = $(`<div id="html_5195e42678f38e1543233d5cac7802b8" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001480639<br>                         <b>Nombre:</b> SANCHEZ GAUNA DE CAJACH ELVIRA<br>                         <b>Dirección:</b> JR. MATEO PUMACAHUA NRO. 270 URB. VILLA MARIA DEL TRIUNFO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_406389d40ac342af061628654a4829bc.setContent(html_5195e42678f38e1543233d5cac7802b8);
             
         
 
-        marker_9fe93ce5b0119fb9d915e67bca34d7a0.bindPopup(popup_2bb2696dd0cae257e8815ea5e58c0500)
+        marker_7407456c2acb64cb93ea1ba14a333952.bindPopup(popup_406389d40ac342af061628654a4829bc)
         ;
 
         
     
     
-                marker_9fe93ce5b0119fb9d915e67bca34d7a0.setIcon(icon_a9dc6ea3b5da9c471f4373f5ed530558);
+                marker_7407456c2acb64cb93ea1ba14a333952.setIcon(icon_c22a7d69efe7e451162351c8607fea24);
             
     
-            var marker_c21d3561bb73dd2ecd074332e42a1a87 = L.marker(
+            var marker_d566f9a0c4a8e620f93126439f9e2441 = L.marker(
                 [-12.2181438, -76.916058],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_caf039ed1ef2131fefa11aed155c5ad0 = L.AwesomeMarkers.icon(
+            var icon_a5bfae05d358681ce1c52449b9c9981b = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -779,34 +798,34 @@
             );
         
     
-        var popup_cffad66de20f5880bc85c3cf2071d46e = L.popup({
+        var popup_be9f07dd8a6703fa8d1e6bcfa718c6ca = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_cd9f6cd49791bdaf92ebd107fc1b1304 = $(`<div id="html_cd9f6cd49791bdaf92ebd107fc1b1304" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001318365<br>                         <b>Nombre:</b> SUAREZ APARI ALEJANDRINA TERESA<br>                         <b>Dirección:</b> JR. AAHH NUEVO PROGRESO MZA. H LOTE. 6 URB. AAHH NUEVO PROGRESO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_cffad66de20f5880bc85c3cf2071d46e.setContent(html_cd9f6cd49791bdaf92ebd107fc1b1304);
+                var html_1b401be1f0794ad3db917b5736112cd1 = $(`<div id="html_1b401be1f0794ad3db917b5736112cd1" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001318365<br>                         <b>Nombre:</b> SUAREZ APARI ALEJANDRINA TERESA<br>                         <b>Dirección:</b> JR. AAHH NUEVO PROGRESO MZA. H LOTE. 6 URB. AAHH NUEVO PROGRESO Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_be9f07dd8a6703fa8d1e6bcfa718c6ca.setContent(html_1b401be1f0794ad3db917b5736112cd1);
             
         
 
-        marker_c21d3561bb73dd2ecd074332e42a1a87.bindPopup(popup_cffad66de20f5880bc85c3cf2071d46e)
+        marker_d566f9a0c4a8e620f93126439f9e2441.bindPopup(popup_be9f07dd8a6703fa8d1e6bcfa718c6ca)
         ;
 
         
     
     
-                marker_c21d3561bb73dd2ecd074332e42a1a87.setIcon(icon_caf039ed1ef2131fefa11aed155c5ad0);
+                marker_d566f9a0c4a8e620f93126439f9e2441.setIcon(icon_a5bfae05d358681ce1c52449b9c9981b);
             
     
-            var marker_51c602d80324f28fd6f112b986807ae5 = L.marker(
+            var marker_c84e9689a5f1255363edf99ed430a516 = L.marker(
                 [-12.1694343, -76.9285595],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_804db921727159f5e50f20dd0f361c24 = L.AwesomeMarkers.icon(
+            var icon_9339a20f3182d136a671ef48b59a53cc = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -817,34 +836,34 @@
             );
         
     
-        var popup_70421e9fd640804d5205e52be241e933 = L.popup({
+        var popup_e9c98fab2c922e569d38b5cde6d52c87 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_9c6cf773500f1e87f432b25cf6d9dc5e = $(`<div id="html_9c6cf773500f1e87f432b25cf6d9dc5e" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001757559<br>                         <b>Nombre:</b> URQUIZA BEJARANO MAGALY VERONICA<br>                         <b>Dirección:</b> AV. AV 26 DE NOVIEMBRE 1399 MZ77 L Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
-                popup_70421e9fd640804d5205e52be241e933.setContent(html_9c6cf773500f1e87f432b25cf6d9dc5e);
+                var html_0d771699ff598008159e3ce1bb139a2e = $(`<div id="html_0d771699ff598008159e3ce1bb139a2e" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001757559<br>                         <b>Nombre:</b> URQUIZA BEJARANO MAGALY VERONICA<br>                         <b>Dirección:</b> AV. AV 26 DE NOVIEMBRE 1399 MZ77 L Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO (0 A 2 PEDIDOS AUT.)                     </div>                     </div>`)[0];
+                popup_e9c98fab2c922e569d38b5cde6d52c87.setContent(html_0d771699ff598008159e3ce1bb139a2e);
             
         
 
-        marker_51c602d80324f28fd6f112b986807ae5.bindPopup(popup_70421e9fd640804d5205e52be241e933)
+        marker_c84e9689a5f1255363edf99ed430a516.bindPopup(popup_e9c98fab2c922e569d38b5cde6d52c87)
         ;
 
         
     
     
-                marker_51c602d80324f28fd6f112b986807ae5.setIcon(icon_804db921727159f5e50f20dd0f361c24);
+                marker_c84e9689a5f1255363edf99ed430a516.setIcon(icon_9339a20f3182d136a671ef48b59a53cc);
             
     
-            var marker_483e93bb04e566c2ad375c5a0fe9c5d2 = L.marker(
+            var marker_80f9047ac72162faa70ed7df501f8148 = L.marker(
                 [-12.2199173, -76.9130654],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_7963c963d6b82763e982da579830394e = L.AwesomeMarkers.icon(
+            var icon_94abf3d7de6bfd79d4f1105f0a894aff = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -855,34 +874,34 @@
             );
         
     
-        var popup_5e56eda06c67206e41bbcc54fd78c194 = L.popup({
+        var popup_715df680454a5671da4d914e25220901 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_04e05e08120c9602dce15808c665e57c = $(`<div id="html_04e05e08120c9602dce15808c665e57c" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001704282<br>                         <b>Nombre:</b> VENTURA GALVEZ VILMA<br>                         <b>Dirección:</b> AH NUEVO PROGRESO 5TO SECTOR MZA. B LOTE. 16 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_5e56eda06c67206e41bbcc54fd78c194.setContent(html_04e05e08120c9602dce15808c665e57c);
+                var html_2a4dd8446343eb2e0b979f83821e650c = $(`<div id="html_2a4dd8446343eb2e0b979f83821e650c" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001704282<br>                         <b>Nombre:</b> VENTURA GALVEZ VILMA<br>                         <b>Dirección:</b> AH NUEVO PROGRESO 5TO SECTOR MZA. B LOTE. 16 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_715df680454a5671da4d914e25220901.setContent(html_2a4dd8446343eb2e0b979f83821e650c);
             
         
 
-        marker_483e93bb04e566c2ad375c5a0fe9c5d2.bindPopup(popup_5e56eda06c67206e41bbcc54fd78c194)
+        marker_80f9047ac72162faa70ed7df501f8148.bindPopup(popup_715df680454a5671da4d914e25220901)
         ;
 
         
     
     
-                marker_483e93bb04e566c2ad375c5a0fe9c5d2.setIcon(icon_7963c963d6b82763e982da579830394e);
+                marker_80f9047ac72162faa70ed7df501f8148.setIcon(icon_94abf3d7de6bfd79d4f1105f0a894aff);
             
     
-            var marker_3c2d3df6936ab83398680aa6bec490a6 = L.marker(
+            var marker_d39b5deeb4f4a9bc324ac75aa18b6839 = L.marker(
                 [-12.189834, -76.922089],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_7a7d8376ba3f0389f513d936cd99f58f = L.AwesomeMarkers.icon(
+            var icon_246bd6773dd552a4acbffed78a299fbf = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -893,34 +912,34 @@
             );
         
     
-        var popup_47fc08d55079c79b9f4d7ae9451c5aa7 = L.popup({
+        var popup_16c3694851ab33acbdfe8199b2984d2a = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_e21c994fb6397c17cca30eabd0ae70b4 = $(`<div id="html_e21c994fb6397c17cca30eabd0ae70b4" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001757135<br>                         <b>Nombre:</b> VERA VILLAFUERTE JUAN JOSE<br>                         <b>Dirección:</b> AV. AV FLORA TRISTAN MZ-9M LOTE-2 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> ABANDONADOR 2 MESES                     </div>                     </div>`)[0];
-                popup_47fc08d55079c79b9f4d7ae9451c5aa7.setContent(html_e21c994fb6397c17cca30eabd0ae70b4);
+                var html_c29e2f0301b6e010849c0d2302d295eb = $(`<div id="html_c29e2f0301b6e010849c0d2302d295eb" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001757135<br>                         <b>Nombre:</b> VERA VILLAFUERTE JUAN JOSE<br>                         <b>Dirección:</b> AV. AV FLORA TRISTAN MZ-9M LOTE-2 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> ABANDONADOR 2 MESES                     </div>                     </div>`)[0];
+                popup_16c3694851ab33acbdfe8199b2984d2a.setContent(html_c29e2f0301b6e010849c0d2302d295eb);
             
         
 
-        marker_3c2d3df6936ab83398680aa6bec490a6.bindPopup(popup_47fc08d55079c79b9f4d7ae9451c5aa7)
+        marker_d39b5deeb4f4a9bc324ac75aa18b6839.bindPopup(popup_16c3694851ab33acbdfe8199b2984d2a)
         ;
 
         
     
     
-                marker_3c2d3df6936ab83398680aa6bec490a6.setIcon(icon_7a7d8376ba3f0389f513d936cd99f58f);
+                marker_d39b5deeb4f4a9bc324ac75aa18b6839.setIcon(icon_246bd6773dd552a4acbffed78a299fbf);
             
     
-            var marker_f228fa2a923b484b05326522d526e178 = L.marker(
+            var marker_2620bb0e2d75b58dc838cd2b5a6042ed = L.marker(
                 [-12.1895359, -76.9255276],
                 {
 }
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
     
-            var icon_191195efcf572d3b9c959527ed8818d5 = L.AwesomeMarkers.icon(
+            var icon_4bc3461447e196497d2e107614efaa6e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -931,30 +950,30 @@
             );
         
     
-        var popup_c3c48b8111da93cbd736b6d22785195f = L.popup({
+        var popup_9279bca79579b86600b67f1fdf51b128 = L.popup({
   "maxWidth": 320,
 });
 
         
             
-                var html_730be138a4ed693ced4ef369220869c7 = $(`<div id="html_730be138a4ed693ced4ef369220869c7" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001757277<br>                         <b>Nombre:</b> ZUÑIGA BLAS WALTER DANIEL<br>                         <b>Dirección:</b> AV. AV MANCO CAPAC 802 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
-                popup_c3c48b8111da93cbd736b6d22785195f.setContent(html_730be138a4ed693ced4ef369220869c7);
+                var html_33bda5ce218cd0cd19d6793764cdf71e = $(`<div id="html_33bda5ce218cd0cd19d6793764cdf71e" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001757277<br>                         <b>Nombre:</b> ZUÑIGA BLAS WALTER DANIEL<br>                         <b>Dirección:</b> AV. AV MANCO CAPAC 802 Lima-Lima-Villa María del Triunfo<br>                         <b>Estatus:</b> NO AUTOGESTIONADO                     </div>                     </div>`)[0];
+                popup_9279bca79579b86600b67f1fdf51b128.setContent(html_33bda5ce218cd0cd19d6793764cdf71e);
             
         
 
-        marker_f228fa2a923b484b05326522d526e178.bindPopup(popup_c3c48b8111da93cbd736b6d22785195f)
+        marker_2620bb0e2d75b58dc838cd2b5a6042ed.bindPopup(popup_9279bca79579b86600b67f1fdf51b128)
         ;
 
         
     
     
-                marker_f228fa2a923b484b05326522d526e178.setIcon(icon_191195efcf572d3b9c959527ed8818d5);
+                marker_2620bb0e2d75b58dc838cd2b5a6042ed.setIcon(icon_4bc3461447e196497d2e107614efaa6e);
             
     
-            var poly_line_da64a69cdaa2ebd74aef8d864ea567ce = L.polyline(
+            var poly_line_60dc8625bf56c41784deb7016902508d = L.polyline(
                 [[-12.1950705, -76.9301468], [-12.2197832, -76.9129919], [-12.175521, -76.935838], [-12.22121, -76.914299], [-12.2185088, -76.9168442], [-12.2212214, -76.9140725], [-12.2171676, -76.9175144], [-12.2198717, -76.9133221], [-12.1851737, -76.9390599], [-12.1851265, -76.9392071], [-12.2176198, -76.9175349], [-12.17897, -76.949218], [-12.1805511, -76.9389439], [-12.172452, -76.934101], [-12.1763775, -76.950738], [-12.1764506, -76.9508157], [-12.17264, -76.9512074], [-12.2181438, -76.916058], [-12.1694343, -76.9285595], [-12.2199173, -76.9130654], [-12.189834, -76.922089], [-12.1895359, -76.9255276]],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5}
-            ).addTo(map_36df4cfc3fffee810fa0acef875565c7);
+            ).addTo(map_4574bac01848a5337eaf1ac80e8007b6);
         
 </script>
 </html>
