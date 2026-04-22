@@ -1,0 +1,4003 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semana 17 - JAQUELINE ROXANA HEREDIA HUAMAN</title>
+
+<<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+}
+
+body {
+    padding: 12px;
+}
+
+.box {
+    background: white;
+    padding: 14px;
+    border-radius: 18px;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    overflow-x: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #0078ff, #00a8ff);
+    color: white;
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.header h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.day-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+.day-summary {
+    padding: 14px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    list-style: none;
+    background: #f8fafc;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.day-summary::-webkit-details-marker {
+    display: none;
+}
+
+.day-summary::after {
+    content: "▼";
+    float: right;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+details[open] > .day-summary::after {
+    content: "▲";
+}
+
+.map-box {
+    padding: 10px 10px 0 10px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 14px;
+    background: #f1f5f9;
+    display: block;
+}
+
+.client-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.client-summary {
+    padding: 14px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+    font-size: 14px;
+    background: #ffffff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.client-summary::-webkit-details-marker {
+    display: none;
+}
+
+.client-summary::after {
+    content: "＋";
+    float: right;
+    font-size: 18px;
+    color: #0078ff;
+}
+
+details[open] > .client-summary::after {
+    content: "－";
+}
+
+.client-content {
+    padding: 0 14px 14px 14px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.info-box {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    width: 100%;
+    line-height: 1.6;
+}
+
+.info-line {
+    font-size: 14px;
+    color: #111827;
+    margin-bottom: 8px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.info-line:last-child {
+    margin-bottom: 0;
+}
+
+.info-label-inline {
+    font-weight: bold;
+    color: #374151;
+}
+
+.section-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 18px 0 10px 0;
+    color: #0078ff;
+}
+
+.table-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: white;
+}
+
+.table-mini {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background: white;
+}
+
+.table-mini th {
+    background: #0078ff;
+    color: white;
+    padding: 8px 6px;
+    font-size: 11px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.table-mini td {
+    padding: 8px 6px;
+    border-bottom: 1px solid #eee;
+    font-size: 11px;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.hist-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #0078ff;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.empty-box {
+    background: #f9fafb;
+    border: 1px dashed #d1d5db;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 14px;
+    color: #6b7280;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.nav-top {
+    margin-bottom: 18px;
+}
+
+.nav-top a {
+    display: inline-block;
+    text-decoration: none;
+    background: #111827;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 24px;
+    }
+
+    .box {
+        padding: 18px;
+    }
+
+    .header h2 {
+        font-size: 26px;
+    }
+
+    .header h3 {
+        font-size: 18px;
+    }
+
+    iframe {
+        height: 520px;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .table-mini th,
+    .table-mini td {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+    <div class="header">
+        <h2>📅 Semana 17</h2>
+        <h3>2026-04-20 a 2026-04-26<br>👤 Digitalizador: JAQUELINE ROXANA HEREDIA HUAMAN<br>👨‍💼 Supervisor: Elizabeth</h3>
+    </div>
+
+        <details class="day-card">
+            <summary class="day-summary">🗺 Rutas – Mapas semanales</summary>
+        
+            <details class="day-card">
+                <summary class="day-summary">📅 22-04-2026 (21 clientes)</summary>
+                
+                <div class="map-box">
+                    <iframe src="./mapa_JAQUELINE_ROXANA_miercoles.html"></iframe>
+                </div>
+                
+            
+<details class="client-card">
+    <summary class="client-summary">🔹 CAHUANA QUISPE JUAN CARLOS</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001480205</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> CAHUANA QUISPE JUAN CARLOS</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. LOS PROCERES MZA. B4 LOTE. 12 URB. TUPAC AMARU Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 9821634</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14898892</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14898771</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14796303</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14733984</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 CARHUAMACA DIAZ MERY</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001559702</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> CARHUAMACA DIAZ MERY</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> MZA. E LOTE. 14 URB. AH SAGRADA FAMILIA Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10200133370</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14806029</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14727251</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 CCAHUANA COTAQUISPE EDMER NELSON</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C000510022</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> CCAHUANA COTAQUISPE EDMER NELSON</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> JR. CAL 2 DE MAYO M18 L32 MZA. MAZAA490 LOTE. 32 URB. ARMATAMBO Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10094956078</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14902581</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14735119</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-08</td>
+                    <td>S14650861</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-04</td>
+                    <td>S14560808</td>
+                    <td>Vendedor</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 CORTEZ TRIVENO GIOVANA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001293000</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> CORTEZ TRIVENO GIOVANA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. AVARQUIMEDES M-B1 L-19 MZA. B1 LOTE. 19 URB. LA CAMPI A Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 40538224</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14733089</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-14</td>
+                    <td>S14083100</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-07</td>
+                    <td>S13911908</td>
+                    <td>Vendedor</td>
+                </tr>
+
+                <tr>
+                    <td>2026-02-28</td>
+                    <td>S13729212</td>
+                    <td>Nitro</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="hist-card">
+            <b>📅 2026-01-13</b><br>
+            <b>Tipo:</b> No capacitado<br>
+            <b>Origen Pedido:</b> Vendedor<br>
+            <b>Digitalizador:</b> OLGA RODRIGUEZ LAVALLE<br>
+            <b>Motivo no capacitado:</b> Otros Motivos<br>
+            <b>Fecha Pedido:</b> 2026-01-17<br>
+            <b>Código Pedido:</b> S12748294
+        </div>
+
+        <div class="hist-card">
+            <b>📅 2025-11-11</b><br>
+            <b>Tipo:</b> No capacitado<br>
+            <b>Origen Pedido:</b> Cliente<br>
+            <b>Digitalizador:</b> OLGA RODRIGUEZ LAVALLE<br>
+            <b>Motivo no capacitado:</b> Prefiere pedir con su vendedor<br>
+            <b>Fecha Pedido:</b> 2025-11-22<br>
+            <b>Código Pedido:</b> S11444466
+        </div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 CUTIRI CHINCHAY MIGUEL ANGEL</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C004203658</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> CUTIRI CHINCHAY MIGUEL ANGEL</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> CALLE LIBERTAD MZ. H LTE. 3 VISTA ALEGRE</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 44935648</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14899136</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14899803</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14728547</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-04</td>
+                    <td>S14552839</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 DAVALOS LARA ROCIO AMPARO</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001397462</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> DAVALOS LARA ROCIO AMPARO</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. JOSE OLAYA COMITE 14 LOTE. 13 URB. SANTA ISABEL DE VILLA Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 45187477</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14800185</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14724057</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-08</td>
+                    <td>S14648741</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-08</td>
+                    <td>S14648680</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 DIAZ ESTELA ROQUE JAER</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C004094782</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> DIAZ ESTELA ROQUE JAER</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> Márquez de Corpac MZ B LT 1</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10333381</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14891659</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14802012</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14817146</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14725659</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 FLORES TORRES SUSAN ROCIO</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001744905</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> FLORES TORRES SUSAN ROCIO</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> ALM. LOS CEDROS NRO. 674 Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 43091030</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14812235</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-25</td>
+                    <td>S14339090</td>
+                    <td>Vendedor</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-18</td>
+                    <td>S14171019</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-12</td>
+                    <td>S14033701</td>
+                    <td>Vendedor</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 GONZALES LIMAYLLA KENLLY ABAD</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001175076</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> GONZALES LIMAYLLA KENLLY ABAD</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> CL. 3 DE OCTUBRE MZA. F LOTE. T2 URB. GARZAS DE VILLA Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 47732375</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14804416</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14807781</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14807898</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14797353</td>
+                    <td>Nitro</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 HERBAS QUISPE LUZMILA VALENTINA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001646250</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> HERBAS QUISPE LUZMILA VALENTINA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> CL. CIENTIFICA MZA. E LOTE. 22 URB. CHORRILLOS Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10325348</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14888733</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14888284</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14801993</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14797551</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 INCIL OCAS MARIA CARMELA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001358577</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> INCIL OCAS MARIA CARMELA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> PJE. SANTA ISABEL DE VILLA MZA. C LOTE. 35A URB. SANTA ISABEL Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10069942470</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14902838</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14812490</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14818496</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14818357</td>
+                    <td>Nitro</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 MALDONADO PALOMINO YOVANA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001303257</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> MALDONADO PALOMINO YOVANA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> MCDO. VISTA ALEGRE PSTO. 53 Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 43044672</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14889277</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14819711</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14727741</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14737058</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="hist-card">
+            <b>📅 2026-04-20</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> <br>
+            <b>Digitalizador:</b> JAQUELINE ROXANA HEREDIA HUAMAN<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> nan<br>
+            <b>Código Pedido:</b> 
+        </div>
+
+        <div class="hist-card">
+            <b>📅 2026-02-21</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Cliente<br>
+            <b>Digitalizador:</b> JOHAN ANDERSON RICHARDS PRADO<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> 2026-03-07<br>
+            <b>Código Pedido:</b> S13911445
+        </div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 PUCHURI SULCA FLOR VANESSA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001721272</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> PUCHURI SULCA FLOR VANESSA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. ALEJANDRO IGLESIA NRO. 145 Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 46690861</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14903054</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14903093</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14903237</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14903238</td>
+                    <td>Nitro</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 QUISOCALA LIMACHI ANA MARIA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C000510402</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> QUISOCALA LIMACHI ANA MARIA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. OTR PARAVIRGEN DE CHAPI P-12 MZA. 270 URB. VILLA VENTURO Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 9821427</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-20</td>
+                    <td>S14911270</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14902778</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14813672</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14804141</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 SALAZAR REANO ANTENOR</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001743846</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> SALAZAR REANO ANTENOR</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> JR. CARLOS MELLET NRO. 1145 URB. SANTA LEONOR Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 72538418</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-20</td>
+                    <td>S14919914</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-20</td>
+                    <td>S14919963</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14819508</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14737325</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="hist-card">
+            <b>📅 2026-03-28</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Cliente<br>
+            <b>Digitalizador:</b> JOHAN ANDERSON RICHARDS PRADO<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> 2026-04-11<br>
+            <b>Código Pedido:</b> S14737325
+        </div>
+
+        <div class="hist-card">
+            <b>📅 2025-10-30</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Vendedor<br>
+            <b>Digitalizador:</b> OLGA RODRIGUEZ LAVALLE<br>
+            <b>Motivo no capacitado:</b> <br>
+            <b>Fecha Pedido:</b> 2025-11-12<br>
+            <b>Código Pedido:</b> S11169647
+        </div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 SANCHEZ REANO BELTHI</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001692470</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> SANCHEZ REANO BELTHI</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> MATELLINI MZA. G LOTE. 36 URB. SANTA LEONOR Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 43111238</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-20</td>
+                    <td>S14933122</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14902637</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14902550</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14902842</td>
+                    <td>Nitro</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 SOLIS PACHECO ROMELIA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C004173845</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> SOLIS PACHECO ROMELIA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> Los Picarones mz Z lt 5 Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 40506201</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-08</td>
+                    <td>S14639625</td>
+                    <td>Vendedor</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-01</td>
+                    <td>S14498497</td>
+                    <td>Vendedor</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-25</td>
+                    <td>S14335136</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-18</td>
+                    <td>S14161651</td>
+                    <td>Vendedor</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 TEJEDA TORRES SOLEDAD MIRIAN</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001345560</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> TEJEDA TORRES SOLEDAD MIRIAN</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> CL. LIBERTAD MZA. I LOTE. 2 Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 44595159</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14901018</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14811938</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-06</td>
+                    <td>S14595409</td>
+                    <td>Vendedor</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-02</td>
+                    <td>S14535852</td>
+                    <td>Vendedor</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 TELLO VALENCIA ADRIAN</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C000508342</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> TELLO VALENCIA ADRIAN</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. CORDILLERA BLANCA MZA. F-11 LOTE. 5 URB. DELICIAS DE VILLA Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10070010831</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14893862</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14883435</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14718915</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-04</td>
+                    <td>S14560076</td>
+                    <td>Vendedor</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 TORRES HINOSTROZA DANIELA LILIANA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001380356</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> TORRES HINOSTROZA DANIELA LILIANA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. VISTA ALEGRE MZA H LOTE 01 MZA. H LOTE. 01 URB. MCDO VISTA ALEGRE PSTO. 33 Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10430448311</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-20</td>
+                    <td>S14935151</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14884095</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14901243</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14814861</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="hist-card">
+            <b>📅 2026-02-21</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Cliente<br>
+            <b>Digitalizador:</b> JOHAN ANDERSON RICHARDS PRADO<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> 2026-02-25<br>
+            <b>Código Pedido:</b> S13653034
+        </div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 VALVERDE ROBLES ROSA MARITZA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001646458</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> VALVERDE ROBLES ROSA MARITZA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. EL SOL NRO. 122 URB. LA CAMPIÑA Lima-Lima-Chorrillos</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Chorrillos (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10462668185</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14734236</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-08</td>
+                    <td>S14647335</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-21</td>
+                    <td>S14255172</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-21</td>
+                    <td>S14252756</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+</details>
+            <details class="day-card">
+                <summary class="day-summary">📅 23-04-2026 (15 clientes)</summary>
+                
+                <div class="map-box">
+                    <iframe src="./mapa_JAQUELINE_ROXANA_jueves.html"></iframe>
+                </div>
+                
+            
+<details class="client-card">
+    <summary class="client-summary">🔹 ANDIA AVILES GRETA MELINA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C000427798</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> ANDIA AVILES GRETA MELINA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. HIGUERETA NRO. 660 Lima-Lima-Santiago de Surco</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Santiago de Surco (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10101438665</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14778249</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-07</td>
+                    <td>S14616366</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-07</td>
+                    <td>S14606004</td>
+                    <td>Vendedor</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-27</td>
+                    <td>S14391883</td>
+                    <td>Vendedor</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="hist-card">
+            <b>📅 2026-04-18</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> <br>
+            <b>Digitalizador:</b> MARILYN LIZBETH PAIVA LEDESMA<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> nan<br>
+            <b>Código Pedido:</b> 
+        </div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 AROTINCO PALOMINO CARLOS</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001757113</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> AROTINCO PALOMINO CARLOS</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> JR. JIROM ALHELIZ MZ T LOTE 14 Lima-Lima-San Juan de Miraflores</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> San Juan de Miraflores (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10088711144</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-17</td>
+                    <td>S14869609</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14788331</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-10</td>
+                    <td>S14708682</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-07</td>
+                    <td>S14614747</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 ARROYO RUBIO MAIDA IVONNE</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001746815</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> ARROYO RUBIO MAIDA IVONNE</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> ASOC VILLA TREBOL MZA. C LOTE. 6 Lima-Lima-San Juan de Miraflores</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> San Juan de Miraflores (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 43801891</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14888553</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14815972</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14816020</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14730478</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="hist-card">
+            <b>📅 2026-03-13</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Cliente<br>
+            <b>Digitalizador:</b> DANIEL ARTURO ALVAREZ CUZCANO<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> 2026-03-25<br>
+            <b>Código Pedido:</b> S14327070
+        </div>
+
+        <div class="hist-card">
+            <b>📅 2025-12-17</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Cliente<br>
+            <b>Digitalizador:</b> DANIEL ARTURO ALVAREZ CUZCANO<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> 2025-12-27<br>
+            <b>Código Pedido:</b> S12288769
+        </div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 CARDENAS CACERES AMELIA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001522477</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> CARDENAS CACERES AMELIA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. CANEVARO MZA. L LOTE. 4 URB. ASOCTREBOL AZUL Lima-Lima-San Juan de Miraflores</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> San Juan de Miraflores (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 8409679</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14899971</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-04</td>
+                    <td>S14561094</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-28</td>
+                    <td>S14424367</td>
+                    <td>Vendedor</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-21</td>
+                    <td>S14255089</td>
+                    <td>Vendedor</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="hist-card">
+            <b>📅 2026-04-01</b><br>
+            <b>Tipo:</b> No capacitado<br>
+            <b>Origen Pedido:</b> Cliente<br>
+            <b>Digitalizador:</b> DANIEL ARTURO ALVAREZ CUZCANO<br>
+            <b>Motivo no capacitado:</b> Otros Motivos<br>
+            <b>Fecha Pedido:</b> 2026-04-04<br>
+            <b>Código Pedido:</b> S14561094
+        </div>
+
+        <div class="hist-card">
+            <b>📅 2026-03-10</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Vendedor<br>
+            <b>Digitalizador:</b> DANIEL ARTURO ALVAREZ CUZCANO<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> 2026-03-21<br>
+            <b>Código Pedido:</b> S14255089
+        </div>
+
+        <div class="hist-card">
+            <b>📅 2025-12-15</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> <br>
+            <b>Digitalizador:</b> DANIEL ARTURO ALVAREZ CUZCANO<br>
+            <b>Motivo no capacitado:</b> <br>
+            <b>Fecha Pedido:</b> nan<br>
+            <b>Código Pedido:</b> 
+        </div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 COQUIL LLACUA DENISS MIRIAM</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001333201</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> COQUIL LLACUA DENISS MIRIAM</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> CL. CADIZ NRO. 398 URB. HIGUERETA Lima-Lima-Santiago de Surco</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Santiago de Surco (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10463907175</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-17</td>
+                    <td>S14869436</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14777006</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14776369</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-10</td>
+                    <td>S14700908</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 HUARIS LOAYZA MERCEDES ELSA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001711378</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> HUARIS LOAYZA MERCEDES ELSA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> PJE. TELESFORO GARCIA BEDOYA S/N TD Lima-Lima-Santiago de Surco</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Santiago de Surco (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 9287739</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-17</td>
+                    <td>S14873587</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14783077</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-07</td>
+                    <td>S14613818</td>
+                    <td>Vendedor</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-31</td>
+                    <td>S14473416</td>
+                    <td>Vendedor</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="hist-card">
+            <b>📅 2026-03-05</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Vendedor<br>
+            <b>Digitalizador:</b> MARILYN LIZBETH PAIVA LEDESMA<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> 2026-03-17<br>
+            <b>Código Pedido:</b> S14132514
+        </div>
+
+        <div class="hist-card">
+            <b>📅 2025-11-17</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Cliente<br>
+            <b>Digitalizador:</b> OLGA RODRIGUEZ LAVALLE<br>
+            <b>Motivo no capacitado:</b> <br>
+            <b>Fecha Pedido:</b> 2025-11-28<br>
+            <b>Código Pedido:</b> S11586822
+        </div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 MARAVI BARDALES GLORIA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C000510436</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> MARAVI BARDALES GLORIA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> CL. LOS ALHELIES MZA. R LOTE. 22 URB. COOP VALLE SHARON Lima-Lima-San Juan de Miraflores</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> San Juan de Miraflores (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10083775578</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-17</td>
+                    <td>S14871234</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-17</td>
+                    <td>S14873095</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14783076</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-10</td>
+                    <td>S14695438</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 PALOMINO CAMPOS MAGALY SOLEDAD</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C000590569</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> PALOMINO CAMPOS MAGALY SOLEDAD</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. MER MARIANO PASTOR SEVILLA P MZA. MAZAA010 URB. SAN JUAN DE MIRAFLORES Lima-Lima-San Juan de Miraflores</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> San Juan de Miraflores (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 41327367</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14783790</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14783721</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-13</td>
+                    <td>S14766031</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-10</td>
+                    <td>S14702839</td>
+                    <td>Nitro</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 RIOS OJEDA SEBASTIAN</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001748598</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> RIOS OJEDA SEBASTIAN</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. ALEJANDRO VELASCO ASTETE NRO. 2083 Lima-Lima-Santiago de Surco</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Santiago de Surco (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10752322312</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-16</td>
+                    <td>S14830942</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-13</td>
+                    <td>S14753067</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-13</td>
+                    <td>S14744860</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-13</td>
+                    <td>S14753111</td>
+                    <td>Nitro</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="hist-card">
+            <b>📅 2026-02-28</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Cliente<br>
+            <b>Digitalizador:</b> MARILYN LIZBETH PAIVA LEDESMA<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> 2026-03-09<br>
+            <b>Código Pedido:</b> S13928298
+        </div>
+
+        <div class="hist-card">
+            <b>📅 2026-01-26</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Vendedor<br>
+            <b>Digitalizador:</b> MARILYN LIZBETH PAIVA LEDESMA<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> 2026-02-09<br>
+            <b>Código Pedido:</b> S13251734
+        </div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 RODRIGUEZ BERROCAL AYDEE</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001731653</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> RODRIGUEZ BERROCAL AYDEE</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AAHH HEROES DE SAN JUAN MZA. G1 LOTE. 25 Lima-Lima-San Juan de Miraflores</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> San Juan de Miraflores (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 7487051</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14900518</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14900651</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-04</td>
+                    <td>S14561065</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-03-28</td>
+                    <td>S14424220</td>
+                    <td>Vendedor</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 ROJAS YARANGA RONALD CHRISTIAN</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001627411</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> ROJAS YARANGA RONALD CHRISTIAN</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> CL. LOS SEIBOS INT. 14 MZA. L14 LOTE. B URB. CC LA CAPULLANA Lima-Lima-Santiago de Surco</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Santiago de Surco (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10401537622</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14789753</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14771309</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14770606</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-14</td>
+                    <td>S14789789</td>
+                    <td>Nitro</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 SALCEDO CALLAPANI NELIDA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C000546889</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> SALCEDO CALLAPANI NELIDA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> MCDO. MCDO EL TREBOL NRO. 125 Lima-Lima-Santiago de Surco</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Santiago de Surco (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 42359066</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-20</td>
+                    <td>S14930222</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14898614</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14731625</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14730994</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="hist-card">
+            <b>📅 2025-12-27</b><br>
+            <b>Tipo:</b> Capacitado<br>
+            <b>Origen Pedido:</b> Cliente<br>
+            <b>Digitalizador:</b> MARILYN LIZBETH PAIVA LEDESMA<br>
+            <b>Motivo no capacitado:</b> -<br>
+            <b>Fecha Pedido:</b> 2025-12-27<br>
+            <b>Código Pedido:</b> S12275811
+        </div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 SILVA MARLO EDUIN ESTALIN</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C001741030</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> SILVA MARLO EDUIN ESTALIN</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. ANDRES TINOCO NRO. 696 Lima-Lima-Santiago de Surco</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> Santiago de Surco (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 71646436</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-20</td>
+                    <td>S14908187</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-16</td>
+                    <td>S14836857</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-13</td>
+                    <td>S14743737</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-06</td>
+                    <td>S14571755</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 SONCCO APFATA NEMESIO</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C000416735</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> SONCCO APFATA NEMESIO</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> AV. AVE MIGUEL IGLESIAS MZA. B LOTE. 15 URB. AH ALEMANA Lima-Lima-San Juan de Miraflores</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> San Juan de Miraflores (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 10442476</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-17</td>
+                    <td>S14863147</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-17</td>
+                    <td>S14863436</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-17</td>
+                    <td>S14877544</td>
+                    <td>Nitro</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+
+<details class="client-card">
+    <summary class="client-summary">🔹 VALENZUELA GOMEZ JUANA</summary>
+
+    <div class="client-content">
+        <div class="info-box">
+            <div class="info-line"><span class="info-label-inline">Código:</span> C000415774</div>
+            <div class="info-line"><span class="info-label-inline">Cliente:</span> VALENZUELA GOMEZ JUANA</div>
+            <div class="info-line"><span class="info-label-inline">Dirección:</span> JR. CAL ARGUEDAS JOSE MARIA MK1 L LOTE. 5 URB. AH HEROES DE SAN JUAN Lima-Lima-San Juan de Miraflores</div>
+            <div class="info-line"><span class="info-label-inline">Distrito:</span> San Juan de Miraflores (Lima)</div>
+            <div class="info-line"><span class="info-label-inline">Tipo Documento:</span> -</div>
+            <div class="info-line"><span class="info-label-inline">Documento:</span> 8385970</div>
+        </div>
+
+        <div class="section-title">📦 Últimos 4 pedidos</div>
+        <div class="table-scroll">
+            <table class="table-mini">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Pedido</th>
+                    <th>Origen</th>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14892082</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-18</td>
+                    <td>S14891692</td>
+                    <td>Nitro</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-15</td>
+                    <td>S14805267</td>
+                    <td>Cliente</td>
+                </tr>
+
+                <tr>
+                    <td>2026-04-11</td>
+                    <td>S14727192</td>
+                    <td>Cliente</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section-title">📘 Histórico de Capacitación</div>
+
+        <div class="empty-box">Sin histórico de capacitación</div>
+
+    </div>
+</details>
+</details>
+        </details>  <!-- 🔒 Cierra "Rutas – Mapas semanales" -->
+
+        <!-- ================== VISTA HISTÓRICO CCC ================== -->
+        <details class="day-card">
+            <summary class="day-summary">📊 Histórico CCC - Mes actual</summary>
+
+            <div style="padding:12px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+                
+                <input type="text"
+                    id="buscadorCCC"
+                    placeholder="🔍 Buscar cliente o código..."
+                    onkeyup="filtrarCCC()"
+                    
+                    style="
+                            flex:1;
+                            min-width:220px;
+                            padding:10px;
+                            border-radius:10px;
+                            border:1px solid #ccc;
+                    ">
+
+                <select id="filtroOrigen"
+                        onchange="filtrarCCC()"
+                        style="
+                            padding:10px;
+                            border-radius:10px;
+                            border:1px solid #ccc;
+                            min-width:170px;
+                            font-size:14px;
+                        ">
+                    <option value="">Todos los orígenes</option>
+                    <option value="cliente">Cliente</option>
+                    <option value="nitro">Nitro</option>
+                    <option value="vendedor">Vendedor</option>
+                    <option value="no_pedido">No hizo pedido</option>
+                </select>
+
+                <button onclick="descargarCCCPDF()"
+                        style="
+                            padding:10px 14px;
+                            border-radius:10px;
+                            border:none;
+                            background:#e11d48;
+                            color:white;
+                            font-size:14px;
+                            cursor:pointer;
+                        ">
+                    📄 Descargar PDF
+                </button>
+
+            </div>
+    
+            <div class="table-scroll">
+                <table class="table-mini" id="tablaCCC">
+                    <tr>
+                        <th>CodCliente</th>
+                        <th>Cliente</th>
+                        <th>FechaCapacitacion</th>
+                        <th>FechaPedido</th>
+                        <th>Origen</th>                        
+                        <th onclick="ordenarDiasVentana()"
+                            style="cursor:pointer;">
+                            Días en ventana <span id="flechaDias">↕</span>
+                        </th>
+                        
+                    </tr>
+        
+                <tr>
+                    <td>C004033162</td>
+                    <td>C004033162 - MOSQUERA MENDOZA ADRIANA NOEMI</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004045077</td>
+                    <td>C004045077 - ZEGARRA QUISPE MARUJA</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001157504</td>
+                    <td>C001157504 - VALDEZ RODAS ANACLETO EUGENIO</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004097544</td>
+                    <td>C004097544 - AMBICHO RUIZ SHARON MAURA</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001482839</td>
+                    <td>C001482839 - DAVILA PASAPERA ENEDINA</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001742014</td>
+                    <td>C001742014 - RAMIREZ MENDOZA MAYKOL ULISES</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001741992</td>
+                    <td>C001741992 - RAMOS ALCALA DORIS</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001303257</td>
+                    <td>C001303257 - MALDONADO PALOMINO YOVANA</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001686818</td>
+                    <td>C001686818 - MELGAREJO ZEVALLOS VDA DE ARMAS CRISTINA</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001686806</td>
+                    <td>C001686806 - CLAUDIO ÑAÑA ROMINA MERLY</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C000509612</td>
+                    <td>C000509612 - OSCCO CUPE ABEL HILARIO</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004176179</td>
+                    <td>C004176179 - HUARCAYA TORRES NIXON MICHAEL</td>
+                    <td>2026-04-20</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-20" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001716288</td>
+                    <td>C001716288 - EVANAN BAUTISTA LIDIA ROTILIO</td>
+                    <td>2026-04-18</td>
+                    <td>2026-04-18</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-18" data-fecha-ped="2026-04-18"></td>
+                </tr>
+            
+                <tr>
+                    <td>C000507966</td>
+                    <td>C000507966 - DELGADO LEON MARTHA</td>
+                    <td>2026-04-18</td>
+                    <td>2026-04-18</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-18" data-fecha-ped="2026-04-18"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001757561</td>
+                    <td>C001757561 - LIMAYLLA VELASQUEZ HERLINDA MARCELINA</td>
+                    <td>2026-04-18</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-18" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C000424008</td>
+                    <td>C000424008 - CUBAS MENOR VIRGILIO</td>
+                    <td>2026-04-17</td>
+                    <td>2026-04-17</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-17" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001631089</td>
+                    <td>C001631089 - ALARCON OSCA MARCOS BRUNO</td>
+                    <td>2026-04-17</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-17" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001685496</td>
+                    <td>C001685496 - ESTELA YATACO ROBERTO ALEXANDER</td>
+                    <td>2026-04-17</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-17" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004201735</td>
+                    <td>C004201735 - ORIHUELA RAMOS VICTORIA</td>
+                    <td>2026-04-17</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-17" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001647126</td>
+                    <td>C001647126 - BODEGA BETZABEL S.A.C.</td>
+                    <td>2026-04-17</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-17" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001752851</td>
+                    <td>C001752851 - CHIPANA TAYPE VILMA VICTORIA</td>
+                    <td>2026-04-17</td>
+                    <td>2026-04-17</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-17" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001758137</td>
+                    <td>C001758137 - CUBA ROJAS CARAMELO CLAUDIO</td>
+                    <td>2026-04-17</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-17" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001629673</td>
+                    <td>C001629673 - BRAVO BERNAL RUTH MAYOLI</td>
+                    <td>2026-04-16</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-16" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001648913</td>
+                    <td>C001648913 - COMERCIAL AMECAR S.A.C. - AMECAR S.A.C.</td>
+                    <td>2026-04-16</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-16" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004059017</td>
+                    <td>C004059017 - VILA HUACCACHI MARLENY</td>
+                    <td>2026-04-16</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-16" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001435758</td>
+                    <td>C001435758 - ARTEAGA GONZALES LUZMILA</td>
+                    <td>2026-04-16</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-16" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001461676</td>
+                    <td>C001461676 - ESPINOA BERMUDEZ CELINDA</td>
+                    <td>2026-04-16</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-16" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001753288</td>
+                    <td>C001753288 - YAURI SIHUINCHA GEANCARLO PAOLO</td>
+                    <td>2026-04-16</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-16" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004190552</td>
+                    <td>C004190552 - ACHON CASTILLO JOSE LUIS</td>
+                    <td>2026-04-16</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-16" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001751135</td>
+                    <td>C001751135 - USCO TORIBIO ELIZABETH</td>
+                    <td>2026-04-16</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-16" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001669563</td>
+                    <td>C001669563 - QUISPE MENDOZA DE HINOJOSA AGATONITA EDA</td>
+                    <td>2026-04-16</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-16" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001661620</td>
+                    <td>C001661620 - ALDONATES CHOQUEHUANCA NELLY RUTH</td>
+                    <td>2026-04-16</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-16" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004166904</td>
+                    <td>C004166904 - AGUILAR MACHUCA DORIS MARISOL</td>
+                    <td>2026-04-15</td>
+                    <td>2026-04-17</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-15" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004176585</td>
+                    <td>C004176585 - SAYRITUPAC GERI NOSER BASILIO</td>
+                    <td>2026-04-15</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-15" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001743313</td>
+                    <td>C001743313 - ESCALANTE MEDINA ROSA SARITA</td>
+                    <td>2026-04-15</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-15" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001743231</td>
+                    <td>C001743231 - HUARANCCA ALEJANDRO ANA MARIA</td>
+                    <td>2026-04-15</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-15" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001727508</td>
+                    <td>C001727508 - ABREGU CARDENAS LUIS ADHERSON</td>
+                    <td>2026-04-15</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-15" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004170188</td>
+                    <td>C004170188 - LOPEZ MARIN MONICA FLOR</td>
+                    <td>2026-04-15</td>
+                    <td>2026-04-17</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-15" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001690723</td>
+                    <td>C001690723 - HUALLPAYUNCA QUISPE EDWIN YURI</td>
+                    <td>2026-04-15</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-15" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C000425152</td>
+                    <td>C000425152 - VALENCIA ESPINOZA MARCIAL</td>
+                    <td>2026-04-15</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-15" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001264445</td>
+                    <td>C001264445 - BUSTAMANTE SUELDO GENOVEVA</td>
+                    <td>2026-04-15</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-15" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001030019</td>
+                    <td>C001030019 - CONDORI LUPACA HEBERTH</td>
+                    <td>2026-04-15</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-15" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001384768</td>
+                    <td>C001384768 - CCOYLLO ECHACCAYA HENRY TEOBALDO</td>
+                    <td>2026-04-14</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-14" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001757968</td>
+                    <td>C001757968 - ARMIJOS PIÑIN MARIA ROSA</td>
+                    <td>2026-04-14</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-14" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001739434</td>
+                    <td>C001739434 - MEDINA LLONTOP MARIBEL</td>
+                    <td>2026-04-14</td>
+                    <td>2026-04-14</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-14" data-fecha-ped="2026-04-14"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001179727</td>
+                    <td>C001179727 - ZAMORA RODRIGUEZ JULIA</td>
+                    <td>2026-04-14</td>
+                    <td>2026-04-14</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-14" data-fecha-ped="2026-04-14"></td>
+                </tr>
+            
+                <tr>
+                    <td>C000547898</td>
+                    <td>C000547898 - DAMIANO ZU IGA ROSI</td>
+                    <td>2026-04-14</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-14" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004173476</td>
+                    <td>C004173476 - QUEZADA CARDENAS ERIKA LIBETH</td>
+                    <td>2026-04-14</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-14" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004218597</td>
+                    <td>C004218597 - GARCIA BLANCO YULIBEL ASTRID</td>
+                    <td>2026-04-14</td>
+                    <td>2026-04-14</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-14" data-fecha-ped="2026-04-14"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004168105</td>
+                    <td>C004168105 - RODRIGUEZ MARIN MARIA DELMIRA</td>
+                    <td>2026-04-14</td>
+                    <td>2026-04-17</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-14" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004210167</td>
+                    <td>C004210167 - TAIPE CARDENAS FREDY ROLANDO</td>
+                    <td>2026-04-14</td>
+                    <td>2026-04-17</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-14" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001173015</td>
+                    <td>C001173015 - SOLORZANO DE UCA AN MARTHA FLORA</td>
+                    <td>2026-04-13</td>
+                    <td>2026-04-14</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="2026-04-14"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001219684</td>
+                    <td>C001219684 - TELLO CHUMBIPUMA DE FERNANDEZ VICTORINA</td>
+                    <td>2026-04-13</td>
+                    <td>2026-04-17</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C000424046</td>
+                    <td>C000424046 - CUSTODIO DELGADO ANA</td>
+                    <td>2026-04-13</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001744097</td>
+                    <td>C001744097 - QUIROZ HUANGAL FLOR KELLY</td>
+                    <td>2026-04-13</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004205846</td>
+                    <td>C004205846 - RUIZ VARGAS DE CHAVEZ ROSENDA</td>
+                    <td>2026-04-13</td>
+                    <td>2026-04-14</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="2026-04-14"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001396352</td>
+                    <td>C001396352 - COLLANTES BENAVIDES ELMER</td>
+                    <td>2026-04-13</td>
+                    <td>2026-04-14</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="2026-04-14"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001462907</td>
+                    <td>C001462907 - C&amp;S MERA&#x27;S STORE SOCIEDAD ANONIMA CERRAD</td>
+                    <td>2026-04-13</td>
+                    <td>2026-04-14</td>
+                    <td>Nitro</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="2026-04-14"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001623811</td>
+                    <td>C001623811 - SANCHEZ MALPARTIDA MARIA CATALINA</td>
+                    <td>2026-04-13</td>
+                    <td>2026-04-14</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="2026-04-14"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001464666</td>
+                    <td>C001464666 - AVALOS CCOCHACHI LUISA</td>
+                    <td>2026-04-13</td>
+                    <td>2026-04-17</td>
+                    <td>Cliente</td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="2026-04-17"></td>
+                </tr>
+            
+                <tr>
+                    <td>C001763813</td>
+                    <td>C001763813 - SANDOVAL LUYO JOSE JUNIOR</td>
+                    <td>2026-04-13</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="nan"></td>
+                </tr>
+            
+                <tr>
+                    <td>C004180285</td>
+                    <td>C004180285 - ZAMBRANO GUTIERREZ BONIFACIO URBANO</td>
+                    <td>2026-04-13</td>
+                    <td>nan</td>
+                    <td></td>
+                    <td class="dias-sin-pedido" data-fecha-cap="2026-04-13" data-fecha-ped="nan"></td>
+                </tr>
+            
+                </table>
+            </div>
+        </details>             
+
+        <details class="day-card">
+            <summary class="day-summary">🟢 Clientes dentro de +14d</summary>
+
+            <div style="padding:12px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+                
+                <input type="text"
+                    id="buscadorCCCVentana"
+                    placeholder="🔍 Buscar cliente o código..."
+                    onkeyup="filtrarTabla('tablaCCCEnVentana', 'buscadorCCCVentana', 'filtroOrigenVentana')"
+                    style="
+                        flex:1;
+                        min-width:220px;
+                        padding:10px;
+                        border-radius:10px;
+                        border:1px solid #ccc;
+                    ">
+
+                <select id="filtroOrigenVentana"
+                        onchange="filtrarTabla('tablaCCCEnVentana', 'buscadorCCCVentana', 'filtroOrigenVentana')"
+                        style="
+                            padding:10px;
+                            border-radius:10px;
+                            border:1px solid #ccc;
+                            min-width:170px;
+                            font-size:14px;
+                        ">
+                    <option value="">Todos los orígenes</option>
+                    <option value="cliente">Cliente</option>
+                    <option value="nitro">Nitro</option>
+                    <option value="vendedor">Vendedor</option>
+                    <option value="no_pedido">No hizo pedido</option>
+                </select>
+
+                <button onclick="descargarTablaPDF('tablaCCCEnVentana', 'Clientes dentro de ventana')"
+                        style="
+                            padding:10px 14px;
+                            border-radius:10px;
+                            border:none;
+                            background:#16a34a;
+                            color:white;
+                            font-size:14px;
+                            cursor:pointer;
+                        ">
+                    📄 Descargar PDF
+                </button>
+            </div>
+
+            <div class="table-scroll">
+                
+        <table class="table-mini" id="tablaCCCEnVentana">
+            <tr>
+                <th>CodCliente</th>
+                <th>Cliente</th>
+                <th>FechaCapacitacion</th>
+                <th>FechaPedido</th>
+                <th>Origen</th>
+                <th onclick="ordenarDiasVentanaVentana()" style="cursor:pointer;">
+                    Días en ventana <span id="flechaDiasVentana">↕</span>
+                </th>
+            </tr>
+        
+            <tr>
+                <td>C001741992</td>
+                <td>C001741992 - RAMOS ALCALA DORIS</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C001742014</td>
+                <td>C001742014 - RAMIREZ MENDOZA MAYKOL ULISES</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C001482839</td>
+                <td>C001482839 - DAVILA PASAPERA ENEDINA</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C004033162</td>
+                <td>C004033162 - MOSQUERA MENDOZA ADRIANA NOEMI</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C001157504</td>
+                <td>C001157504 - VALDEZ RODAS ANACLETO EUGENIO</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C001686806</td>
+                <td>C001686806 - CLAUDIO ÑAÑA ROMINA MERLY</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C001686818</td>
+                <td>C001686818 - MELGAREJO ZEVALLOS VDA DE ARMAS CRISTINA</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C000509612</td>
+                <td>C000509612 - OSCCO CUPE ABEL HILARIO</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C004176179</td>
+                <td>C004176179 - HUARCAYA TORRES NIXON MICHAEL</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C004045077</td>
+                <td>C004045077 - ZEGARRA QUISPE MARUJA</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C001303257</td>
+                <td>C001303257 - MALDONADO PALOMINO YOVANA</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C004097544</td>
+                <td>C004097544 - AMBICHO RUIZ SHARON MAURA</td>
+                <td>2026-04-20</td>
+                <td>nan</td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>C000507966</td>
+                <td>C000507966 - DELGADO LEON MARTHA</td>
+                <td>2026-04-18</td>
+                <td>2026-04-18</td>
+                <td>Cliente</td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td>C001716288</td>
+                <td>C001716288 - EVANAN BAUTISTA LIDIA ROTILIO</td>
+                <td>2026-04-18</td>
+                <td>2026-04-18</td>
+                <td>Cliente</td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td>C001757561</td>
+                <td>C001757561 - LIMAYLLA VELASQUEZ HERLINDA MARCELINA</td>
+                <td>2026-04-18</td>
+                <td>nan</td>
+                <td></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td>C001758137</td>
+                <td>C001758137 - CUBA ROJAS CARAMELO CLAUDIO</td>
+                <td>2026-04-17</td>
+                <td>nan</td>
+                <td></td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td>C004201735</td>
+                <td>C004201735 - ORIHUELA RAMOS VICTORIA</td>
+                <td>2026-04-17</td>
+                <td>nan</td>
+                <td></td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td>C001631089</td>
+                <td>C001631089 - ALARCON OSCA MARCOS BRUNO</td>
+                <td>2026-04-17</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td>C001752851</td>
+                <td>C001752851 - CHIPANA TAYPE VILMA VICTORIA</td>
+                <td>2026-04-17</td>
+                <td>2026-04-17</td>
+                <td>Cliente</td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td>C001647126</td>
+                <td>C001647126 - BODEGA BETZABEL S.A.C.</td>
+                <td>2026-04-17</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td>C000424008</td>
+                <td>C000424008 - CUBAS MENOR VIRGILIO</td>
+                <td>2026-04-17</td>
+                <td>2026-04-17</td>
+                <td>Cliente</td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td>C001685496</td>
+                <td>C001685496 - ESTELA YATACO ROBERTO ALEXANDER</td>
+                <td>2026-04-17</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td>C001753288</td>
+                <td>C001753288 - YAURI SIHUINCHA GEANCARLO PAOLO</td>
+                <td>2026-04-16</td>
+                <td>nan</td>
+                <td></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>C001751135</td>
+                <td>C001751135 - USCO TORIBIO ELIZABETH</td>
+                <td>2026-04-16</td>
+                <td>nan</td>
+                <td></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>C001461676</td>
+                <td>C001461676 - ESPINOA BERMUDEZ CELINDA</td>
+                <td>2026-04-16</td>
+                <td>nan</td>
+                <td></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>C004059017</td>
+                <td>C004059017 - VILA HUACCACHI MARLENY</td>
+                <td>2026-04-16</td>
+                <td>nan</td>
+                <td></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>C001435758</td>
+                <td>C001435758 - ARTEAGA GONZALES LUZMILA</td>
+                <td>2026-04-16</td>
+                <td>nan</td>
+                <td></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>C001669563</td>
+                <td>C001669563 - QUISPE MENDOZA DE HINOJOSA AGATONITA EDA</td>
+                <td>2026-04-16</td>
+                <td>nan</td>
+                <td></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>C004190552</td>
+                <td>C004190552 - ACHON CASTILLO JOSE LUIS</td>
+                <td>2026-04-16</td>
+                <td>nan</td>
+                <td></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>C001648913</td>
+                <td>C001648913 - COMERCIAL AMECAR S.A.C. - AMECAR S.A.C.</td>
+                <td>2026-04-16</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>C001661620</td>
+                <td>C001661620 - ALDONATES CHOQUEHUANCA NELLY RUTH</td>
+                <td>2026-04-16</td>
+                <td>nan</td>
+                <td></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>C001629673</td>
+                <td>C001629673 - BRAVO BERNAL RUTH MAYOLI</td>
+                <td>2026-04-16</td>
+                <td>nan</td>
+                <td></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>C001690723</td>
+                <td>C001690723 - HUALLPAYUNCA QUISPE EDWIN YURI</td>
+                <td>2026-04-15</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>C004170188</td>
+                <td>C004170188 - LOPEZ MARIN MONICA FLOR</td>
+                <td>2026-04-15</td>
+                <td>2026-04-17</td>
+                <td>Cliente</td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>C004166904</td>
+                <td>C004166904 - AGUILAR MACHUCA DORIS MARISOL</td>
+                <td>2026-04-15</td>
+                <td>2026-04-17</td>
+                <td>Cliente</td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>C004176585</td>
+                <td>C004176585 - SAYRITUPAC GERI NOSER BASILIO</td>
+                <td>2026-04-15</td>
+                <td>nan</td>
+                <td></td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>C001727508</td>
+                <td>C001727508 - ABREGU CARDENAS LUIS ADHERSON</td>
+                <td>2026-04-15</td>
+                <td>nan</td>
+                <td></td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>C001264445</td>
+                <td>C001264445 - BUSTAMANTE SUELDO GENOVEVA</td>
+                <td>2026-04-15</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>C001030019</td>
+                <td>C001030019 - CONDORI LUPACA HEBERTH</td>
+                <td>2026-04-15</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>C001743231</td>
+                <td>C001743231 - HUARANCCA ALEJANDRO ANA MARIA</td>
+                <td>2026-04-15</td>
+                <td>nan</td>
+                <td></td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>C001743313</td>
+                <td>C001743313 - ESCALANTE MEDINA ROSA SARITA</td>
+                <td>2026-04-15</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>C000425152</td>
+                <td>C000425152 - VALENCIA ESPINOZA MARCIAL</td>
+                <td>2026-04-15</td>
+                <td>nan</td>
+                <td></td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td>C001384768</td>
+                <td>C001384768 - CCOYLLO ECHACCAYA HENRY TEOBALDO</td>
+                <td>2026-04-14</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>7</td>
+            </tr>
+            
+            <tr>
+                <td>C000547898</td>
+                <td>C000547898 - DAMIANO ZU IGA ROSI</td>
+                <td>2026-04-14</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>7</td>
+            </tr>
+            
+            <tr>
+                <td>C001739434</td>
+                <td>C001739434 - MEDINA LLONTOP MARIBEL</td>
+                <td>2026-04-14</td>
+                <td>2026-04-14</td>
+                <td>Cliente</td>
+                <td>7</td>
+            </tr>
+            
+            <tr>
+                <td>C001757968</td>
+                <td>C001757968 - ARMIJOS PIÑIN MARIA ROSA</td>
+                <td>2026-04-14</td>
+                <td>nan</td>
+                <td></td>
+                <td>7</td>
+            </tr>
+            
+            <tr>
+                <td>C004173476</td>
+                <td>C004173476 - QUEZADA CARDENAS ERIKA LIBETH</td>
+                <td>2026-04-14</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>7</td>
+            </tr>
+            
+            <tr>
+                <td>C001179727</td>
+                <td>C001179727 - ZAMORA RODRIGUEZ JULIA</td>
+                <td>2026-04-14</td>
+                <td>2026-04-14</td>
+                <td>Cliente</td>
+                <td>7</td>
+            </tr>
+            
+            <tr>
+                <td>C004168105</td>
+                <td>C004168105 - RODRIGUEZ MARIN MARIA DELMIRA</td>
+                <td>2026-04-14</td>
+                <td>2026-04-17</td>
+                <td>Cliente</td>
+                <td>7</td>
+            </tr>
+            
+            <tr>
+                <td>C004210167</td>
+                <td>C004210167 - TAIPE CARDENAS FREDY ROLANDO</td>
+                <td>2026-04-14</td>
+                <td>2026-04-17</td>
+                <td>Nitro</td>
+                <td>7</td>
+            </tr>
+            
+            <tr>
+                <td>C004218597</td>
+                <td>C004218597 - GARCIA BLANCO YULIBEL ASTRID</td>
+                <td>2026-04-14</td>
+                <td>2026-04-14</td>
+                <td>Cliente</td>
+                <td>7</td>
+            </tr>
+            
+            <tr>
+                <td>C001744097</td>
+                <td>C001744097 - QUIROZ HUANGAL FLOR KELLY</td>
+                <td>2026-04-13</td>
+                <td>nan</td>
+                <td></td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>C001462907</td>
+                <td>C001462907 - C&amp;S MERA&#x27;S STORE SOCIEDAD ANONIMA CERRAD</td>
+                <td>2026-04-13</td>
+                <td>2026-04-14</td>
+                <td>Nitro</td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>C001173015</td>
+                <td>C001173015 - SOLORZANO DE UCA AN MARTHA FLORA</td>
+                <td>2026-04-13</td>
+                <td>2026-04-14</td>
+                <td>Cliente</td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>C001623811</td>
+                <td>C001623811 - SANCHEZ MALPARTIDA MARIA CATALINA</td>
+                <td>2026-04-13</td>
+                <td>2026-04-14</td>
+                <td>Cliente</td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>C001763813</td>
+                <td>C001763813 - SANDOVAL LUYO JOSE JUNIOR</td>
+                <td>2026-04-13</td>
+                <td>nan</td>
+                <td></td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>C000424046</td>
+                <td>C000424046 - CUSTODIO DELGADO ANA</td>
+                <td>2026-04-13</td>
+                <td>nan</td>
+                <td></td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>C004205846</td>
+                <td>C004205846 - RUIZ VARGAS DE CHAVEZ ROSENDA</td>
+                <td>2026-04-13</td>
+                <td>2026-04-14</td>
+                <td>Cliente</td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>C001396352</td>
+                <td>C001396352 - COLLANTES BENAVIDES ELMER</td>
+                <td>2026-04-13</td>
+                <td>2026-04-14</td>
+                <td>Nitro</td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>C001464666</td>
+                <td>C001464666 - AVALOS CCOCHACHI LUISA</td>
+                <td>2026-04-13</td>
+                <td>2026-04-17</td>
+                <td>Cliente</td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>C001219684</td>
+                <td>C001219684 - TELLO CHUMBIPUMA DE FERNANDEZ VICTORINA</td>
+                <td>2026-04-13</td>
+                <td>2026-04-17</td>
+                <td>Cliente</td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>C004180285</td>
+                <td>C004180285 - ZAMBRANO GUTIERREZ BONIFACIO URBANO</td>
+                <td>2026-04-13</td>
+                <td>nan</td>
+                <td></td>
+                <td>8</td>
+            </tr>
+            </table>
+            </div>
+        </details>
+        </div>
+        <script>
+
+        function filtrarCCC() {
+            let texto = document.getElementById("buscadorCCC").value.toLowerCase();
+            let origen = document.getElementById("filtroOrigen").value.toLowerCase();
+            let filas = document.querySelectorAll("#tablaCCC tr");
+
+            filas.forEach((fila, i) => {
+                if (i === 0) return; // cabecera
+
+                let columnas = fila.querySelectorAll("td");
+                let textoFila = fila.innerText.toLowerCase();
+                let origenFila = columnas[4].innerText.toLowerCase().trim();
+
+                let cumpleTexto = textoFila.includes(texto);
+                let cumpleOrigen =
+                    origen === "" ||
+                    origenFila === origen ||
+                    (origen === "no_pedido" && (origenFila === "" || origenFila === "nan"));
+
+                fila.style.display = (cumpleTexto && cumpleOrigen) ? "" : "none";
+            });
+        }
+
+        function filtrarTabla(idTabla, idBuscador, idFiltro) {
+            const texto = document.getElementById(idBuscador).value.toLowerCase();
+            const origen = document.getElementById(idFiltro).value.toLowerCase();
+            const filas = document.querySelectorAll(`#${idTabla} tr`);
+
+            filas.forEach((fila, i) => {
+                if (i === 0) return; // cabecera
+
+                const columnas = fila.querySelectorAll("td");
+                if (!columnas.length) return;
+
+                const textoFila = fila.innerText.toLowerCase();
+                const origenFila = columnas[4].innerText.toLowerCase().trim();
+
+                const cumpleTexto = textoFila.includes(texto);
+                const cumpleOrigen =
+                    origen === "" ||
+                    origenFila === origen ||
+                    (origen === "no_pedido" && (origenFila === "" || origenFila === "nan"));
+
+                fila.style.display = (cumpleTexto && cumpleOrigen) ? "" : "none";
+            });
+        }
+        function descargarTablaPDF(idTabla, titulo) {
+            const filas = document.querySelectorAll("#" + idTabla + " tr");
+            let contenido = "";
+
+            contenido +=
+                "<h2 style='text-align:center;'>" + titulo + "</h2>" +
+                "<p style='text-align:center; font-size:12px;'>" +
+                    "Generado el " + new Date().toLocaleDateString() +
+                "</p>" +
+                "<table border='1' cellpadding='6' cellspacing='0' " +
+                    "style='width:100%; border-collapse:collapse; font-size:11px;'>" +
+                    "<thead style='background:#0078ff; color:white;'>" +
+                        "<tr>" +
+                            "<th>CodCliente</th>" +
+                            "<th>Cliente</th>" +
+                            "<th>Fecha Capacitación</th>" +
+                            "<th>Fecha Pedido</th>" +
+                            "<th>Origen</th>" +
+                            "<th>Días en ventana</th>" +
+                        "</tr>" +
+                    "</thead>" +
+                    "<tbody>";
+
+            filas.forEach((fila, i) => {
+                if (i === 0) return;
+                if (fila.style.display === "none") return;
+
+                const cols = fila.querySelectorAll("td");
+                if (cols.length >= 5) {
+                    contenido +=
+                        "<tr>" +
+                            "<td>" + cols[0].innerText + "</td>" +
+                            "<td>" + cols[1].innerText + "</td>" +
+                            "<td>" + cols[2].innerText + "</td>" +
+                            "<td>" + cols[3].innerText + "</td>" +
+                            "<td>" + cols[4].innerText + "</td>" +
+                        "</tr>";
+                }
+            });
+
+            contenido +=
+                    "</tbody>" +
+                "</table>";
+
+            const ventana = window.open("", "_blank");
+            ventana.document.write(
+                "<html>" +
+                    "<head>" +
+                        "<title>" + titulo + "</title>" +
+                        "<style>body{font-family:Arial,sans-serif;padding:20px;}</style>" +
+                    "</head>" +
+                    "<body>" +
+                        contenido +
+                        "<script>window.print();<\/script>" +
+                    "</body>" +
+                "</html>"
+            );
+            ventana.document.close();
+        }
+
+        /* ✅ NUEVA FUNCIÓN — DÍAS SIN PEDIDO */
+        function calcularDiasSinPedido() {
+            let hoy = new Date();
+
+            document.querySelectorAll(".dias-sin-pedido").forEach(celda => {
+
+                let fechaCapStr = celda.dataset.fechaCap;
+                let fechaPedStr = celda.dataset.fechaPed;
+
+                if (!fechaCapStr) return;
+
+                let fechaCap = new Date(fechaCapStr);
+                let fechaBase = (!fechaPedStr || fechaPedStr === "nan")
+                    ? hoy
+                    : new Date(fechaPedStr);
+
+                let diffMs = fechaBase - fechaCap;
+                let dias = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+                if (!fechaPedStr || fechaPedStr === "nan") {
+                    if (dias >= 15) {
+                        celda.innerText = "Fuera de periodo para pedido";
+                        celda.style.background = "#fee2e2";
+                        celda.style.color = "#991b1b";
+                        celda.style.fontWeight = "bold";
+                    } else {
+                        celda.innerText = dias;
+                    }
+                } else {
+                    celda.innerText = dias;
+                }
+            });
+        }
+
+        /* ✅ ORDENAMIENTO — DÍAS EN VENTANA */
+        let ordenAscDias = true;
+
+        function ordenarDiasVentana() {
+            let tabla = document.getElementById("tablaCCC");
+            let filas = Array.from(tabla.querySelectorAll("tr")).slice(1);
+            let flecha = document.getElementById("flechaDias");
+
+            filas.sort((a, b) => {
+                let aTexto = a.querySelectorAll("td")[5].innerText;
+                let bTexto = b.querySelectorAll("td")[5].innerText;
+
+                let valA = extraerValorDias(aTexto);
+                let valB = extraerValorDias(bTexto);
+
+                return ordenAscDias ? valA - valB : valB - valA;
+            });
+
+            filas.forEach(fila => tabla.appendChild(fila));
+
+            flecha.innerText = ordenAscDias ? "▲" : "▼";
+            ordenAscDias = !ordenAscDias;
+        }
+
+        let ordenAscDiasVentana = true;
+
+        function ordenarDiasVentanaVentana() {
+            let tabla = document.getElementById("tablaCCCEnVentana");
+            let filas = Array.from(tabla.querySelectorAll("tr")).slice(1);
+            let flecha = document.getElementById("flechaDiasVentana");
+
+            filas.sort((a, b) => {
+                let valA = parseInt(a.querySelectorAll("td")[4].innerText) || 0;
+                let valB = parseInt(b.querySelectorAll("td")[4].innerText) || 0;
+
+                return ordenAscDiasVentana ? valA - valB : valB - valA;
+            });
+
+            filas.forEach(fila => tabla.appendChild(fila));
+
+            flecha.innerText = ordenAscDiasVentana ? "▲" : "▼";
+            ordenAscDiasVentana = !ordenAscDiasVentana;
+        }
+
+        function extraerValorDias(texto) {
+            if (texto.includes("Fuera")) return 9999;
+            let n = parseInt(texto);
+            return isNaN(n) ? 9998 : n;
+        }
+
+        /* ✅ Ejecutar automáticamente al cargar la página */
+        document.addEventListener("DOMContentLoaded", () => {
+            calcularDiasSinPedido();
+        });
+        </script>
+        <script>
+        function descargarCCCPDF() {
+
+            let filas = document.querySelectorAll("#tablaCCC tr");
+            let contenido = "";
+
+            contenido += `
+                <h2 style="text-align:center;">Histórico CCC</h2>
+                <p style="text-align:center; font-size:12px;">
+                    Digitalizador: ${document.querySelector(".header h3").innerText}<br>
+                    Generado el ${new Date().toLocaleDateString()}
+                </p>
+                <table border="1" cellpadding="6" cellspacing="0"
+                    style="width:100%; border-collapse:collapse; font-size:11px;">
+                    <thead style="background:#0078ff; color:white;">
+                        <tr>
+                            <th>CodCliente</th>
+                            <th>Cliente</th>
+                            <th>Fecha Capacitación</th>
+                            <th>Fecha Pedido</th>
+                            <th>Origen</th>
+                            <th>Días en ventana</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            filas.forEach((fila, i) => {
+                if (i === 0) return; // cabecera
+                if (fila.style.display === "none") return; // solo visible
+
+                let cols = fila.querySelectorAll("td");
+                if (cols.length === 5) {
+                    contenido += `
+                        <tr>
+                            <td>${cols[0].innerText}</td>
+                            <td>${cols[1].innerText}</td>
+                            <td>${cols[2].innerText}</td>
+                            <td>${cols[3].innerText}</td>
+                        </tr>
+                    `;
+                }
+            });
+
+            contenido += `
+                    </tbody>
+                </table>
+            `;
+
+            let ventana = window.open("", "_blank");
+            ventana.document.write(`
+                <html>
+                <head>
+                    <title>Histórico CCC</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 20px; }
+                    </style>
+                </head>
+                <body>
+                    ${contenido}
+                    <script>
+                        window.print();
+                    <\/script>
+                </body>
+                </html>
+            `);
+            ventana.document.close();
+        }
+        </script>
+
+        </body>
+        </html>
+        

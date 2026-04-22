@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fd8476fc1454601097a553c06166bad6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+            <style>
+            .leaflet-control-attribution {
+                display: none !important;
+            }
+            </style>
+            
+    
+            <div style="
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 9999;
+                background: white;
+                padding: 10px 14px;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+                font-size: 13px;
+            ">
+                <b>Resumen de Ruta</b><br>
+                Total clientes: 15<br>
+                <span style="color: orange;"><b>Por graduar:</b> 0</span>
+            </div>
+            
+    
+            <div class="folium-map" id="map_fd8476fc1454601097a553c06166bad6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fd8476fc1454601097a553c06166bad6 = L.map(
+                "map_fd8476fc1454601097a553c06166bad6",
+                {
+                    center: [-12.12111, -76.9880495],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_182acbbe7d011b0e10167ff3ab3f6897 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u00a9 OpenStreetMap contributors \u00a9 CARTO",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_182acbbe7d011b0e10167ff3ab3f6897.addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var marker_5cd35f716348a08bedd7ce248b9e04e9 = L.marker(
+                [-12.12111, -76.9880495],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_35fe540c0b4422bf1efd31bc429615e0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce74a27916759d0389b24d2d4cebae91 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a3f7e95c16cf93bb78dd09d70b4b18b8 = $(`<div id="html_a3f7e95c16cf93bb78dd09d70b4b18b8" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000427798<br>                         <b>Nombre:</b> ANDIA AVILES GRETA MELINA<br>                         <b>Dirección:</b> AV. HIGUERETA NRO. 660 Lima-Lima-Santiago de Surco<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_ce74a27916759d0389b24d2d4cebae91.setContent(html_a3f7e95c16cf93bb78dd09d70b4b18b8);
+            
+        
+
+        marker_5cd35f716348a08bedd7ce248b9e04e9.bindPopup(popup_ce74a27916759d0389b24d2d4cebae91)
+        ;
+
+        
+    
+    
+                marker_5cd35f716348a08bedd7ce248b9e04e9.setIcon(icon_35fe540c0b4422bf1efd31bc429615e0);
+            
+    
+            var marker_89b79ad42058640252a99cdffb850638 = L.marker(
+                [-12.170563, -76.966131],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_3ae488ff1fcb772af5a95ab90a52f5a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f25b854404c7449c813e6cecdce3960 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7d173bd8a2177cfe93679ccb24e89166 = $(`<div id="html_7d173bd8a2177cfe93679ccb24e89166" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001757113<br>                         <b>Nombre:</b> AROTINCO PALOMINO CARLOS<br>                         <b>Dirección:</b> JR. JIROM ALHELIZ MZ T LOTE 14 Lima-Lima-San Juan de Miraflores<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_5f25b854404c7449c813e6cecdce3960.setContent(html_7d173bd8a2177cfe93679ccb24e89166);
+            
+        
+
+        marker_89b79ad42058640252a99cdffb850638.bindPopup(popup_5f25b854404c7449c813e6cecdce3960)
+        ;
+
+        
+    
+    
+                marker_89b79ad42058640252a99cdffb850638.setIcon(icon_3ae488ff1fcb772af5a95ab90a52f5a3);
+            
+    
+            var marker_e7328f6943500c40675a9bc257b645f1 = L.marker(
+                [-12.1850616, -76.9800008],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_7fffdd42666ec2f09733c46a2a3eac06 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29ab697c3bd2268e7b43e855d508e876 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5f73fc9746291cb960bc431df1eebfc9 = $(`<div id="html_5f73fc9746291cb960bc431df1eebfc9" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001746815<br>                         <b>Nombre:</b> ARROYO RUBIO MAIDA IVONNE<br>                         <b>Dirección:</b> ASOC VILLA TREBOL MZA. C LOTE. 6 Lima-Lima-San Juan de Miraflores<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_29ab697c3bd2268e7b43e855d508e876.setContent(html_5f73fc9746291cb960bc431df1eebfc9);
+            
+        
+
+        marker_e7328f6943500c40675a9bc257b645f1.bindPopup(popup_29ab697c3bd2268e7b43e855d508e876)
+        ;
+
+        
+    
+    
+                marker_e7328f6943500c40675a9bc257b645f1.setIcon(icon_7fffdd42666ec2f09733c46a2a3eac06);
+            
+    
+            var marker_280326c5eb868e7fdecc4a7760b0afd6 = L.marker(
+                [-12.1664093, -76.974727],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_16e786fa555e7367f2569ced3f7a4eb2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_645326247f594a0b31ba623dc5dee432 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d4efd81202473d549c4a956344f90dce = $(`<div id="html_d4efd81202473d549c4a956344f90dce" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001522477<br>                         <b>Nombre:</b> CARDENAS CACERES AMELIA<br>                         <b>Dirección:</b> AV. CANEVARO MZA. L LOTE. 4 URB. ASOCTREBOL AZUL Lima-Lima-San Juan de Miraflores<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_645326247f594a0b31ba623dc5dee432.setContent(html_d4efd81202473d549c4a956344f90dce);
+            
+        
+
+        marker_280326c5eb868e7fdecc4a7760b0afd6.bindPopup(popup_645326247f594a0b31ba623dc5dee432)
+        ;
+
+        
+    
+    
+                marker_280326c5eb868e7fdecc4a7760b0afd6.setIcon(icon_16e786fa555e7367f2569ced3f7a4eb2);
+            
+    
+            var marker_7ed20f625344d3c5b1e39a7506d49520 = L.marker(
+                [-12.1219964, -76.9924272],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_6ccc53253ab3a4ab81003af587c6625f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bc83375e6628677a349e8320560f98de = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e928c858fb451a8e1535d1b17188feb8 = $(`<div id="html_e928c858fb451a8e1535d1b17188feb8" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001333201<br>                         <b>Nombre:</b> COQUIL LLACUA DENISS MIRIAM<br>                         <b>Dirección:</b> CL. CADIZ NRO. 398 URB. HIGUERETA Lima-Lima-Santiago de Surco<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_bc83375e6628677a349e8320560f98de.setContent(html_e928c858fb451a8e1535d1b17188feb8);
+            
+        
+
+        marker_7ed20f625344d3c5b1e39a7506d49520.bindPopup(popup_bc83375e6628677a349e8320560f98de)
+        ;
+
+        
+    
+    
+                marker_7ed20f625344d3c5b1e39a7506d49520.setIcon(icon_6ccc53253ab3a4ab81003af587c6625f);
+            
+    
+            var marker_a32b4613c1edf70f74885a9c78240c1a = L.marker(
+                [-12.1336819, -76.9918536],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_96c7b0132ce7b6c9c5dc0fd4d949e0da = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2832fed92252d72c2cf79548efb92dd1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e51de56bcbe61454b3cf0f83b85b9f13 = $(`<div id="html_e51de56bcbe61454b3cf0f83b85b9f13" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001711378<br>                         <b>Nombre:</b> HUARIS LOAYZA MERCEDES ELSA<br>                         <b>Dirección:</b> PJE. TELESFORO GARCIA BEDOYA S/N TD Lima-Lima-Santiago de Surco<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_2832fed92252d72c2cf79548efb92dd1.setContent(html_e51de56bcbe61454b3cf0f83b85b9f13);
+            
+        
+
+        marker_a32b4613c1edf70f74885a9c78240c1a.bindPopup(popup_2832fed92252d72c2cf79548efb92dd1)
+        ;
+
+        
+    
+    
+                marker_a32b4613c1edf70f74885a9c78240c1a.setIcon(icon_96c7b0132ce7b6c9c5dc0fd4d949e0da);
+            
+    
+            var marker_8fae52dafe7770bb6cb2bd58d09fc4a0 = L.marker(
+                [-12.1704215, -76.9660859],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_1dd0ca8e1eb074a84c3e62ee4195947d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a9620a557bd699536a9f1f100e0b06b2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a419195030127fc3c646566897f1fb34 = $(`<div id="html_a419195030127fc3c646566897f1fb34" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000510436<br>                         <b>Nombre:</b> MARAVI BARDALES GLORIA<br>                         <b>Dirección:</b> CL. LOS ALHELIES MZA. R LOTE. 22 URB. COOP VALLE SHARON Lima-Lima-San Juan de Miraflores<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_a9620a557bd699536a9f1f100e0b06b2.setContent(html_a419195030127fc3c646566897f1fb34);
+            
+        
+
+        marker_8fae52dafe7770bb6cb2bd58d09fc4a0.bindPopup(popup_a9620a557bd699536a9f1f100e0b06b2)
+        ;
+
+        
+    
+    
+                marker_8fae52dafe7770bb6cb2bd58d09fc4a0.setIcon(icon_1dd0ca8e1eb074a84c3e62ee4195947d);
+            
+    
+            var marker_bd954214e440319a312ae968782f8f08 = L.marker(
+                [-12.1876572, -76.963219],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_a20a77c33a3978bda211322873c389f7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5db18b815d82f4fd252cfaa0b4adad73 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_95c89dd406e02a6742fdb500fc02a326 = $(`<div id="html_95c89dd406e02a6742fdb500fc02a326" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000590569<br>                         <b>Nombre:</b> PALOMINO CAMPOS MAGALY SOLEDAD<br>                         <b>Dirección:</b> AV. MER MARIANO PASTOR SEVILLA P MZA. MAZAA010 URB. SAN JUAN DE MIRAFLORES Lima-Lima-San Juan de Miraflores<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_5db18b815d82f4fd252cfaa0b4adad73.setContent(html_95c89dd406e02a6742fdb500fc02a326);
+            
+        
+
+        marker_bd954214e440319a312ae968782f8f08.bindPopup(popup_5db18b815d82f4fd252cfaa0b4adad73)
+        ;
+
+        
+    
+    
+                marker_bd954214e440319a312ae968782f8f08.setIcon(icon_a20a77c33a3978bda211322873c389f7);
+            
+    
+            var marker_dcda393e7ee6e6402f1875aeb8467344 = L.marker(
+                [-12.1274326, -76.9872814],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_7b85fd7ff901a26f91e673b77a11203b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac20eb8c8a9cd0be45938cc7eb692d28 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_69f59fabab9e679033a04ad2ba3f32fc = $(`<div id="html_69f59fabab9e679033a04ad2ba3f32fc" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001748598<br>                         <b>Nombre:</b> RIOS OJEDA SEBASTIAN<br>                         <b>Dirección:</b> AV. ALEJANDRO VELASCO ASTETE NRO. 2083 Lima-Lima-Santiago de Surco<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_ac20eb8c8a9cd0be45938cc7eb692d28.setContent(html_69f59fabab9e679033a04ad2ba3f32fc);
+            
+        
+
+        marker_dcda393e7ee6e6402f1875aeb8467344.bindPopup(popup_ac20eb8c8a9cd0be45938cc7eb692d28)
+        ;
+
+        
+    
+    
+                marker_dcda393e7ee6e6402f1875aeb8467344.setIcon(icon_7b85fd7ff901a26f91e673b77a11203b);
+            
+    
+            var marker_190ea6a0fc5e81d185b561328f24b1c8 = L.marker(
+                [-12.1663549, -76.9747112],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_2adbf44a9bf62daf1ba0b8cace43cb41 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe10c8ac3f7e303dc1216e29f1ebb496 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a19e770e36bacd22880c4fd8fba5c352 = $(`<div id="html_a19e770e36bacd22880c4fd8fba5c352" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001731653<br>                         <b>Nombre:</b> RODRIGUEZ BERROCAL AYDEE<br>                         <b>Dirección:</b> AAHH HEROES DE SAN JUAN MZA. G1 LOTE. 25 Lima-Lima-San Juan de Miraflores<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_fe10c8ac3f7e303dc1216e29f1ebb496.setContent(html_a19e770e36bacd22880c4fd8fba5c352);
+            
+        
+
+        marker_190ea6a0fc5e81d185b561328f24b1c8.bindPopup(popup_fe10c8ac3f7e303dc1216e29f1ebb496)
+        ;
+
+        
+    
+    
+                marker_190ea6a0fc5e81d185b561328f24b1c8.setIcon(icon_2adbf44a9bf62daf1ba0b8cace43cb41);
+            
+    
+            var marker_3b0646df9dcb7ed42a950bc4f907e186 = L.marker(
+                [-12.13801, -77.00167],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_3751e117b8d157d59cd6d559ce33544c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_075f498897dd99d0bf91f2a46690aae5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_dade47f5b0e45fd6f1d48b210fba5d19 = $(`<div id="html_dade47f5b0e45fd6f1d48b210fba5d19" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001627411<br>                         <b>Nombre:</b> ROJAS YARANGA RONALD CHRISTIAN<br>                         <b>Dirección:</b> CL. LOS SEIBOS INT. 14 MZA. L14 LOTE. B URB. CC LA CAPULLANA Lima-Lima-Santiago de Surco<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_075f498897dd99d0bf91f2a46690aae5.setContent(html_dade47f5b0e45fd6f1d48b210fba5d19);
+            
+        
+
+        marker_3b0646df9dcb7ed42a950bc4f907e186.bindPopup(popup_075f498897dd99d0bf91f2a46690aae5)
+        ;
+
+        
+    
+    
+                marker_3b0646df9dcb7ed42a950bc4f907e186.setIcon(icon_3751e117b8d157d59cd6d559ce33544c);
+            
+    
+            var marker_cf47a1bb11edb93e720e393921a83f09 = L.marker(
+                [-12.1475, -77.01473],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_634db1f1fdd39b411d54d97073b352c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8f589a4a02b40c92201d9022bb12b61 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_dd6298fd328cc67d22f7aaa5236e84ad = $(`<div id="html_dd6298fd328cc67d22f7aaa5236e84ad" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000546889<br>                         <b>Nombre:</b> SALCEDO CALLAPANI NELIDA<br>                         <b>Dirección:</b> MCDO. MCDO EL TREBOL NRO. 125 Lima-Lima-Santiago de Surco<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_d8f589a4a02b40c92201d9022bb12b61.setContent(html_dd6298fd328cc67d22f7aaa5236e84ad);
+            
+        
+
+        marker_cf47a1bb11edb93e720e393921a83f09.bindPopup(popup_d8f589a4a02b40c92201d9022bb12b61)
+        ;
+
+        
+    
+    
+                marker_cf47a1bb11edb93e720e393921a83f09.setIcon(icon_634db1f1fdd39b411d54d97073b352c3);
+            
+    
+            var marker_dc6771d483c571d90d2754bfc9fe736c = L.marker(
+                [-12.1441, -76.98209],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_a927aca79de945e4fc45ead440e1782d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_302ab428ff5c34b6e14f8d970f0740f6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_47bf25e37d3e7c939b090fc310023e1a = $(`<div id="html_47bf25e37d3e7c939b090fc310023e1a" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001741030<br>                         <b>Nombre:</b> SILVA MARLO EDUIN ESTALIN<br>                         <b>Dirección:</b> AV. ANDRES TINOCO NRO. 696 Lima-Lima-Santiago de Surco<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_302ab428ff5c34b6e14f8d970f0740f6.setContent(html_47bf25e37d3e7c939b090fc310023e1a);
+            
+        
+
+        marker_dc6771d483c571d90d2754bfc9fe736c.bindPopup(popup_302ab428ff5c34b6e14f8d970f0740f6)
+        ;
+
+        
+    
+    
+                marker_dc6771d483c571d90d2754bfc9fe736c.setIcon(icon_a927aca79de945e4fc45ead440e1782d);
+            
+    
+            var marker_04c53a0f57b7380044ae5eb2ec61fb3f = L.marker(
+                [-12.1776209, -76.9624908],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_2112dc9ca009f00987efb59c57d2b0cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_efa5465646eedef60390f51a2ab187ec = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1036f86983f7055a9509c6332f9ecbe6 = $(`<div id="html_1036f86983f7055a9509c6332f9ecbe6" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000416735<br>                         <b>Nombre:</b> SONCCO APFATA NEMESIO<br>                         <b>Dirección:</b> AV. AVE MIGUEL IGLESIAS MZA. B LOTE. 15 URB. AH ALEMANA Lima-Lima-San Juan de Miraflores<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_efa5465646eedef60390f51a2ab187ec.setContent(html_1036f86983f7055a9509c6332f9ecbe6);
+            
+        
+
+        marker_04c53a0f57b7380044ae5eb2ec61fb3f.bindPopup(popup_efa5465646eedef60390f51a2ab187ec)
+        ;
+
+        
+    
+    
+                marker_04c53a0f57b7380044ae5eb2ec61fb3f.setIcon(icon_2112dc9ca009f00987efb59c57d2b0cf);
+            
+    
+            var marker_c10a547b2ee5c70a5c7812364e97fc6c = L.marker(
+                [-12.1748005, -76.964957],
+                {
+}
+            ).addTo(map_fd8476fc1454601097a553c06166bad6);
+        
+    
+            var icon_cb4e5e69ee790b82a8853f30992349af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de01f86a6c9a7e25a51f6a5bf7b478fe = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_031e9d4b7a3134f9f0c9d6a1d9efe087 = $(`<div id="html_031e9d4b7a3134f9f0c9d6a1d9efe087" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000415774<br>                         <b>Nombre:</b> VALENZUELA GOMEZ JUANA<br>                         <b>Dirección:</b> JR. CAL ARGUEDAS JOSE MARIA MK1 L LOTE. 5 URB. AH HEROES DE SAN JUAN Lima-Lima-San Juan de Miraflores<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_de01f86a6c9a7e25a51f6a5bf7b478fe.setContent(html_031e9d4b7a3134f9f0c9d6a1d9efe087);
+            
+        
+
+        marker_c10a547b2ee5c70a5c7812364e97fc6c.bindPopup(popup_de01f86a6c9a7e25a51f6a5bf7b478fe)
+        ;
+
+        
+    
+    
+                marker_c10a547b2ee5c70a5c7812364e97fc6c.setIcon(icon_cb4e5e69ee790b82a8853f30992349af);
+            
+</script>
+</html>
