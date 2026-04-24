@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bcf9a92d303d99943ee852b1caacdad7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+            <style>
+            .leaflet-control-attribution {
+                display: none !important;
+            }
+            </style>
+            
+    
+            <div style="
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 9999;
+                background: white;
+                padding: 10px 14px;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+                font-size: 13px;
+            ">
+                <b>Resumen de Ruta</b><br>
+                Total clientes: 21<br>
+                <span style="color: orange;"><b>Por graduar:</b> 0</span>
+            </div>
+            
+    
+            <div class="folium-map" id="map_bcf9a92d303d99943ee852b1caacdad7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bcf9a92d303d99943ee852b1caacdad7 = L.map(
+                "map_bcf9a92d303d99943ee852b1caacdad7",
+                {
+                    center: [-12.1940299, -76.9864492],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_172023c852619e706161b784177e9d7c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u00a9 OpenStreetMap contributors \u00a9 CARTO",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_172023c852619e706161b784177e9d7c.addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var marker_6833bf0bc0711609c6c93c4d5e8487e4 = L.marker(
+                [-12.1940299, -76.9864492],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_d8912edea21ec7bd3148cbbe2ed5c3c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65dfc4fcef466c7b035350eefe9258a9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_85a383282c6239ec8e3dbdf46dec1166 = $(`<div id="html_85a383282c6239ec8e3dbdf46dec1166" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001480205<br>                         <b>Nombre:</b> CAHUANA QUISPE JUAN CARLOS<br>                         <b>Dirección:</b> AV. LOS PROCERES MZA. B4 LOTE. 12 URB. TUPAC AMARU Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_65dfc4fcef466c7b035350eefe9258a9.setContent(html_85a383282c6239ec8e3dbdf46dec1166);
+            
+        
+
+        marker_6833bf0bc0711609c6c93c4d5e8487e4.bindPopup(popup_65dfc4fcef466c7b035350eefe9258a9)
+        ;
+
+        
+    
+    
+                marker_6833bf0bc0711609c6c93c4d5e8487e4.setIcon(icon_d8912edea21ec7bd3148cbbe2ed5c3c5);
+            
+    
+            var marker_7478cfaf8e69a8e904d633d4e5a4cb8c = L.marker(
+                [-12.1982486, -76.9965149],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_fc5c6c9386cdab92151a7ea6a1d7ea2b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9fae2e8ce907ca0530a196a9c9858bf5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fde98f0d57681316edcf77f95888f3af = $(`<div id="html_fde98f0d57681316edcf77f95888f3af" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001559702<br>                         <b>Nombre:</b> CARHUAMACA DIAZ MERY<br>                         <b>Dirección:</b> MZA. E LOTE. 14 URB. AH SAGRADA FAMILIA Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_9fae2e8ce907ca0530a196a9c9858bf5.setContent(html_fde98f0d57681316edcf77f95888f3af);
+            
+        
+
+        marker_7478cfaf8e69a8e904d633d4e5a4cb8c.bindPopup(popup_9fae2e8ce907ca0530a196a9c9858bf5)
+        ;
+
+        
+    
+    
+                marker_7478cfaf8e69a8e904d633d4e5a4cb8c.setIcon(icon_fc5c6c9386cdab92151a7ea6a1d7ea2b);
+            
+    
+            var marker_2adf0dade78f2855e1d5ed2390c09e98 = L.marker(
+                [-12.2058604, -76.9418109],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_a15b7e6bbe7a0b5f63399d8aec1738aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1df65cdedbb2ee7cd3d20c5a86474269 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6590adfb9d2e1e57d4ca0cc83e13f369 = $(`<div id="html_6590adfb9d2e1e57d4ca0cc83e13f369" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000510022<br>                         <b>Nombre:</b> CCAHUANA COTAQUISPE EDMER NELSON<br>                         <b>Dirección:</b> JR. CAL 2 DE MAYO M18 L32 MZA. MAZAA490 LOTE. 32 URB. ARMATAMBO Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_1df65cdedbb2ee7cd3d20c5a86474269.setContent(html_6590adfb9d2e1e57d4ca0cc83e13f369);
+            
+        
+
+        marker_2adf0dade78f2855e1d5ed2390c09e98.bindPopup(popup_1df65cdedbb2ee7cd3d20c5a86474269)
+        ;
+
+        
+    
+    
+                marker_2adf0dade78f2855e1d5ed2390c09e98.setIcon(icon_a15b7e6bbe7a0b5f63399d8aec1738aa);
+            
+    
+            var marker_89b78a1d84fe2cfb59f845442e6cb869 = L.marker(
+                [-12.1750118, -76.9954829],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_3b094586d64f171400a50b46d5aa5d65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6d8fc0ae04b36d2f7b62f003675c3330 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f0d14bf7932fc631f066af19fdff8079 = $(`<div id="html_f0d14bf7932fc631f066af19fdff8079" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001293000<br>                         <b>Nombre:</b> CORTEZ TRIVENO GIOVANA<br>                         <b>Dirección:</b> AV. AVARQUIMEDES M-B1 L-19 MZA. B1 LOTE. 19 URB. LA CAMPI A Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_6d8fc0ae04b36d2f7b62f003675c3330.setContent(html_f0d14bf7932fc631f066af19fdff8079);
+            
+        
+
+        marker_89b78a1d84fe2cfb59f845442e6cb869.bindPopup(popup_6d8fc0ae04b36d2f7b62f003675c3330)
+        ;
+
+        
+    
+    
+                marker_89b78a1d84fe2cfb59f845442e6cb869.setIcon(icon_3b094586d64f171400a50b46d5aa5d65);
+            
+    
+            var marker_b775d46415e7d71d37553376e6bfc77a = L.marker(
+                [-12.18781, -76.993018],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_330d32e8090de6ba55e88f8224e4a451 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_57c69b952b9443b61ffabc232f040178 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_55d1619c9b8eaa98b7014c6ec8bd4169 = $(`<div id="html_55d1619c9b8eaa98b7014c6ec8bd4169" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004203658<br>                         <b>Nombre:</b> CUTIRI CHINCHAY MIGUEL ANGEL<br>                         <b>Dirección:</b> CALLE LIBERTAD MZ. H LTE. 3 VISTA ALEGRE<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_57c69b952b9443b61ffabc232f040178.setContent(html_55d1619c9b8eaa98b7014c6ec8bd4169);
+            
+        
+
+        marker_b775d46415e7d71d37553376e6bfc77a.bindPopup(popup_57c69b952b9443b61ffabc232f040178)
+        ;
+
+        
+    
+    
+                marker_b775d46415e7d71d37553376e6bfc77a.setIcon(icon_330d32e8090de6ba55e88f8224e4a451);
+            
+    
+            var marker_b51df08268fee63f35041aebb0965077 = L.marker(
+                [-12.2022941, -76.9765837],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_07bbdcd031855586594948b26855de1a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c2d9a0f53708daf8cf04115e7284342 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0e22e90979989a6e7ca5b8a0df5330f4 = $(`<div id="html_0e22e90979989a6e7ca5b8a0df5330f4" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001397462<br>                         <b>Nombre:</b> DAVALOS LARA ROCIO AMPARO<br>                         <b>Dirección:</b> AV. JOSE OLAYA COMITE 14 LOTE. 13 URB. SANTA ISABEL DE VILLA Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_5c2d9a0f53708daf8cf04115e7284342.setContent(html_0e22e90979989a6e7ca5b8a0df5330f4);
+            
+        
+
+        marker_b51df08268fee63f35041aebb0965077.bindPopup(popup_5c2d9a0f53708daf8cf04115e7284342)
+        ;
+
+        
+    
+    
+                marker_b51df08268fee63f35041aebb0965077.setIcon(icon_07bbdcd031855586594948b26855de1a);
+            
+    
+            var marker_32e950f9f71c9e071303d055374c9253 = L.marker(
+                [-12.202667, -77.025756],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_48aa5c7c25f30ce4ea9632915e072181 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_675a14e8f4545df5d6760908e9fffb16 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1a4b12d84c82731c348c91c54229efe2 = $(`<div id="html_1a4b12d84c82731c348c91c54229efe2" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004094782<br>                         <b>Nombre:</b> DIAZ ESTELA ROQUE JAER<br>                         <b>Dirección:</b> Márquez de Corpac MZ B LT 1<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_675a14e8f4545df5d6760908e9fffb16.setContent(html_1a4b12d84c82731c348c91c54229efe2);
+            
+        
+
+        marker_32e950f9f71c9e071303d055374c9253.bindPopup(popup_675a14e8f4545df5d6760908e9fffb16)
+        ;
+
+        
+    
+    
+                marker_32e950f9f71c9e071303d055374c9253.setIcon(icon_48aa5c7c25f30ce4ea9632915e072181);
+            
+    
+            var marker_c26cbcbbbb4ba067c27d4d4ec3eb6556 = L.marker(
+                [-12.2064621, -77.0113267],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_5643831d166c3927291e24631cf60721 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7d8e6fb3acb32bc333d2ac5e0a0afd3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5e2541390f137c88b5a1710099e34cf1 = $(`<div id="html_5e2541390f137c88b5a1710099e34cf1" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001744905<br>                         <b>Nombre:</b> FLORES TORRES SUSAN ROCIO<br>                         <b>Dirección:</b> ALM. LOS CEDROS NRO. 674 Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_e7d8e6fb3acb32bc333d2ac5e0a0afd3.setContent(html_5e2541390f137c88b5a1710099e34cf1);
+            
+        
+
+        marker_c26cbcbbbb4ba067c27d4d4ec3eb6556.bindPopup(popup_e7d8e6fb3acb32bc333d2ac5e0a0afd3)
+        ;
+
+        
+    
+    
+                marker_c26cbcbbbb4ba067c27d4d4ec3eb6556.setIcon(icon_5643831d166c3927291e24631cf60721);
+            
+    
+            var marker_d51cf362ebd3188813fa4e3e99dc9938 = L.marker(
+                [-12.199016, -76.9956841],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_b20b5ff792f3e918a780b9f842d3a80c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_871992dd0bb879dd89164385dc63cefa = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6465cd82b31522718e18306ef4882725 = $(`<div id="html_6465cd82b31522718e18306ef4882725" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001175076<br>                         <b>Nombre:</b> GONZALES LIMAYLLA KENLLY ABAD<br>                         <b>Dirección:</b> CL. 3 DE OCTUBRE MZA. F LOTE. T2 URB. GARZAS DE VILLA Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_871992dd0bb879dd89164385dc63cefa.setContent(html_6465cd82b31522718e18306ef4882725);
+            
+        
+
+        marker_d51cf362ebd3188813fa4e3e99dc9938.bindPopup(popup_871992dd0bb879dd89164385dc63cefa)
+        ;
+
+        
+    
+    
+                marker_d51cf362ebd3188813fa4e3e99dc9938.setIcon(icon_b20b5ff792f3e918a780b9f842d3a80c);
+            
+    
+            var marker_9a51a93e403ef97aead873565cc57fcf = L.marker(
+                [-12.1964511, -76.9994345],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_a2a4d50054b220e30357a8e145121649 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79c286291a758572b3813715dc865a02 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_91d966a50614d1bf9f16524039add4f2 = $(`<div id="html_91d966a50614d1bf9f16524039add4f2" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001646250<br>                         <b>Nombre:</b> HERBAS QUISPE LUZMILA VALENTINA<br>                         <b>Dirección:</b> CL. CIENTIFICA MZA. E LOTE. 22 URB. CHORRILLOS Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_79c286291a758572b3813715dc865a02.setContent(html_91d966a50614d1bf9f16524039add4f2);
+            
+        
+
+        marker_9a51a93e403ef97aead873565cc57fcf.bindPopup(popup_79c286291a758572b3813715dc865a02)
+        ;
+
+        
+    
+    
+                marker_9a51a93e403ef97aead873565cc57fcf.setIcon(icon_a2a4d50054b220e30357a8e145121649);
+            
+    
+            var marker_cde28761c59a42416a6b5d0ef067511a = L.marker(
+                [-12.2042911, -76.9804367],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_a8dee1540e201cb0023a972ecf553e61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84ba2c110229d2512cc693e9d5f43dd5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1bbcad646833297fa2d974be4da3c1c6 = $(`<div id="html_1bbcad646833297fa2d974be4da3c1c6" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001358577<br>                         <b>Nombre:</b> INCIL OCAS MARIA CARMELA<br>                         <b>Dirección:</b> PJE. SANTA ISABEL DE VILLA MZA. C LOTE. 35A URB. SANTA ISABEL Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_84ba2c110229d2512cc693e9d5f43dd5.setContent(html_1bbcad646833297fa2d974be4da3c1c6);
+            
+        
+
+        marker_cde28761c59a42416a6b5d0ef067511a.bindPopup(popup_84ba2c110229d2512cc693e9d5f43dd5)
+        ;
+
+        
+    
+    
+                marker_cde28761c59a42416a6b5d0ef067511a.setIcon(icon_a8dee1540e201cb0023a972ecf553e61);
+            
+    
+            var marker_b96e265049695798ee1e38bd6517597a = L.marker(
+                [-12.1880789, -76.9934685],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_57d22c4bf63bc9932d64abd57e3e4a8c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_efb7f018b17ea1bdf376d5d6d72f5ce6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8ecc02cbac2df898eb9204e54b0d3019 = $(`<div id="html_8ecc02cbac2df898eb9204e54b0d3019" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001303257<br>                         <b>Nombre:</b> MALDONADO PALOMINO YOVANA<br>                         <b>Dirección:</b> MCDO. VISTA ALEGRE PSTO. 53 Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_efb7f018b17ea1bdf376d5d6d72f5ce6.setContent(html_8ecc02cbac2df898eb9204e54b0d3019);
+            
+        
+
+        marker_b96e265049695798ee1e38bd6517597a.bindPopup(popup_efb7f018b17ea1bdf376d5d6d72f5ce6)
+        ;
+
+        
+    
+    
+                marker_b96e265049695798ee1e38bd6517597a.setIcon(icon_57d22c4bf63bc9932d64abd57e3e4a8c);
+            
+    
+            var marker_4af629fafa731becfb7ba05be73d2417 = L.marker(
+                [-12.1652622, -77.0223265],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_f726f7d9f871c5b7a63f999c91e7e9aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82ad20abf1b5961889781ed74fedd776 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f2381b9dd70a5fb15b9eeaec4023f6f7 = $(`<div id="html_f2381b9dd70a5fb15b9eeaec4023f6f7" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001721272<br>                         <b>Nombre:</b> PUCHURI SULCA FLOR VANESSA<br>                         <b>Dirección:</b> AV. ALEJANDRO IGLESIA NRO. 145 Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_82ad20abf1b5961889781ed74fedd776.setContent(html_f2381b9dd70a5fb15b9eeaec4023f6f7);
+            
+        
+
+        marker_4af629fafa731becfb7ba05be73d2417.bindPopup(popup_82ad20abf1b5961889781ed74fedd776)
+        ;
+
+        
+    
+    
+                marker_4af629fafa731becfb7ba05be73d2417.setIcon(icon_f726f7d9f871c5b7a63f999c91e7e9aa);
+            
+    
+            var marker_e6455799fa36d7b1c9cadcbd6a23c5d2 = L.marker(
+                [-12.189067, -77.014361],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_6b2d93a2b7f89aa126fc4d88800eab07 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30b2de8cd3cc078469e27fd785d4e5d9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5c14e9ed937fd52137a8c1ec0debccef = $(`<div id="html_5c14e9ed937fd52137a8c1ec0debccef" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000510402<br>                         <b>Nombre:</b> QUISOCALA LIMACHI ANA MARIA<br>                         <b>Dirección:</b> AV. OTR PARAVIRGEN DE CHAPI P-12 MZA. 270 URB. VILLA VENTURO Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_30b2de8cd3cc078469e27fd785d4e5d9.setContent(html_5c14e9ed937fd52137a8c1ec0debccef);
+            
+        
+
+        marker_e6455799fa36d7b1c9cadcbd6a23c5d2.bindPopup(popup_30b2de8cd3cc078469e27fd785d4e5d9)
+        ;
+
+        
+    
+    
+                marker_e6455799fa36d7b1c9cadcbd6a23c5d2.setIcon(icon_6b2d93a2b7f89aa126fc4d88800eab07);
+            
+    
+            var marker_fd59a1a6251c5b5d756adbfa57f10bc3 = L.marker(
+                [-12.180058, -77.011951],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_cc3ddeaf06f56d91b7f14f6143bcc81c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99ca89cddc3d57182717ccc4aed5fdb9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c3156c8ddc5e62db7db51a0a24509173 = $(`<div id="html_c3156c8ddc5e62db7db51a0a24509173" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001743846<br>                         <b>Nombre:</b> SALAZAR REANO ANTENOR<br>                         <b>Dirección:</b> JR. CARLOS MELLET NRO. 1145 URB. SANTA LEONOR Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_99ca89cddc3d57182717ccc4aed5fdb9.setContent(html_c3156c8ddc5e62db7db51a0a24509173);
+            
+        
+
+        marker_fd59a1a6251c5b5d756adbfa57f10bc3.bindPopup(popup_99ca89cddc3d57182717ccc4aed5fdb9)
+        ;
+
+        
+    
+    
+                marker_fd59a1a6251c5b5d756adbfa57f10bc3.setIcon(icon_cc3ddeaf06f56d91b7f14f6143bcc81c);
+            
+    
+            var marker_9db355740e9f17211d163778a5c4c273 = L.marker(
+                [-12.1786883, -77.0130524],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_96e2968782d95a07f0ec3e375622b3b0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d65d76f7aa7b7004569f14db918a6d34 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_80adb9e844cd608f8e49ea886fe826b3 = $(`<div id="html_80adb9e844cd608f8e49ea886fe826b3" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001692470<br>                         <b>Nombre:</b> SANCHEZ REANO BELTHI<br>                         <b>Dirección:</b> MATELLINI MZA. G LOTE. 36 URB. SANTA LEONOR Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_d65d76f7aa7b7004569f14db918a6d34.setContent(html_80adb9e844cd608f8e49ea886fe826b3);
+            
+        
+
+        marker_9db355740e9f17211d163778a5c4c273.bindPopup(popup_d65d76f7aa7b7004569f14db918a6d34)
+        ;
+
+        
+    
+    
+                marker_9db355740e9f17211d163778a5c4c273.setIcon(icon_96e2968782d95a07f0ec3e375622b3b0);
+            
+    
+            var marker_e91aeb51378c0d8138fb35b0ecebe0e8 = L.marker(
+                [-12.1939723, -77.0078214],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_47f05d809ec99d878daa59a172c39690 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_232388417717a2d75620aa8dcc88b20e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_320d8a97ef6c0c59f35299b8accc4294 = $(`<div id="html_320d8a97ef6c0c59f35299b8accc4294" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C004173845<br>                         <b>Nombre:</b> SOLIS PACHECO ROMELIA<br>                         <b>Dirección:</b> Los Picarones mz Z lt 5 Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_232388417717a2d75620aa8dcc88b20e.setContent(html_320d8a97ef6c0c59f35299b8accc4294);
+            
+        
+
+        marker_e91aeb51378c0d8138fb35b0ecebe0e8.bindPopup(popup_232388417717a2d75620aa8dcc88b20e)
+        ;
+
+        
+    
+    
+                marker_e91aeb51378c0d8138fb35b0ecebe0e8.setIcon(icon_47f05d809ec99d878daa59a172c39690);
+            
+    
+            var marker_0c0d00f2982040d35cc578635750de69 = L.marker(
+                [-12.1881281, -76.9929821],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_7d6e593434f6f26614641b3fc9900d96 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c94938f56bee18a2f1523af3d3d46c3a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7ddc0f2c7bd939b11eab5348bc12ec89 = $(`<div id="html_7ddc0f2c7bd939b11eab5348bc12ec89" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001345560<br>                         <b>Nombre:</b> TEJEDA TORRES SOLEDAD MIRIAN<br>                         <b>Dirección:</b> CL. LIBERTAD MZA. I LOTE. 2 Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_c94938f56bee18a2f1523af3d3d46c3a.setContent(html_7ddc0f2c7bd939b11eab5348bc12ec89);
+            
+        
+
+        marker_0c0d00f2982040d35cc578635750de69.bindPopup(popup_c94938f56bee18a2f1523af3d3d46c3a)
+        ;
+
+        
+    
+    
+                marker_0c0d00f2982040d35cc578635750de69.setIcon(icon_7d6e593434f6f26614641b3fc9900d96);
+            
+    
+            var marker_0cae6647858327a60fe4c92805c50839 = L.marker(
+                [-12.1973195, -76.9884354],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_dc4385416621017fdeb634beaf595020 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acf98c99a92cb7446db0f6fd63d81b22 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0db30899563a60f31103095335e95151 = $(`<div id="html_0db30899563a60f31103095335e95151" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C000508342<br>                         <b>Nombre:</b> TELLO VALENCIA ADRIAN<br>                         <b>Dirección:</b> AV. CORDILLERA BLANCA MZA. F-11 LOTE. 5 URB. DELICIAS DE VILLA Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_acf98c99a92cb7446db0f6fd63d81b22.setContent(html_0db30899563a60f31103095335e95151);
+            
+        
+
+        marker_0cae6647858327a60fe4c92805c50839.bindPopup(popup_acf98c99a92cb7446db0f6fd63d81b22)
+        ;
+
+        
+    
+    
+                marker_0cae6647858327a60fe4c92805c50839.setIcon(icon_dc4385416621017fdeb634beaf595020);
+            
+    
+            var marker_16f841721d66d9fe83462daf2d87f062 = L.marker(
+                [-12.1880947, -76.993487],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_020014d9a1f51dbe73a5abd4fa99213c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c20c1059d69bcb4b74fc7a95c4796885 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d319070d51f6e98a9f7dbed1c183f801 = $(`<div id="html_d319070d51f6e98a9f7dbed1c183f801" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001380356<br>                         <b>Nombre:</b> TORRES HINOSTROZA DANIELA LILIANA<br>                         <b>Dirección:</b> AV. VISTA ALEGRE MZA H LOTE 01 MZA. H LOTE. 01 URB. MCDO VISTA ALEGRE PSTO. 33 Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_c20c1059d69bcb4b74fc7a95c4796885.setContent(html_d319070d51f6e98a9f7dbed1c183f801);
+            
+        
+
+        marker_16f841721d66d9fe83462daf2d87f062.bindPopup(popup_c20c1059d69bcb4b74fc7a95c4796885)
+        ;
+
+        
+    
+    
+                marker_16f841721d66d9fe83462daf2d87f062.setIcon(icon_020014d9a1f51dbe73a5abd4fa99213c);
+            
+    
+            var marker_e1b196e26aed215b76f92e6ff5510c32 = L.marker(
+                [-12.1782967, -76.9966685],
+                {
+}
+            ).addTo(map_bcf9a92d303d99943ee852b1caacdad7);
+        
+    
+            var icon_9a51b07bada43dc49274577e110ec6e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee4eb3e7531bade82de8eb571fe88956 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f2c7d443f9850a683c4869f21a3ce3ec = $(`<div id="html_f2c7d443f9850a683c4869f21a3ce3ec" style="width: 100.0%; height: 100.0%;">                     <div style="font-size:13px;">                         <b>Cod Cliente:</b> C001646458<br>                         <b>Nombre:</b> VALVERDE ROBLES ROSA MARITZA<br>                         <b>Dirección:</b> AV. EL SOL NRO. 122 URB. LA CAMPIÑA Lima-Lima-Chorrillos<br>                         <b>Estatus:</b> -                     </div>                     </div>`)[0];
+                popup_ee4eb3e7531bade82de8eb571fe88956.setContent(html_f2c7d443f9850a683c4869f21a3ce3ec);
+            
+        
+
+        marker_e1b196e26aed215b76f92e6ff5510c32.bindPopup(popup_ee4eb3e7531bade82de8eb571fe88956)
+        ;
+
+        
+    
+    
+                marker_e1b196e26aed215b76f92e6ff5510c32.setIcon(icon_9a51b07bada43dc49274577e110ec6e4);
+            
+</script>
+</html>
